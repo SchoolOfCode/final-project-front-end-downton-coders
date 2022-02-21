@@ -1,16 +1,18 @@
 import React from 'react'
 
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 
 function Navbar() {
   return (
-    <nav>
     
-      
-            <Link href = "/about">About Us</Link> 
-            <Link href = "/login">Login</Link> 
-       
+    <nav className='container'>
+    <div className='img'>
+      <img  src ='/logo.png' width ='100px' height ="70px" />
+    </div>
+    <NavLink to ='/about'>About Us</NavLink>  
+    <NavLink to ='/login'>login</NavLink>  
+   
     </nav>
 
   )

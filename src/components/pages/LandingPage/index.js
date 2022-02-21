@@ -5,7 +5,7 @@ function LandingPage() {
   return (
    
   <div>
-    <Navbar />
+  <Navbar />
     <h1>This is Landing Page</h1>
   </div>
   )
