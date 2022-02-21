@@ -3,11 +3,11 @@ import Hero from "../../Hero";
 
 function LandingPage() {
   return (
-    <div>
-      <h1>This is Landing Page</h1>
-      <section className="hero-landing-page">
+    <div id="landingPageWrapper">
+ 
+     
         <Hero />
-      </section>
+     
     </div>
   );
 }
