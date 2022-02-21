@@ -1,0 +1,23 @@
+/* Container holding the image and the text */
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+  /* width: 1000px; */
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 60px;
+}
+
+.line {
+  display: block;
+}
