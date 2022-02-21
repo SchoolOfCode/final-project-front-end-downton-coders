@@ -1,16 +1,19 @@
-import Show from "../Show";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import logo from "./logo.svg";
+import LandingPage from "../pages/LandingPage";
+import MainPage from "../pages/MainPage";
+
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Show />
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage />}>
+          <Route path="main" element={<MainPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
