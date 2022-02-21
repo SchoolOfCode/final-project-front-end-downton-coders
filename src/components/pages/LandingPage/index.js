@@ -1,7 +1,13 @@
 import React from "react";
-
+import Aboutus from "./About-Us/index";
 function LandingPage() {
-  return <h1>This is Landing Page</h1>;
+  return (
+    <>
+    <div>
+      <Aboutus/>
+    </div>
+    </>
+  );
 }
 
 export default LandingPage;
