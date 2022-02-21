@@ -7,8 +7,8 @@ function Navbar() {
   return (
     
     <nav className='container'>
-    <div className='img'>
-      <img  src ='/logo.png' width ='100px' height ="70px" />
+    <div className='logo'>
+      <img  src ='/logo.png' width ='100px' height ="70px"  alt =""/>
     </div>
     <NavLink to ='/about'>About Us</NavLink>  
     <NavLink to ='/login'>login</NavLink>  
