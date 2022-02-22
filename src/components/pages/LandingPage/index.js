@@ -1,7 +1,15 @@
 import React from "react";
+import Hero from "../../Hero";
 
 function LandingPage() {
-  return <h1>This is Landing Page</h1>;
+  return (
+    <div id="landingPageWrapper">
+ 
+     
+        <Hero />
+     
+    </div>
+  );
 }
 
 export default LandingPage;
