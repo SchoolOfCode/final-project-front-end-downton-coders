@@ -1,4 +1,14 @@
 import React from "react";
+
+import Aboutus from "./About-Us/index";
+function LandingPage() {
+  return (
+    <>
+    <div>
+      <Aboutus/>
+    </div>
+    </>
+
 import Hero from "../../Hero";
 
 function LandingPage() {
@@ -9,6 +19,7 @@ function LandingPage() {
         <Hero />
      
     </div>
+
   );
 }
 
