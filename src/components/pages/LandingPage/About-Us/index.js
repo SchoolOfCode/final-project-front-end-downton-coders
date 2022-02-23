@@ -1,11 +1,21 @@
-import AboutHeader from "../About-Us/AboutUsHeader/AboutUsHeader";
-
+import AboutHeader from "./AboutUsHeader/AboutHeader";
+import AboutUsImage from "./AboutUsImage/AboutUsImage";
+import AboutText from "./AboutUsText/AboutUsText"
+import styles from "./styles.module.css";
 function Aboutus() {
   return (
     <>
-    <div>
-      <AboutHeader/>
-    </div>
+    <section data-testid="aboutUsSectiontesting" className={styles.backgroundAboutUsContainer}>
+        <div className={styles.aboutUsHeader}>
+            <AboutHeader/>
+        </div>
+        <div className={styles.aboutUsContainer}>
+          <div className={styles.aboutUsMainContainer}>
+              <AboutText/>
+              <AboutUsImage/>
+          </div>
+        </div>
+    </section>
     </>
   );
 }
