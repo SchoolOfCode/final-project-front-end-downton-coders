@@ -1,12 +1,12 @@
-.header{
+.headerSlider{
     color:#462626;
     font-size: 36px;
     display:inline-block;
-    width:250px;
+    width:800px;
     text-align: center;
     border-bottom: 4px solid #A30B3D;
 }
 
-.header_Us{
+.header_UsSlider{
     color: #7201A5;
 }

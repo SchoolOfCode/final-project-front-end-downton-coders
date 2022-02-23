@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../../Navbar/Navbar";
 
 import Aboutus from "./About-Us/index";
+import LandingPageSlider from "./landingPageSlider/landingPageSlider";
 
 
 import Hero from "../../Hero";
@@ -14,6 +15,7 @@ function LandingPage() {
      <Navbar />
     <h1>This is Landing Page</h1>
         <Hero />
+        <LandingPageSlider/>
         <Aboutus/>
     </div>
 

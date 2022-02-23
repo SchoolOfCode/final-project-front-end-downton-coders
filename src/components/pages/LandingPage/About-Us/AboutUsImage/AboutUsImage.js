@@ -1,10 +1,12 @@
-import styles from './style.module.css';
+import image from "../AboutUsImage/imageStore/aboutUs.png"
+import styles from "./style.module.css";
+function AboutUsImage() {
 
-function AboutImage(){
-
-    return (<>
-        <h1 className={styles.image}>About <span className={styles.image_Us}>Us</span></h1>
-    </>)
+  return (
+    <>
+   <img src={image} className={styles.imgContainer}alt="piture of group" data-testid="aboutUsImagetesting"/>
+    </>
+  );
 }
 
-export default AboutImage;
+export default AboutUsImage;
