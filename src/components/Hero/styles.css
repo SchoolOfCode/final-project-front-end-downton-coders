@@ -64,6 +64,8 @@ li {
   display: inline;
 }
 
+li a:hover { color: #A30B3D; }
+
 .line-2 {
   color: #7201a5;
   font-weight: bolder;
