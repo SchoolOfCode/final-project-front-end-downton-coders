@@ -1,6 +1,4 @@
 import React from "react";
-import Navbar from "../../Navbar/Navbar";
-
 import Aboutus from "./About-Us/index";
 import LandingPageSlider from "./landingPageSlider/landingPageSlider";
 
@@ -11,9 +9,6 @@ function LandingPage() {
   return (
 
     <div id="landingPageWrapper">
- 
-     <Navbar />
-    <h1>This is Landing Page</h1>
         <Hero />
         <LandingPageSlider/>
         <Aboutus/>
