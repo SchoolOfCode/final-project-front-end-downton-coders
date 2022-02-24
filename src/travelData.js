@@ -76,17 +76,6 @@ const travelData = [
     categories: "Museum",
     price: "Free",
   },
-  {
-    id: 7,
-    title: "",
-    location: "",
-    star_rating: 0,
-    date: "",
-    description: "",
-    image: "",
-    categories: "",
-    price: "",
-  },
 ];
 
 export default travelData;
