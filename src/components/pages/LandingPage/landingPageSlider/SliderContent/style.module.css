@@ -19,7 +19,6 @@
 .slideMain{
     max-width:1200px;
     display:flex;
-
 }
 
 /* .slideMain button{
@@ -58,7 +57,7 @@
     width:292px;
     height: 464px;
     border-radius:25px;
-    margin-left:1rem;
+    /* margin-left:1rem; */
     overflow: hidden;
     cursor: pointer;
     /* display:flex;
@@ -104,6 +103,7 @@
     font-weight: bold;
     /* width:200px; */
     height: 200px;
+    margin-left:0.7rem;
 }
 .paragraphDesc{
  white-space: wrap;

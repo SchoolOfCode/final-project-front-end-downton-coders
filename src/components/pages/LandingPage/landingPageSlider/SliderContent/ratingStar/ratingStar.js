@@ -14,7 +14,7 @@ function RatingStar(rate) {
 //     setRating(rate)
 //     // other logic
 //   }
-console.log(rating.rate)
+
 
   return (
     <div className={styles.StarRatingContainer} data-testid="starRatingContainerTesting">
