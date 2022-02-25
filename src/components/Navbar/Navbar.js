@@ -8,12 +8,14 @@ function Navbar() {
     
     <nav className='container'>
     <div className='logo'>
-      <img  src ='/logo.png' width ='100px' height ="70px"  alt =""/>
+      <img  src ='/logo2.png' width ='100px' height ="70px"  alt =""/>
     </div>
     
     <div className="navlink">
-    <NavLink to ='/about'>About Us</NavLink>  
-    <NavLink to ='/login'>login</NavLink>  
+    <ul>
+          <li><a href="">About</a></li>
+          <li><a href="">Login</a></li>
+        </ul>
     </div>
     </nav>
 

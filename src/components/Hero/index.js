@@ -21,9 +21,9 @@ function Hero() {
      
       <div class="container">
           <p className="mainText centered">
-            <h1 class="line">Creating <text style={{color: "#7201a5"}}>connections</text></h1>
-            <h1 class="line"> through shared </h1>
-            <h1 class="line-2">experiences</h1>
+            <h1 className="line">Creating <text style={{color: "#7201a5"}}>connections</text></h1>
+            <h1 className="line"> through shared </h1>
+            <h1 className="line-2">experiences</h1>
           </p>
         <button className="getStarted">GET STARTED</button>
       </div>
