@@ -1,13 +1,11 @@
-* {
-  background-color: #F9F2F2;
-}
 
 
 .container {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between;  
 } 
+
 
 li a { color: #7201A5;}
 li a:hover { color: #A30B3D;}
