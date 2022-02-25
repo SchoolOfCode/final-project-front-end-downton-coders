@@ -9,11 +9,11 @@ function Hero() {
     <div className="heroWrapper">
 
     <header className = "nav-container">
-    <img  src ='logo2.png' width ='100px' height ="70px"  alt ="/#"/>
+    <img  src ='logo2.png' width ='100px' height ="70px"  alt ="experience logo"/>
       <nav className = "navlink">
         <ul>
-          <li><a href="/#">About</a></li>
-          <li><a href="/#">Login</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/login">Login</a></li>
         </ul>
       </nav>
     </header> 
