@@ -2,7 +2,7 @@ import RatingStar from "./ratingStar"
 import {screen,render} from "@testing-library/react"
 
 it('check if the ratingStar in the page',()=>{
-    render(<RatingStar/>)
+    render(<RatingStar rate={[]}/>)
 
     const starSection = screen.getByTestId("starRatingContainerTesting")
 
