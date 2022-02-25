@@ -1,6 +1,6 @@
 import React from 'react'
 import "../Navbar/navbar.css"
-import { NavLink } from 'react-router-dom'
+//import { NavLink } from 'react-router-dom'
 
 
 function Navbar() {
@@ -8,13 +8,13 @@ function Navbar() {
     
     <nav className='nav-container'>
     <div className='logo'>
-      <img  src ='/logo2.png' width ='100px' height ="70px"  alt =""/>
+      <img  src ='/logo2.png' width ='100px' height ="70px"  alt ="/#"/>
     </div>
     
     <div className="navlink">
     <ul>
-          <li><a href="">About</a></li>
-          <li><a href="">Login</a></li>
+          <li><a href="/#">About</a></li>
+          <li><a href="/#">Login</a></li>
         </ul>
     </div>
     </nav>
