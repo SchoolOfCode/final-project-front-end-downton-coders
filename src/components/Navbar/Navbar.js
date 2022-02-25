@@ -13,8 +13,8 @@ function Navbar() {
     
     <div className="navlink">
     <ul>
-          <li><a href="/#">About</a></li>
-          <li><a href="/#">Login</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/login">Login</a></li>
         </ul>
     </div>
     </nav>
