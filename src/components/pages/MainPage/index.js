@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import Form from "../../Form/Form";
+import SubmitForm from "../../SubmitForm/SubmitForm"
 import Navbar from "../../Navbar/Navbar";
 import LandingPageSlider from "../LandingPage/landingPageSlider/landingPageSlider";
 import "./styles.css"
@@ -10,7 +10,7 @@ function MainPage() {
   <>
     <Navbar />
     <LandingPageSlider />
-    <Form />
+    <SubmitForm />
   </>
   )
 }

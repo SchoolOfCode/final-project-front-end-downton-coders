@@ -1,0 +1,21 @@
+.form-container {
+    width: 75vw;
+    text-align: center;
+    margin: auto;
+    border: 2px solid gray;
+    border-radius: 2%;
+}
+.create-experience-button {
+
+}
+
+.submit-button {
+    background-color: #7201A5;
+    margin: 10px 0 10px 0;
+}
+
+.create-experience-button {
+    width: 80%;
+    margin: 10px 0 10px 0;
+}
+

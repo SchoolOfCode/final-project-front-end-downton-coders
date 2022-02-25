@@ -1,8 +1,7 @@
 import React from "react";
 import "./styles.css";
-
-
-
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Button } from 'react-bootstrap'
 
 function Hero() {
   return (
@@ -19,13 +18,13 @@ function Hero() {
       </nav>
     </header> 
      
-      <div class="container">
-          <p className="mainText centered">
+      <div class="landing-container">
+          <p className="mainText-centered">
             <h1 className="line">Creating <text style={{color: "#7201a5"}}>connections</text></h1>
             <h1 className="line"> through shared </h1>
             <h1 className="line-2">experiences</h1>
           </p>
-        <button className="getStarted">GET STARTED</button>
+        <Button className="submit-button">GET STARTED</Button>
       </div>
     </div>
   </>
