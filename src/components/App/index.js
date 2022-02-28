@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import LandingPage from "../pages/LandingPage";
@@ -7,16 +8,15 @@ import DashbroadPage from "../pages/DashbroadPage";
 
 import "./App.css";
 
-
 function App() {
   return (
     <>
-    <Routes>
-      <Route path="/" element={<LandingPage />} />
-      <Route path="main" element={<MainPage />} />
-      <Route path="event" element={<EventPage />} />
-      <Route path="dashbroad" element={<DashbroadPage />} />
-    </Routes>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="main" element={<MainPage />} />
+        <Route path="event" element={<EventPage />} />
+        <Route path="dashbroad" element={<DashbroadPage />} />
+      </Routes>
     </>
   );
 }
