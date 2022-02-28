@@ -24,11 +24,22 @@ function Hero({ userLogin, showModal, setShowModal }) {
           </nav>
         </header>
 
-        <div className="landing-container">
+
+    <header className = "nav-container">
+    <img  src ='logo2.png' width ='100px' height ="70px"  alt ="experience logo"/>
+      <nav className = "navlink">
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/login">Login</a></li>
+        </ul>
+      </nav>
+    </header> 
+       <div className="landing-container">
           <div className="mainText-centered">
             <h1 className="line">
               Creating <span style={{ color: "#7201a5" }}>connections</span>
             </h1>
+
             <h1 className="line"> through shared </h1>
             <h1 className="line-2">experiences</h1>
           </div>
