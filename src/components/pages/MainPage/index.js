@@ -4,6 +4,9 @@ import SubmitForm from "../../SubmitForm/SubmitForm"
 import Navbar from "../../Navbar/Navbar";
 import LandingPageSlider from "../LandingPage/landingPageSlider/landingPageSlider";
 import "./styles.css"
+import Footer from "../../Footer/Footer.js";
+import JoinChatButton from "../../JoinChatButton/JoinChatButton.js";
+
 
 function MainPage() {
   return (
@@ -11,6 +14,8 @@ function MainPage() {
     <Navbar />
     <LandingPageSlider />
     <SubmitForm />
+    <JoinChatButton/>
+    <Footer/>
   </>
   )
 }

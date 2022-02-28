@@ -2,15 +2,25 @@
 
 .FooterContainer {
   background-color: plum;
-  height: 350px;
+  /* height: 350px; */
   width: auto;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  
-  
+  display: flex;
+  justify-content: space-between;
 
 }
+
+
+.FooterLeft {
+display: flex;
+justify-content: center;
+background-color: blue;
+align-items: center;
+width: 600px;
+}
+
 
 .FooterLogo {
    
@@ -47,14 +57,25 @@
     border: none;
 }
 
+.FooterRight {
+  display: flex;
+justify-content: center;
+flex-direction: row;
+background-color: blue;
+align-items: center;
+width: 600px;
+
+}
 
 .FooterMediaIcon {
    background-color: plum;
   height: 70px;
-  justify-content: right;
-  flex-direction: row;
+  width: 300px;
   display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   padding-bottom: 30px;
   padding-right: 20px;
+  
 
 }

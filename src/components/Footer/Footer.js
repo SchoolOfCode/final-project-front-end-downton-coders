@@ -13,7 +13,7 @@ function Footer() {
       
   <div className="FooterContainer">
 
-    
+    <div className="FooterLeft">
   <div className="FooterLogo">
     <img  src ={SOClogo} width ='200px' height ="200px"alt =""/>
 </div>
@@ -22,9 +22,9 @@ function Footer() {
       <div className="FooterPoweredByText">
       <h4>Powered By School of Code</h4>
       </div>
+      </div>
      
-     
-     
+     <div className="FooterRight">
        <div className="FooterConnectText">
        <h4>Connect with us</h4>
        </div>
@@ -35,7 +35,7 @@ function Footer() {
       <img  src ={EmailLogo} alt =""/>
       <img  src ={FacebookLogo} alt =""/>
      </div>
-        
+     </div>
        </div>
   
     
