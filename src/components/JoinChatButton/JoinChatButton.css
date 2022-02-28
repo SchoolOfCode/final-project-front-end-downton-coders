@@ -1,0 +1,12 @@
+.ChatButtonContainer {
+    width: 75vw;
+    text-align: center;
+    margin: auto;
+    border: 2px solid gray;
+    border-radius: 2%;
+}
+
+.JoinChatButton {
+    background-color:blue;
+    justify-content: center;
+}
