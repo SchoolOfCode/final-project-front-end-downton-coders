@@ -9,8 +9,9 @@ function MainPage() {
   return (
   <>
     <Navbar />
-    <LandingPageSlider />
     <SubmitForm />
+    <LandingPageSlider />
+    
   </>
   )
 }

@@ -1,21 +1,185 @@
-.form-container {
-    width: 75vw;
-    text-align: center;
+/* 
+
+body {
+    background-color: #eee;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+} */
+
+.card {
+    width: 100%;
+    padding: 20px;
+    border: none
+}
+    
+.main-container {
+    width: 100%;
+    height: 45vh;
     margin: auto;
-    border: 2px solid gray;
-    border-radius: 2%;
+    border-bottom: 2px solid #7201A5;
+   
 }
+
+.experience-form-container {
+    margin: auto;
+    height: 65vh;
+    width: 100%;   
+}
+
 .create-experience-button {
-
-}
-
-.submit-button {
+    width: 100%;
     background-color: #7201A5;
-    margin: 10px 0 10px 0;
+    height: 7vh;
+
+    
 }
+
+.create-experience-button:hover {
+    background-color: #8605c2;
+    height: 7vh;
+}
+
+
+.show-container {
+    background-color: white;
+}
+
+.locaton-date-flex {
+    display: flex;
+}
+
+/* 
+
+body {
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    font-size: 12px;
+    line-height: 30px;
+    color: #777;
+    background: #fff
+}
+
+
+    
+.container {
+    width: 100%;
+    margin: auto;
+    height: 65vh;
+    border: 2px solid #7201A5;
+    border-radius: 20px;
+    
+}
+
+.experience-form-container {
+    width: 50vw;
+    margin: 0 auto;
+    
+}
+
+fieldset {
+    border: medium none !important;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+ 
+}
+
+#create-experience input[type="file"], 
+#create-experience textarea {
+    width: 35vw;
+    height: 60px;
+    border: 1px solid #ccc;
+    background: #FFF;
+    margin: 20px 0 5px;
+    padding: 10px;
+    border-radius: 20px;
+    
+}
+
+#create-experience input[type="text"],
+#create-experience input[type="text"],
+#create-experience input[type="text"],
+#create-experience input[type="text"],
+#create-experience textarea {
+    width: 45vw;
+    height: 50px;
+    border: 1px solid #ccc;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 10px; 
+    text-align: center;
+    border-radius: 20px;
+    
+}
+
+#create-experience input[type="file"]:hover,
+#create-experience input[type="text"]:hover,
+#create-experience input[type="text"]:hover,
+#create-experience input[type="text"]:hover,
+#create-experience input[type="text"]:hover,
+#create-experience textarea:hover {
+    -webkit-transition: border-color 0.3s ease-in-out;
+    -moz-transition: border-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
+    border: 1px solid #aaa;
+}
+
+#create-experience textarea {
+    height: 100px;
+    width: 45vw;
+    resize: none;
+    border-radius: 20px;
+    
+}
+
+/*BUTTONS*/
+
+/* .create-experience-button:hover {
+    background-color: #8602c4;-webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out
+}
+
+#create-experience button[type="submit"] {
+    cursor: pointer;
+    width: 40%;
+    border: none;
+    border-radius: 4%;
+    background: #6b049b;
+    color: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 20px;
+}
+
+#create-experience button[type="submit"]:hover {
+    background: #8602c4;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out
+}
+
+#create-experience input:focus,
+#create-experience textarea:focus {
+    outline: 0;
+    border: 1px solid #6b049b;
+}
+
 
 .create-experience-button {
-    width: 80%;
-    margin: 10px 0 10px 0;
+    background-color: white;
+    color: #6b049b;
+    width: 60vw;
+    height: 7vh;
+    margin-bottom: 20px;
+    border: 2px solid #6b049b;
+    border-radius: 20px;
 }
 
+input[type="text"], textarea {
+    font-size: 150%;
+} */
+
+ 
