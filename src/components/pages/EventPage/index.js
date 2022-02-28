@@ -1,4 +1,5 @@
 import React from "react";
+
 import AttendingEventPageUser from "./attendingEventPageUser/AttendingEventPageUser";
 import HeroEventUser from "./heroEventPageUser/heroeventuser"
 import {useLocation} from "react-router-dom"
@@ -23,6 +24,17 @@ function EventPage() {
     <HeroEventUser DataToRender={DataToUse}/>
     <AttendingEventPageUser DataToRender={DataToUse}/>
   </>);
+
+// import HeroEventUser from "./heroEventPageUser/heroeventuser";
+
+// function EventPage() {
+//   return (
+//     <>
+//       <h1>This is Event Page</h1>
+//       <HeroEventUser />
+//     </>
+//   );
+
 }
 
 export default EventPage;
