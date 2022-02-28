@@ -5,7 +5,7 @@ import {BrowserRouter} from "react-router-dom"
 
 
 it('check if the HeroEventUserMock section working and render',()=>{
-    render(<BrowserRouter><HeroEventUser/></BrowserRouter>)
+    render(<BrowserRouter><HeroEventUser DataToRender={[]}/></BrowserRouter>)
 
     const HeroEventSection = screen.getByTestId("heroContainerTesting")
 
