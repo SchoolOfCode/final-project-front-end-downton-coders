@@ -1,11 +1,9 @@
-
-
 .FooterContainer {
   background-color: plum;
   /* height: 350px; */
   width: auto;
   box-sizing: border-box;
-  padding: 0;
+  padding: 20px;
   margin: 0;
   display: flex;
   justify-content: space-between;
@@ -16,7 +14,7 @@
 .FooterLeft {
 display: flex;
 justify-content: center;
-background-color: blue;
+background-color: plum;
 align-items: center;
 width: 600px;
 }
@@ -61,7 +59,7 @@ width: 600px;
   display: flex;
 justify-content: center;
 flex-direction: row;
-background-color: blue;
+background-color: plum;
 align-items: center;
 width: 600px;
 
@@ -70,10 +68,10 @@ width: 600px;
 .FooterMediaIcon {
    background-color: plum;
   height: 70px;
-  width: 300px;
+  width: 300px; 
   display: flex;
   justify-content: space-between;
-  flex-direction: column;
+  flex-direction: row;
   padding-bottom: 30px;
   padding-right: 20px;
   
