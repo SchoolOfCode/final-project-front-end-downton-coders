@@ -1,4 +1,8 @@
 import React from 'react'
+<<<<<<< HEAD:src/components/Navbar/index.js
+import "../Navbar/styles.css"
+//import { NavLink } from 'react-router-dom'
+=======
 import "../Navbar/navbar.css"
 import { FaSignInAlt, FaSignOutAlt, FaUser } from 'react-icons/fa'
 import {useNavigate, Link} from 'react-router-dom'
@@ -6,6 +10,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { logout, reset } from '../features/auth/authSlice.js'
 
 //import { Link } from 'react-router-dom'
+>>>>>>> main:src/components/Navbar/Navbar.js
 
 
 function Navbar() {
@@ -22,7 +27,7 @@ function Navbar() {
     
     <nav className='nav-container'>
     <div className='logo'>
-      <img  src ='/logo2.png' width ='100px' height ="70px"  alt ="/#"/>
+      <img  src ='/logo2.png' width ='100px' height ="70px"  alt =".."/>
     </div>
     
     <div className="navlink">

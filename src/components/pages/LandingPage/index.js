@@ -84,6 +84,7 @@ function LandingPage() {
       <LandingPageSlider />
       <Aboutus />
       <Footer />
+
     </div>
   );
 }
