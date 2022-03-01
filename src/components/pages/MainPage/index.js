@@ -6,20 +6,22 @@ import Navbar from "../../Navbar";
 import JoinChatButton from "../../JoinChatButton/JoinChatButton.js";
 import LandingPageSlider from "../LandingPage/landingPageSlider/landingPageSlider";
 import Pagination from "../../Pagination/Pagination"
-
+import MainEventsSection from "../../MainEventsSection/index";
 import "./styles.css"
 import Footer from "../../Footer/Footer.js";
+import { current } from "@reduxjs/toolkit";
 
 
 
 
-function MainPage({paginate, eventsPerPage, numbersOfEvents }) {
+function MainPage({paginate, eventsPerPage, numbersOfEvents, indexLastEvent, indexFirstEvent, currentEvent, eventData  }) {
   return (
   <>
     <Navbar />
     <Pagination paginate={paginate} eventsPerPage={eventsPerPage} numbersOfEvents={numbersOfEvents} />
     <JoinChatButton/>
-    <LandingPageSlider />
+    <MainEventsSection indexLastEvent={indexLastEvent} indexFirstEvent={indexFirstEvent} currentEvent={currentEvent} eventData={eventData} /> 
+    {/* <LandingPageSlider /> */}
     <SubmitForm />
     <Footer/>
   

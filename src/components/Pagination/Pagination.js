@@ -9,6 +9,7 @@ const Pagination = ({ paginate, eventsPerPage, numbersOfEvents }) => {
 
   for (let i = 1; i <= Math.ceil(numbersOfEvents / eventsPerPage); i++) {
     pageNumbers.push(i);
+    console.log("Creating page numbers...")
   }
 
   return (
@@ -22,7 +23,7 @@ const Pagination = ({ paginate, eventsPerPage, numbersOfEvents }) => {
           </li>
         ))}
       </ul>
-    </nav>
+</nav>
   );
 };
 
