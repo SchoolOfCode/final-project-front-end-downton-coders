@@ -12,10 +12,11 @@ import "./App.css";
 function App() {
 
   const [eventData, setEventData] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const paginate = pageNumber => setCurrentPage(pageNumber);
   
   async function getEventData () {
     const response = await fetch ("https://xpeerience.herokuapp.com/events");
-    console.log(response.json);
     const data = await response.json();
     setEventData(data);
     console.log(eventData); 
@@ -30,7 +31,7 @@ useEffect(() => {
  
     <Routes>
       <Route path="/" element={<LandingPage />} />
-      <Route path="main" element={<MainPage />} />
+      <Route path="main" element={<MainPage eventsPerPage = {6} numbersOfEvents = {eventData.length} paginate = {paginate} />} />
       <Route path="event" element={<EventPage />} />
       <Route path="dashbroad" element={<DashbroadPage />} />
     </Routes>
