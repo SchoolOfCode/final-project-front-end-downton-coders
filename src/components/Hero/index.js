@@ -1,10 +1,15 @@
 import React from "react";
 import "./styles.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Button } from "react-bootstrap";
+
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Button } from 'react-bootstrap'
+import {FaSignInAlt, FaUser} from 'react-icons/fa'
+import { Link } from "react-router-dom";
+
 import LoginButton from "../LoginButton";
 
 function Hero({ userLogin, showModal, setShowModal }) {
+
   return (
     <>
       <div className="heroWrapper">
@@ -29,8 +34,13 @@ function Hero({ userLogin, showModal, setShowModal }) {
     <img  src ='logo2.png' width ='100px' height ="70px"  alt ="experience logo"/>
       <nav className = "navlink">
         <ul>
-          <li><a href="/about">About</a></li>
-          <li><a href="/login">Login</a></li>
+          <Link to="/about">About</Link>
+          <Link to="/login"><FaSignInAlt/> Login</Link>
+          <Link to="/register"><FaUser/> Register</Link>
+          
+        
+          
+
         </ul>
       </nav>
     </header> 
