@@ -5,45 +5,44 @@ body {
     display: flex;
     height: 100vh;
     align-items: center;
-} */
+}  */
+
+.outer-container {
+    margin: 30px;
+}
 
 .card {
     width: 100%;
-    padding: 20px;
-    border: none
+    padding: 10px;
+    border: none;
 }
     
 .main-container {
     width: 100%;
-    height: 45vh;
     margin: auto;
-    border-bottom: 2px solid #7201A5;
+    border: 1px solid #7201A5;
    
 }
 
-.experience-form-container {
-    margin: auto;
-    height: 65vh;
-    width: 100%;   
+.create-experience-container {
+    width: 100%;     
+    display: flex;
+    background-color: #b975d8;
 }
 
 .create-experience-button {
-    width: 100%;
+    width: 80vw;
+    height: 7vh;    
     background-color: #7201A5;
-    height: 7vh;
-
-    
+    color: white;
+    font-size: 1.5em;
 }
 
 .create-experience-button:hover {
-    background-color: #8605c2;
     height: 7vh;
+    background-color: #8605c2;
 }
 
-
-.show-container {
-    background-color: white;
-}
 
 .locaton-date-flex {
     display: flex;

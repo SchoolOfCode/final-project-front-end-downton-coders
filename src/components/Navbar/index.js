@@ -1,5 +1,5 @@
 import React from 'react'
-import "../Navbar/navbar.css"
+import "../Navbar/styles.css"
 //import { NavLink } from 'react-router-dom'
 
 
@@ -8,7 +8,7 @@ function Navbar() {
     
     <nav className='nav-container'>
     <div className='logo'>
-      <img  src ='/logo2.png' width ='100px' height ="70px"  alt ="/#"/>
+      <img  src ='/logo2.png' width ='100px' height ="70px"  alt =".."/>
     </div>
     
     <div className="navlink">

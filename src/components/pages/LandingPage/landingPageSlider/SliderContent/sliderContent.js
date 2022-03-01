@@ -3,7 +3,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import styles from "./style.module.css";
 import RatingStar from "./ratingStar/ratingStar";
-import travelData from "../../../../../DummyData";
+import travelData from "../../../../../travelData"
 import {Link} from "react-router-dom";
 import {useState} from"react";
 

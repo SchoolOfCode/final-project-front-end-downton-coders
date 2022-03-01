@@ -10,8 +10,8 @@ function LandingPage() {
 
     <div id="landingPageWrapper">
         <Hero />
-        <LandingPageSlider/>
-        <Aboutus/>
+        <LandingPageSlider />
+        <Aboutus />
     </div>
 
   );
