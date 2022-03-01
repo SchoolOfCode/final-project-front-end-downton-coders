@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import "./styles.css";
+import { loginUser, useAuthState, useAuthDispatch } from "../Context/index.js";
 
-function InputsLogin({ onSubmitLogin, setShowModal }) {
+function InputsLogin(props) {
+  //{ onSubmitLogin, setShowModal }
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const dispatch = useAuthDispatch();
+  const { loading, errorMessage } = useAuthState();
 
   function handleEmail(event) {
     const email = event.target.value;
@@ -15,10 +20,19 @@ function InputsLogin({ onSubmitLogin, setShowModal }) {
     setPassword(password);
   }
 
-  const handleForm = () => {
+  const handleForm = async () => {
     if (email && password) {
-      onSubmitLogin(email, password, setEmail, setPassword);
-      setShowModal(false);
+      await loginUser(dispatch, { email: email, password: password });
+
+      // try {
+      //   let response = await loginUser(dispatch, { email, password });
+      //   if (!response) return;
+      //   props.history.push("/main"); //navigate to main page on success
+      // } catch (error) {
+      //   console.log(error);
+      // }
+      console.log("Login email and password submited");
+      props.setShowModal(false);
     }
   };
 
