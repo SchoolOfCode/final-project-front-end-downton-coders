@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import styles from "./style.module.css";
+import styles from "./sliderContent.module.css";
 import RatingStar from "./ratingStar/ratingStar";
 import travelData from "../../../../../travelData";
 import {Link} from "react-router-dom";
