@@ -5,7 +5,6 @@ import {useState} from"react";
 
 function SuggestionEvent({DataToRender}){
     let arrSuggestion=[];
-    const [data,setData] =useState(arrSuggestion)
     const random =DataToRender
     
     let arrLength=0;
@@ -30,7 +29,7 @@ function SuggestionEvent({DataToRender}){
 
     return(<>
         <div className={styles.suggestionEvent}>
-            {data.map((input)=>{
+            {arrSuggestion.map((input)=>{
                 return(
                     <div key={input.id}>
                         <Link to="/event" className={styles.linkstyle} state={{input:{input}}}>
