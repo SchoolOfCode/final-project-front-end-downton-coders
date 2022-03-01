@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import styles from "./style.module.css";
+import styles from "./sliderContent.module.css";
 import RatingStar from "./ratingStar/ratingStar";
 import travelData from "../../../../../travelData"
 import {Link} from "react-router-dom";
@@ -11,7 +11,6 @@ import {useState} from"react";
 function SliderContent(){
 const [sliderContent,setSliderContent]=useState(travelData)
 
-    console.log(sliderContent)
     const settings = {
         dots: false,
         infinite: true,
@@ -21,13 +20,14 @@ const [sliderContent,setSliderContent]=useState(travelData)
     };
 
     return(<>
-    <div className={styles.slideContainer}>
+    <div className={styles.slideContainer} data-testid="slideContainertesting">
         
         <Slider {...settings} className={styles.slideMain}>
             {sliderContent.map((input)=>{
-                return (<>
-                    <Link to="/main" className={styles.linkstyle}>
-                        <div className={styles.tileContainer} key={input.id}>
+                return (
+                    <div key={input.id} >
+                    <Link to="/event" className={styles.linkstyle} state={{input:{input}}}>
+                        <div className={styles.tileContainer}>
                             <div className={styles.tile}>
                                 <div>
                                     <img className={styles.imgContainer} src={input.image} /> 
@@ -51,7 +51,8 @@ const [sliderContent,setSliderContent]=useState(travelData)
                             </div>
                         </div>
                     </Link >
-                </>)
+                    </div>
+                )
             })}
         
            
