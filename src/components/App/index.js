@@ -1,19 +1,43 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Routes, Route } from "react-router-dom";
 import LandingPage from "../pages/LandingPage";
 import MainPage from "../pages/MainPage";
 import EventPage from "../pages/EventPage";
 import DashbroadPage from "../pages/DashbroadPage";
-
-
+import io from "socket.io-client";
 import "./App.css";
-
 
 function App() {
   const [eventData, setEventData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [eventsPerPage] = useState(6);
   const [loading, setLoading] = useState(false);
+  const [chatUser, setChatUser] = useState({name: "", message: ""});
+  const [chat, setChat] = useState([]);
+
+  const socketRef = useRef();
+
+  useEffect(
+    () => {
+      socketRef.current = io.connect("https://xpeerience.herokuapp.com/")
+      socketRef.current.on("message", ({name, message}) => {
+        setChat([...chat, {name, message}])
+      })
+      return () => socketRef.current.disconnect()
+    },
+    [chat]
+  );
+
+  const onTextChange = (e) => {
+    setChatUser({...chatUser, [e.target.name]: e.target.value});
+  };
+
+  const onMessageSubmit = (e) => {
+    const {name, message} = chat;
+    socketRef.current.emit("message", {name, message});
+    e.preventDefault();
+    setChatUser({message: "", name});
+  }
 
   async function getEventData() {
     setLoading(true);

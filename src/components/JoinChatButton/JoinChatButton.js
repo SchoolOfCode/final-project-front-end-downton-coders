@@ -76,27 +76,54 @@ import "./JoinChatButton.css";
 
 function JoinChatButton() {
     const [showShow, setShowShow] = useState(false);
-
     const toggleShow = () => setShowShow(!showShow);
+
+
+    function openForm() {
+        document.getElementById("myForm").style.display = "block";
+      }
+      
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+      }
+
 
     return (
 
-    <div className = "form-container">
+//     <div className = "form-container">
 
-<MDBBtn onClick={toggleShow} className="JoinChatButton">Join Chat</MDBBtn>
-<MDBCollapse show={showShow}>
-<Form className="signup-form">
-  <Form.Group>
-  <Form.Control className="image-input" type="img" placeholder="image" name="image" />
-      <Form.Control className="name-input" type="text" placeholder="name" name="name"/>
-      <Form.Control className="description-input" type="text" placeholder="description" name="description" />
-      <Form.Control className="image-input" type="img" placeholder="image" name="image" />
-      <Form.Control className="price-input" type="price" placeholder="price" name="price" />
-      <Button className="submit-button" value="submit" type="submit">submit</Button>
-  </Form.Group>
-  </Form>
-</MDBCollapse>
+// {/* <MDBBtn onClick={toggleShow} className="JoinChatButton">Join Chat</MDBBtn>
+// <MDBCollapse show={showShow}>
+// <Form className="signup-form">
+//   <Form.Group>
+//   <Form.Control className="image-input" type="img" placeholder="image" name="image" />
+//       <Form.Control className="name-input" type="text" placeholder="name" name="name"/>
+//       <Form.Control className="description-input" type="text" placeholder="description" name="description" />
+//       <Form.Control className="image-input" type="img" placeholder="image" name="image" />
+//       <Form.Control className="price-input" type="price" placeholder="price" name="price" />
+
+//       <Button className="submit-button" value="submit" type="submit">submit</Button>
+//   </Form.Group>
+//   </Form>
+// </MDBCollapse> */}
+
+
+
+// </div>
+<section id="chat-container" className="chat-container">
+<button className="open-button" onClick={openForm}>Chat</button>
+<div className="chat-popup" id="myForm">
+  <form action="/action_page.php" className="form-container">
+    <h1>Chat</h1>
+
+    <label for="msg"><b>Message</b></label>
+    <textarea placeholder="Type message.." name="message" required></textarea>
+
+    <button type="submit" className="btn">Send</button>
+    <button type="button" className="btn cancel" onClick={closeForm}>Close</button>
+  </form>
 </div>
+</section>
 
     );
 
