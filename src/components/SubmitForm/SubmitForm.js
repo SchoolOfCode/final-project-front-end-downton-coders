@@ -2,9 +2,8 @@
 import React, { useState } from "react";
 import { MDBCollapse, MDBBtn } from "mdb-react-ui-kit";
 import { Form, Button } from "react-bootstrap";
-import "./SubmitForm.css";
+import "./styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./SubmitForm.css";
 
 function SubmitForm() {
   const [showShow, setShowShow] = useState(false);
