@@ -5,7 +5,7 @@ import SubmitForm from "../../SubmitForm"
 import Navbar from "../../Navbar";
 import JoinChatButton from "../../JoinChatButton/JoinChatButton.js";
 import LandingPageSlider from "../LandingPage/landingPageSlider/landingPageSlider";
-import Pagination from "../../Pagination/Pagination"
+//import Pagination from "../../Pagination/Pagination"
 
 import "./styles.css"
 import Footer from "../../Footer/Footer.js";
@@ -16,9 +16,8 @@ import Footer from "../../Footer/Footer.js";
 function MainPage() {
   return (
   <>
-  <Pagination />
     <Navbar />
-    <Pagination />
+
     <JoinChatButton/>
     <LandingPageSlider />
     <SubmitForm />

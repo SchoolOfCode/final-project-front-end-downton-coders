@@ -29,10 +29,10 @@ useEffect(() => {
   return (
  
     <Routes>
-      {/* <Route path="/" element={<LandingPage />} />
+      <Route path="/" element={<LandingPage />} />
       <Route path="main" element={<MainPage />} />
       <Route path="event" element={<EventPage />} />
-      <Route path="dashbroad" element={<DashbroadPage />} /> */}
+      <Route path="dashbroad" element={<DashbroadPage />} />
     </Routes>
     
 
