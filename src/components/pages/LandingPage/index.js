@@ -3,7 +3,9 @@ import Aboutus from "./About-Us/index";
 import LandingPageSlider from "./landingPageSlider/landingPageSlider";
 import Footer from "../../Footer/Footer.js";
 import LoginPopup from "../../LoginPopup";
+import Dashbroad from "../../pages/DashbroadPage/index"
 import { API_URL } from "../../../config";
+import { Provider } from "react-redux";
 
 import Hero from "../../Hero";
 
@@ -83,6 +85,8 @@ function LandingPage() {
       {userLogin.username}
       <LandingPageSlider />
       <Aboutus />
+  
+    
       <Footer />
     </div>
   );

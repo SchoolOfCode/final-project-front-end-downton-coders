@@ -1,0 +1,28 @@
+.dashboardBackground{
+    background-color:#F9F2F2;
+    display:flex;
+    justify-content: center;
+}
+.dashboardContainerMain{
+    display:flex;
+    justify-content: space-between;
+    width:1200px;
+}
+.dashboardProfile{
+    background-color:white;
+    border-radius:25px;
+    border:3px solid #7201A5;
+    width:300px;
+    height:617px;
+    padding:0.5rem;
+    margin:2rem;
+}
+.dashboardevent{
+    background-color:white;
+    border:3px solid #7201A5;
+    width:950px;
+    height: 900px;
+    border-radius:25px;
+    padding:0.5rem;
+    margin:2rem;
+}

@@ -1,0 +1,28 @@
+.dashbroadEventSectionContainer{
+    background-color:white;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.dashbroadEventSection{
+    background-color: white;
+    width:596px;
+    height: 232px;
+    margin:2rem;
+    border:3px solid #7201A5;
+    border-radius:25px;
+    overflow:hidden;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.eventdashbroadUserSection{
+    background-color:white;
+    width:596px;
+    height: 500px;
+    margin:2rem;
+    border:3px solid #7201A5;
+    border-radius:25px;
+    overflow:hidden;
+}

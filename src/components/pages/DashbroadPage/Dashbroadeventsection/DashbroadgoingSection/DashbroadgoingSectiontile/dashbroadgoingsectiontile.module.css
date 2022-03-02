@@ -1,0 +1,22 @@
+.tileContainer{
+    background-color: rgba(114, 1, 165,0.3);
+    /* opacity:30%; */
+    border-radius:50px;
+    margin:.2rem; 
+    padding:5px;
+    margin-bottom:10px;
+   
+}
+.tileContainerMain{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tileTitleNDate{
+    font-size:18px;
+    font-weight: bold;
+    color:black;
+    margin:0px;
+    margin-left:.5rem;
+    margin-right:.5rem;
+}
