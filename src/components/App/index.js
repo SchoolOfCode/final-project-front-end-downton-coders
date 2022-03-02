@@ -40,6 +40,16 @@ function App() {
     setChatUser({message: "", name});
   }
 
+  const renderChat = () => {
+    return chat.map(({name, message}, index) => (
+      <div key={index}>
+        <h3>
+          {name}: <span>{message}</span>
+        </h3>
+      </div>
+    ))
+  }
+
   async function getEventData() {
     setLoading(true);
     const response = await fetch("https://xpeerience.herokuapp.com/events");
@@ -62,30 +72,20 @@ function App() {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
+
     <AuthProvider>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route
-          path="main"
-          element={
-            <MainPage
-              eventsPerPage={eventsPerPage}
-              numbersOfEvents={eventData.length}
-              paginate={paginate}
-              indexLastEvent={indexOfLastEvent}
-              indexFirstEvent={indexOfFirstEvent}
-              currentEvent={currentEvent}
-              eventData={eventData}
-            />
-          }
-        />
+        <Route path="main" element={<MainPage eventsPerPage={eventsPerPage} numbersOfEvents={eventData.length} paginate={paginate} indexLastEvent={indexOfLastEvent} indexFirstEvent={indexOfFirstEvent} currentEvent={currentEvent} eventData={eventData} onMessageSubmit={onMessageSubmit} onTextChange={onTextChange} renderChat={renderChat} />} />
+  
         <Route path="event" element={<EventPage />} />
         <Route path="dashbroad" element={<DashbroadPage />} />
       </Routes>
     </AuthProvider>
+
   );
 }
 
 export default App;
 
-// numbersOfEvents = {eventData.length}
+
