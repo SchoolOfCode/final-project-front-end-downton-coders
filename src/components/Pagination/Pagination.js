@@ -4,11 +4,12 @@ import "./styles.css";
 
 import React from 'react';
 
-const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
+const Pagination = ({ paginate, eventsPerPage, numbersOfEvents }) => {
   const pageNumbers = [];
 
-  for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
+  for (let i = 1; i <= Math.ceil(numbersOfEvents / eventsPerPage); i++) {
     pageNumbers.push(i);
+    console.log("Creating page numbers...")
   }
 
   return (
@@ -22,7 +23,7 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
           </li>
         ))}
       </ul>
-    </nav>
+</nav>
   );
 };
 

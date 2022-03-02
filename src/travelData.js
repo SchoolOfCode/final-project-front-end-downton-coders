@@ -1,136 +1,47 @@
-// const travelData = [
-//   {
-//     "page": 1,
-//     "per_page": 6,
-//     "total": 12,
-//     "total_pages": 2,
-//     "data": [
-
-//   {
-//     id: 1,
-//     title: "Yayoi Kusama: Infinity Mirror Rooms",
-//     location: "Tate Modern",
-//     date: "Im can visit on weekends",
-//     description:
-//         "Hey everyone! Anyone fancy going to see the Yayoi Kusama exhibition? It looks amazing and would be great to meet other people who where interested. Its running untill the 22nd June 2022. Gallery website: https://www.tate.org.uk/whats-on/tate-modern/exhibition/yayoi-kusama-infinity-mirror-rooms",
-//     image:
-//         "https://media.cntraveller.com/photos/611be7d58c1b7286f1c1111f/master/w_960%2Cc_limit/chandelier-of-grief-2.jpg",
-//     categories: "Exhibition",
-//     price: "£10",
-//   },
-//   {
-//     id: 2,
-//     title: "Samaria Gorge Hiking",
-//     location: "Crete, Greece",
-//     star_rating: 3,
-//     date: "15/03/2022",
-//     description:
-//       "Samaria is the Europe's longest goarge, a huge national park with a dramatic 16km hiking route. This is best tacklend in spring or autumn.",
-//     image:
-//       "https://www.muchbetteradventures.com/magazine/content/images/2020/08/24090842/GettyImages-493878980-1.jpg",
-//     categories: "Outdoors",
-//     price: "Free",
-//   },
-//   {
-//     id: 3,
-//     title: "Afternoon Tea",
-//     location: "London, UK",
-//     star_rating: 5,
-//     date: "11/03/2022",
-//     description:
-//       "Come to The Ampersand Hotel and join our epic weekly afternoon tea with Miss. Young, the native English Teacher.",
-//     image:
-//       "https://assets.londonist.com/uploads/2019/05/i875/egertongardens_27.jpg",
-//     categories: "Food & Drink",
-//     price: "$8",
-//   },
-//   {
-//     id: 4,
-//     title: "Wine Bar Night",
-//     location: "East London, UK",
-//     star_rating: 4,
-//     date: "26/02/2022",
-//     description: "Have a wine tasting night with the wine expert Peter White.",
-//     image:
-//       "https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/34/2014/10/28-50-Marylebone.jpg",
-//     categories: "Food & Drink",
-//     price: "$10",
-//   },
-//   {
-//     id: 5,
-//     title: "Berlengas Tour",
-//     location: "Lisbon, Portugal",
-//     star_rating: 4,
-//     date: "17/04/2022",
-//     description:
-//       "Stunning island that everyone should pay a visit. Bring your bottled water and sunglasses.",
-//     image:
-//       "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6c/5f/64.jpg",
-//     categories: "Tour",
-//     price: "$5",
-//   },
-//   {
-//     id: 6,
-//     title: "World War II Museum",
-//     location: "Gdańsk, Poland",
-//     star_rating: 5,
-//     date: "20/03/2022",
-//     description:
-//       "Audio tour, exhibitions, and virtual walk in the history of World War II. The war began with Germany’s attack on Poland at the Polish military base at the ...",
-//     image:
-//       "https://www.politico.eu/cdn-cgi/image/width=1320,height=880,quality=80,format=auto,onerror=redirect/wp-content/uploads/2017/05/GettyImages-633059630.jpg",
-//     categories: "Museum",
-//     price: "Free",
-//   },
-// ]
-//   }]
-
-// export default travelData;
-
 
 const travelData = [
   {
     id: 1,
-    title: "Sailing Trip in Sunset",
-    location: "Ferragudo, Portugal",
-    date: "28/02/2022",
+    title: " Yayoi Kusama’s Infinity Mirror Rooms",
+    location: "Tate Modern, London",
+    date: "Tickets will be availble from 31 March 2022",
     description:
-      "Join the sailing trip with Anita at 5 pm, children are allowed. Max. 20 ppl. Gather in front of The Grand Hotel.",
+      "Hi everyone! Anyone out there interested in seeing Yayoi Kusama's exhibition? It looks stunninh and would be nice to meet other people who where interested in visiting",
     image:
-      "https://cdn.travel-in-portugal.com/sites/default/files/photos/ferragudo-portugal.jpg",
-    categories: "Outdoors",
-    price: "$10",
+      "https://www.tate.org.uk/sites/default/files/styles/width-340/public/kusa714_infinity_mirrored_room_-_filled_with_the_brilliance_of_life_2011_a.jpg",
+    categories: "Exhibition",
+    price: "£10",
   },
   {
     id: 2,
-    title: "Samaria Gorge Hiking",
-    location: "Crete, Greece",
-    date: "15/03/2022",
+    title: "Dachshund Pup Cafe",
+    location: "Brighton",
+    date: "Open to suggestions",
     description:
-      "Samaria is the Europe's longest goarge, a huge national park with a dramatic 16km hiking route. This is best tacklend in spring or autumn.",
+      "Hey! I would so love to visit a pup cafe. Anyone else near brighton who could do with some doggy cuddles? Website: https://www.pupup.cafe/event/dachshund-pop-up-cafe-brighton/",
     image:
-      "https://www.muchbetteradventures.com/magazine/content/images/2020/08/24090842/GettyImages-493878980-1.jpg",
-    categories: "Outdoors",
-    price: "Free",
+      "https://wp-media-fatsoma.imgix.net/W1siZiIsInB1YmxpYy8yMDIyLzIvMjMvMTUvMjAvNi84OTgvMjc0NjQzMDM5XzEzMTc0MzUwODg3MzQ3ODRfNTM1NDY4Nzc2MjYwNDY0NTExN19uLmpwZyJdXQ?auto=format,compress,enhance&fit=crop&ar=16:9&ixlib=imgixjs-3.4.0&w=926",
+    categories: "Daytrip",
+    price: "TBC",
   },
   {
     id: 3,
-    title: "Afternoon Tea",
+    title: "Afternoon Tea at the Dorchester",
     location: "London, UK",
-    date: "11/03/2022",
+    date: "Any weekend",
     description:
-      "Come to The Ampersand Hotel and join our epic weekly afternoon tea with Miss. Young, the native English Teacher.",
+      "Hi guys! I have spotted a two for one deal at the Dorchester. Its for high tea if anyone else is interested? It normally costs £25 each so we would only pay £12.50! Let me know if you fancy it.",
     image:
       "https://assets.londonist.com/uploads/2019/05/i875/egertongardens_27.jpg",
     categories: "Food & Drink",
-    price: "$8",
+    price: "£12.50",
   },
   {
     id: 4,
     title: "Wine Bar Night",
     location: "East London, UK",
-    date: "26/02/2022",
-    description: "Have a wine tasting night with the wine expert Peter White.",
+    date: "Friday evenings",
+    description: "Anyone want to join a wine tasting night with the wine expert Peter White. Sounds like fun!",
     image:
       "https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/34/2014/10/28-50-Marylebone.jpg",
     categories: "Food & Drink",
@@ -140,23 +51,23 @@ const travelData = [
     id: 5,
     title: "Berlengas Tour",
     location: "Lisbon, Portugal",
-    date: "17/04/2022",
+    date: "April",
     description:
-      "Stunning island that everyone should pay a visit. Bring your bottled water and sunglasses.",
+      "Who fancys a short break!? I loved to go somewhere warm soon if that inetests anyone..?",
     image:
       "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6c/5f/64.jpg",
-    categories: "Tour",
-    price: "$5",
+    categories: "Short Break",
+    price: "TBC",
   },
   {
     id: 6,
-    title: "World War II Museum",
-    location: "Gdańsk, Poland",
-    date: "20/03/2022",
+    title: "Museum Trip",
+    location: "London",
+    date: "Week days",
     description:
-      "Audio tour, exhibitions, and virtual walk in the history of World War II. The war began with Germany’s attack on Poland at the Polish military base at the ...",
+      "Hiya, anyone near London and like visiting Museums? I am still alittle covid nervous so would love to find some other people who are happy to wear mask etc?",
     image:
-      "https://www.politico.eu/cdn-cgi/image/width=1320,height=880,quality=80,format=auto,onerror=redirect/wp-content/uploads/2017/05/GettyImages-633059630.jpg",
+      "https://unsplash.com/photos/acowe0pCVBg",
     categories: "Museum",
     price: "Free",
   },

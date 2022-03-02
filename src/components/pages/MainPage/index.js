@@ -1,5 +1,17 @@
 import React from "react";
 
+
+
+//import SubmitForm from "../../SubmitForm"
+//import Navbar from "../../Navbar";
+import JoinChatButton from "../../JoinChatButton/JoinChatButton.js";
+import LandingPageSlider from "../LandingPage/landingPageSlider/landingPageSlider";
+import Pagination from "../../Pagination/Pagination"
+import MainEventsSection from "../../MainEventsSection/index";
+import "./styles.css"
+import Footer from "../../Footer/Footer.js";
+import { current } from "@reduxjs/toolkit";
+
 //import { NavLink } from "react-router-dom";
 // import SubmitForm from "../../SubmitForm";
 import Navbar from "../../Navbar/index";
@@ -7,39 +19,25 @@ import Navbar from "../../Navbar/index";
 import { NavLink } from "react-router-dom";
 import SubmitForm from "../../SubmitForm/SubmitForm";
 
-import JoinChatButton from "../../JoinChatButton/JoinChatButton.js";
-
 import SearchBar from "../../SearchBar/SearchBar.js";
 
-import LandingPageSlider from "../LandingPage/landingPageSlider/landingPageSlider";
-
-import "./styles.css";
-import Footer from "../../Footer/Footer.js";
-
-function MainPage() {
+function MainPage({paginate, eventsPerPage, numbersOfEvents, indexLastEvent, indexFirstEvent, currentEvent, eventData  }) {
   return (
 
   <>
     <Navbar />
+    <SubmitForm />
     <JoinChatButton/>
-    <SearchBar/>
+    {/* <LandingPageSlider /> */}
+      <SearchBar/>
     <LandingPageSlider />
-
-      <SubmitForm />
-      <Footer />
-    </>
-  );
-
-  // import "./styles.css";
-
-  // function MainPage() {
-  //   return (
-  //     <>
-  //       <Navbar />
-  //       <LandingPageSlider />
-  //       <SubmitForm />
-  //     </>
-  //   );
+    <MainEventsSection indexLastEvent={indexLastEvent} indexFirstEvent={indexFirstEvent} currentEvent={currentEvent} eventData={eventData} /> 
+    <Pagination paginate={paginate} eventsPerPage={eventsPerPage} numbersOfEvents={numbersOfEvents} />
+    
+      <Footer/>
+  </>
+  )
+  
 }
 
 export default MainPage;
