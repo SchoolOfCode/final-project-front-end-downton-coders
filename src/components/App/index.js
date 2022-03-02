@@ -5,6 +5,7 @@ import MainPage from "../pages/MainPage";
 import EventPage from "../pages/EventPage";
 import DashbroadPage from "../pages/DashbroadPage";
 import io from "socket.io-client";
+import { AuthProvider } from "../Context/index.js";
 import "./App.css";
 
 function App() {
@@ -51,26 +52,37 @@ function App() {
   // getEventData();
 
   useEffect(() => {
-    getEventData()
+    getEventData();
   }, []);
 
   const indexOfLastEvent = currentPage * eventsPerPage;
   const indexOfFirstEvent = indexOfLastEvent - eventsPerPage;
   const currentEvent = eventData.slice(indexOfFirstEvent, indexOfLastEvent);
 
-  const paginate = pageNumber => setCurrentPage(pageNumber);
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
-
-    <Routes>
-      <Route path="/" element={<LandingPage />} />
-      <Route path="main" element={<MainPage eventsPerPage={eventsPerPage} numbersOfEvents={eventData.length} paginate={paginate} indexLastEvent={indexOfLastEvent} indexFirstEvent={indexOfFirstEvent} currentEvent={currentEvent} eventData={eventData} />} />
-      <Route path="event" element={<EventPage />} />
-      <Route path="dashbroad" element={<DashbroadPage />} />
-    </Routes>
-
-
-
+    <AuthProvider>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route
+          path="main"
+          element={
+            <MainPage
+              eventsPerPage={eventsPerPage}
+              numbersOfEvents={eventData.length}
+              paginate={paginate}
+              indexLastEvent={indexOfLastEvent}
+              indexFirstEvent={indexOfFirstEvent}
+              currentEvent={currentEvent}
+              eventData={eventData}
+            />
+          }
+        />
+        <Route path="event" element={<EventPage />} />
+        <Route path="dashbroad" element={<DashbroadPage />} />
+      </Routes>
+    </AuthProvider>
   );
 }
 

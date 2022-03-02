@@ -1,11 +1,12 @@
 import React from "react";
+import { FaSignInAlt } from "react-icons/fa";
 import "./styles.css";
 
 function LoginButton({ handleFormPage }) {
   return (
     <div className="login-button-div">
       <button className="login-button" onClick={handleFormPage}>
-        Login
+        <FaSignInAlt /> Login
       </button>
     </div>
   );
