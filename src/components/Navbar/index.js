@@ -23,7 +23,7 @@ function Navbar({ setShowModal, setShowModalRegister }) {
       <img
         src="./logo2.png"
         className={styles.navLogo}
-        width="100px"
+        width="200px"
         height="70px"
         alt="experience logo"
       />
