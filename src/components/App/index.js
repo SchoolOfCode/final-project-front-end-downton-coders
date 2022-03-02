@@ -17,16 +17,16 @@ function App() {
 
   const socketRef = useRef();
 
-  useEffect(
-    () => {
-      socketRef.current = io.connect("https://xpeerience.herokuapp.com/")
-      socketRef.current.on("message", ({name, message}) => {
-        setChat([...chat, {name, message}])
-      })
-      return () => socketRef.current.disconnect()
-    },
-    [chat]
-  );
+  // useEffect(
+  //   () => {
+  //     socketRef.current = io.connect("https://xpeerience.herokuapp.com/")
+  //     socketRef.current.on("message", ({name, message}) => {
+  //       setChat([...chat, {name, message}])
+  //     })
+  //     return () => socketRef.current.disconnect()
+  //   },
+  //   [chat]
+  // );
 
   const onTextChange = (e) => {
     setChatUser({...chatUser, [e.target.name]: e.target.value});
@@ -74,7 +74,7 @@ function App() {
 
     <Routes>
       <Route path="/" element={<LandingPage />} />
-      <Route path="main" element={<MainPage eventsPerPage={eventsPerPage} numbersOfEvents={eventData.length} paginate={paginate} indexLastEvent={indexOfLastEvent} indexFirstEvent={indexOfFirstEvent} currentEvent={currentEvent} eventData={eventData} onMessageSubmit={onMessageSubmit} onTextChange={onTextChange} renderChat={renderChat} />} />
+      <Route path="main" element={<MainPage eventsPerPage={eventsPerPage} numbersOfEvents={eventData.length} paginate={paginate} indexLastEvent={indexOfLastEvent} indexFirstEvent={indexOfFirstEvent} currentEvent={currentEvent} eventData={eventData} onMessageSubmit={onMessageSubmit} onTextChange={onTextChange} renderChat={renderChat} chatUser={chatUser} />} />
       <Route path="event" element={<EventPage />} />
       <Route path="dashbroad" element={<DashbroadPage />} />
     </Routes>
