@@ -37,7 +37,8 @@ function InputsLogin({ setShowModal }) {
 
   return (
     <div className="form">
-      <label className="requiredLabel"> * Required</label>
+      <label className="requiredLabel"> * All fields Required</label>
+      <div>Email :</div>
       <textarea
         className="form-textarea form-input"
         type="text"
@@ -47,7 +48,8 @@ function InputsLogin({ setShowModal }) {
         maxLength="50"
       />
 
-      <label className="requiredLabel"> * Required</label>
+      <br />
+      <div>Password :</div>
       <textarea
         className="form-textarea form-input"
         type="text"

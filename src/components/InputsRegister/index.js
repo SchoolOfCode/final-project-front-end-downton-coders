@@ -94,7 +94,8 @@ function InputsRegister({ setShowModalRegister }) {
 
   return (
     <div className="form">
-      <label className="requiredLabel"> * Required</label>
+      <label className="requiredLabel"> *All fields Required</label>
+      <div>First Name :</div>
       <textarea
         className="form-textarea form-input"
         type="text"
@@ -103,8 +104,8 @@ function InputsRegister({ setShowModalRegister }) {
         value={name1}
         maxLength="30"
       />
-
-      <label className="requiredLabel"> * Required</label>
+      <br />
+      <div>Last Name :</div>
       <textarea
         className="form-textarea form-input"
         type="text"
@@ -113,8 +114,8 @@ function InputsRegister({ setShowModalRegister }) {
         value={surname}
         maxLength="30"
       />
-
-      <label className="requiredLabel"> * Required</label>
+      <br />
+      <div>Username :</div>
       <textarea
         className="form-textarea form-input"
         type="text"
@@ -124,7 +125,8 @@ function InputsRegister({ setShowModalRegister }) {
         maxLength="30"
       />
 
-      <label className="requiredLabel"> * Required</label>
+      <br />
+      <div>Email :</div>
       <textarea
         className="form-textarea form-input"
         type="text"
@@ -134,7 +136,8 @@ function InputsRegister({ setShowModalRegister }) {
         maxLength="30"
       />
 
-      <label className="requiredLabel"> * Required</label>
+      <br />
+      <div>Password :</div>
       <textarea
         className="form-textarea form-input"
         type="text"
@@ -144,7 +147,8 @@ function InputsRegister({ setShowModalRegister }) {
         maxLength="30"
       />
 
-      <label className="requiredLabel"> * Required</label>
+      <br />
+      <div>Age :</div>
       <textarea
         className="form-textarea form-input"
         type="number"
@@ -154,7 +158,8 @@ function InputsRegister({ setShowModalRegister }) {
         maxLength="3"
       />
 
-      <label className="requiredLabel"> * Required</label>
+      <br />
+      <div>Hobbies :</div>
       <textarea
         className="form-textarea form-input"
         type="text"
