@@ -1,182 +1,164 @@
 import {FaUser} from 'react-icons/fa'
 import { useState, useEffect } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
-import { toast } from 'react-toastify'
+import { registerUser, useAuthState, useAuthDispatch } from "../Context/index.js";
 
-import { register, reset } from '../features/auth/authSlice'
-import Spinner from '../components/Spinner'
+function Register(props) {
+  //{ onSubmitLogin, setShowModal }
+  // const [name, setName] = useState("");
+  // const [surname, setSurname] = useState("");
+  // const [username, setUsername] = useState("");
+  // const [age, setAge] = useState(null);
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
+  // const [password2, setPassword2] = useState("");
+  // const [hobbies, setHobbies] = useState([]);
+  const [formData, setFormData] = useState({
+    name: '',
+    surname: '',
+    username: '',
+    age: null,
+    email: '',
+    password: '',
+    password2: '',
+    hobbies: [],
+  })
 
+  const { name, surname, username, email, age, password, password2, hobbies } = formData
 
-const Register = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        surname: '',
-        username: '',
-        age: null,
-        email: '',
-        password: '',
-        password2: '',
-        hobbies: [],
-      })
+  const dispatch = useAuthDispatch();
+  const { loading, errorMessage } = useAuthState();
 
+  const onChange = (e) => {
+    setFormData((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }))
+  }
 
-      const { name, surname, username, age,  email, password, password2, hobbies } = formData
+  // function handleName(event) {
+  //   const name = event.target.value;
+  //   setName(name);
+  // }
+  // function handleSurname(event) {
+  //   const surname = event.target.value;
+  //   setSurname(surname);
+  // }
+  // function handleUsername(event) {
+  //   const username = event.target.value;
+  //   setUsername(username);
+  // }
+  // function handleEmail(event) {
+  //   const email = event.target.value;
+  //   setEmail(email);
+  // }
+  // function handleAge(event) {
+  //   const age = event.target.value;
+  //   setAge(age);
+  // }
 
-      const navigate = useNavigate()
-      const dispatch = useDispatch()
-    
-      const { user, isLoading, isError, isSuccess, message } = useSelector(
-        (state) => state.auth
-      )
-    
-      useEffect(() => {
-        if (isError) {
-          toast.error(message)
-        }
-    
-        if (isSuccess || user) {
-          navigate('/')
-        }
-    
-        dispatch(reset())
-      }, [user, isError, isSuccess, message, navigate, dispatch])
-    
-      const onChange = (e) => {
-        setFormData((prevState) => ({
-          ...prevState,
-          [e.target.name]: e.target.value,
-        }))
+  // function handlePassword(event) {
+  //   const password = event.target.value;
+  //   setPassword(password);
+  // }
+
+  const handleForm = async () => {
+    if (email && password) {
+      await registerUser(dispatch, {name: name, surname: surname, username: username, age: age, email: email, password: password, password2: password2,hobbies: hobbies });
+
+      try {
+        let response = await Register(dispatch, {name, surname, username, age, email, password, password2, hobbies });
+        if (!response) return;
+        props.history.push("/"); //navigate to main page on success
+      } catch (error) {
+        console.log(error);
       }
-    
-      const onSubmit = (e) => {
-        e.preventDefault()
-    
-        if (password !== password2) {
-          toast.error('Passwords do not match')
-        } else {
-          const userData = {
-            name,
-            email,
-            password,
-          }
-    
-          dispatch(register(userData))
-        }
-      }
-    
-      if (isLoading) {
-        return <Spinner />
-      }
-    
-      return (
-        <>
-          <section className='heading'>
-            <h1>
-              <FaUser /> Register
-            </h1>
-            <p>Please create an account</p>
-          </section>
-    
-          <section className='form'>
-            <form onSubmit={onSubmit}>
-              <div className='form-group'>
-                <input
-                  type='text'
-                  className='form-control'
-                  id='name'
-                  name='name'
-                  value={name}
-                  placeholder='Enter your name'
-                  onChange={onChange}
-                />
-              </div>
-              <div className='form-group'>
-                <input
-                  type='text'
-                  className='form-control'
-                  id='surname'
-                  name='surname'
-                  value={surname}
-                  placeholder='Enter your surname'
-                  onChange={onChange}
-                />
-              </div>
-              <div className='form-group'>
-                <input
-                  type='text'
-                  className='form-control'
-                  id='username'
-                  name='username'
-                  value={username}
-                  placeholder='Enter your username'
-                  onChange={onChange}
-                />
-              </div>
-              <div className='form-group'>
-                <input
-                  type='number'
-                  className='form-control'
-                  id='age'
-                  name='age'
-                  value={age}
-                  placeholder='Enter your name'
-                  onChange={onChange}
-                />
-              </div>
-              <div className='form-group'>
-                <input
-                  type='email'
-                  className='form-control'
-                  id='email'
-                  name='email'
-                  value={email}
-                  placeholder='Enter your email'
-                  onChange={onChange}
-                />
-              </div>
-              <div className='form-group'>
-                <input
-                  type='password'
-                  className='form-control'
-                  id='password'
-                  name='password'
-                  value={password}
-                  placeholder='Enter password'
-                  onChange={onChange}
-                />
-              </div>
-              <div className='form-group'>
-                <input
-                  type='password'
-                  className='form-control'
-                  id='password2'
-                  name='password2'
-                  value={password2}
-                  placeholder='Confirm password'
-                  onChange={onChange}
-                />
-              </div>
-              <div className='form-group'>
-                <input
-                  type='text'
-                  className='form-control'
-                  id='bobbies'
-                  name='hobbies'
-                  value={hobbies}
-                  placeholder='Confirm password'
-                  onChange={onChange}
-                />
-              </div>
-              <div className='form-group'>
-                <button type='submit' className='btn btn-block'>
-                  Submit
-                </button>
-              </div>
-            </form>
-          </section>
-        </>
-      )
+      console.log("Login email and password submited");
+      props.setShowModal(false);
+    }
+  };
+
+  return (
+    <div className="form">
+      <label className="requiredLabel"> * Required</label>
+      <textarea
+        className="form-textarea form-input"
+        type="text"
+        onChange={onChange}
+        placeholder="Enter your name"
+        value={name}
+        maxLength="50"
+      />
+      <label className="requiredLabel"> * Required</label>
+      <textarea
+        className="form-textarea form-input"
+        type="text"
+        onChange={onChange}
+        placeholder="Enter your surname"
+        value={surname}
+        maxLength="50"
+      />
+      <label className="requiredLabel"> * Required</label>
+      <textarea
+        className="form-textarea form-input"
+        type="text"
+        onChange={onChange}
+        placeholder="Enter your username"
+        value={username}
+        maxLength="50"
+      />
+      <label className="requiredLabel"> * Required</label>
+      <textarea
+        className="form-textarea form-input"
+        type="number"
+        onChange={onChange}
+        placeholder="Enter your email"
+        value={age}
+        maxLength="50"
+      />
+      <label className="requiredLabel"> * Required</label>
+      <textarea
+        className="form-textarea form-input"
+        type="text"
+        onChange={onChange}
+        placeholder="Enter your email"
+        value={email}
+        maxLength="50"
+      />
+
+      <label className="requiredLabel"> * Required</label>
+      <textarea
+        className="form-textarea form-input"
+        type="password"
+        onChange={onChange}
+        placeholder="Enter your password"
+        value={password}
+        maxLength="80"
+      />
+      <label className="requiredLabel"> * Required</label>
+      <textarea
+        className="form-textarea form-input"
+        type="password"
+        onChange={onChange}
+        placeholder="Confirm your password"
+        value={password2}
+        maxLength="80"
+      />
+      <label className="requiredLabel"> * Required</label>
+      <textarea
+        className="form-textarea form-input"
+        type="text"
+        onChange={onChange}
+        placeholder="Enter your hobbies"
+        value={hobbies}
+        maxLength="80"
+      />
+
+      <br />
+      <button className="form-submit-button" onClick={() => handleForm()}>
+      Submit
+      </button>
+    </div>
+  );
 }
 
-export default Register
+export default Register;

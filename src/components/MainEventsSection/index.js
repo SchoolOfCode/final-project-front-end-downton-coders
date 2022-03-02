@@ -6,6 +6,7 @@ export default function MainEventsSection({indexLastEvent, indexFirstEvent, curr
 const eventsToRender = eventData.slice(indexFirstEvent, indexLastEvent);
     return (
         <section id="mainEventsSection" className="mainEventsSection">
+       
             {eventsToRender.map((event, index) => {
                 return (
                     <section key={index} id={index}>

@@ -1,3 +1,4 @@
+//Not using it right now
 import { useEffect, useState } from "react";
 
 import { API_URL } from "../../config";
