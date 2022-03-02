@@ -2,6 +2,7 @@ import React from "react";
 import "./styles.css";
 
 import InputsLogin from "../InputsLogin";
+import { Link } from "react-router-dom";
 
 function LoginPopup({ onSubmitLogin, showModal, setShowModal }) {
   if (showModal) {
@@ -16,6 +17,8 @@ function LoginPopup({ onSubmitLogin, showModal, setShowModal }) {
             onSubmitLogin={onSubmitLogin}
             setShowModal={setShowModal}
           />
+          <p> Don't have account, signup here</p>
+          <Link to ='/register'>Register</Link>
         </div>
       </div>
     );
