@@ -1,0 +1,53 @@
+:root {
+  --purple: #7201a5;
+  --white: #ffffff;
+  --grey: rgb(228, 228, 228);
+  --textColor: rgb(22, 22, 22);
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;  
+} 
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;  
+  width: 98.9vw;
+  padding: 18px;
+  background-color: var(--grey);
+}
+
+li a { 
+  color: var(--grey);
+}
+
+a:link {
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 1.3em;
+  color: var(--textColor);
+}
+
+.navAbout, .navLogin  {
+  color: var(--textColor);
+}
+
+
+.navAbout:hover, .navLogin:hover, a:link:hover {
+  color: var(--purple);
+}
+
+
+
+
+
+
+

@@ -18,13 +18,12 @@ function MainPage({paginate, eventsPerPage, numbersOfEvents, indexLastEvent, ind
   return (
   <>
     <Navbar />
-    <Pagination paginate={paginate} eventsPerPage={eventsPerPage} numbersOfEvents={numbersOfEvents} />
-    <JoinChatButton/>
-    <MainEventsSection indexLastEvent={indexLastEvent} indexFirstEvent={indexFirstEvent} currentEvent={currentEvent} eventData={eventData} /> 
-    {/* <LandingPageSlider /> */}
     <SubmitForm />
+    <JoinChatButton/>
+    {/* <LandingPageSlider /> */}
+    <MainEventsSection indexLastEvent={indexLastEvent} indexFirstEvent={indexFirstEvent} currentEvent={currentEvent} eventData={eventData} /> 
+    <Pagination paginate={paginate} eventsPerPage={eventsPerPage} numbersOfEvents={numbersOfEvents} />
     <Footer/>
-  
   </>
   )
 

@@ -1,10 +1,10 @@
 import React from 'react'
-
-import "../Navbar/styles.css"
 import { FaSignInAlt, FaSignOutAlt, FaUser } from 'react-icons/fa'
 import {useNavigate, Link} from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { logout, reset } from '../features/auth/authSlice.js'
+
+import styles from "../Navbar/navbar.module.css"
 
 //import { Link } from 'react-router-dom'
 
@@ -22,19 +22,16 @@ function Navbar() {
   }
   return (
     
-    <nav className='nav-container'>
-    <div className='logo'>
-      <img  src ='/logo2.png' width ='100px' height ="70px"  alt =".."/>
+    <nav className={styles.navContainer}>
+    <div className={styles.logo}>
+      <img  src ='/logo2.png'   alt =".."/>
     </div>
-    
-    <div className="navlink">
+    <div className={styles.navlink}>
     <ul>
           <li><a href="/about">About</a></li>
-
-         
         {user ? (
           <li>
-            <button className='btn' onClick={onLogout}>
+            <button className={styles.btn} onClick={onLogout}>
               <FaSignOutAlt /> Logout
             </button>
           </li>
