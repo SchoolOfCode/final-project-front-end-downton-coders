@@ -8,6 +8,8 @@ import { Button } from "react-bootstrap";
 // import { Link } from "react-router-dom";
 
 import LoginButton from "../LoginButton";
+import { FaSignOutAlt } from "react-icons/fa";
+import RegisterButton from "../RegisterButton/registerButton";
 
 function Hero(props) {
   //{ userLogin, showModal, setShowModal }
@@ -47,11 +49,18 @@ function Hero(props) {
                 <LoginButton handleFormPage={() => props.setShowModal(true)} />
               </li>
               <li>
-                <button onClick={handleLogout}>Logout</button>
+                <button onClick={handleLogout}><FaSignOutAlt />Signout</button>
               </li>
             </ul>
             Username:
             {userDetails ? userDetails.username : ""}
+            <ul>
+              <li>
+              <RegisterButton handleFormPage={() => props.setShowModal(true)} />
+              </li>
+              {userDetails ? userDetails.user: ''}
+            </ul>
+
           </nav>
         </header>
 
