@@ -9,6 +9,8 @@ import SubmitForm from "../../SubmitForm/SubmitForm";
 
 import JoinChatButton from "../../JoinChatButton/JoinChatButton.js";
 
+import SearchBar from "../../SearchBar/SearchBar.js";
+
 import LandingPageSlider from "../LandingPage/landingPageSlider/landingPageSlider";
 
 import "./styles.css";
@@ -16,14 +18,13 @@ import Footer from "../../Footer/Footer.js";
 
 function MainPage() {
   return (
-    <>
-      {/* <Navbar />
 
-    <SubmitForm />
-    <LandingPageSlider /> */}
+  <>
+    <Navbar />
+    <JoinChatButton/>
+    <SearchBar/>
+    <LandingPageSlider />
 
-      <JoinChatButton />
-      <LandingPageSlider />
       <SubmitForm />
       <Footer />
     </>
