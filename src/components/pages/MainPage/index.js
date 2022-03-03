@@ -11,6 +11,7 @@ import "./styles.css";
 import Footer from "../../Footer/Footer.js";
 import { current } from "@reduxjs/toolkit";
 import SearchBar from "../../SearchBar/SearchBar.js";
+import PopularSlider from "../../PopularSlider/PopularSlider.js";
 import LoginPopup from "../../LoginPopup";
 import RegisterPopup from "../../RegisterPopup";
 
@@ -41,6 +42,7 @@ function MainPage({
         setShowModal={setShowLoginPopup}
         setShowModalRegister={setRegisterPopup}
       />
+      <PopularSlider />
       <Pagination paginate={paginate} eventsPerPage={eventsPerPage} numbersOfEvents={numbersOfEvents} />
     <ChatPopup onMessageSubmit={onMessageSubmit} onTextChange={onTextChange} renderChat={renderChat} chatUser={chatUser}/>
     <MainEventsSection indexLastEvent={indexLastEvent} indexFirstEvent={indexFirstEvent} currentEvent={currentEvent} eventData={eventData} /> 

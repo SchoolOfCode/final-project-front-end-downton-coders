@@ -1,0 +1,47 @@
+.PopularSliderContainer {
+    position: relative;
+    /* text-align: center; */
+    display: flex;
+    text-align: center;
+    display: block;
+    /* /* border-radius: 25px 25px 25px 25px; */
+    margin: 62.5px
+    /* padding: 5px; */
+    
+}
+
+
+.PopularSliderHeader {
+    color:#462626;
+    font-size: 36px;
+    /* /* display:inline-block; */
+    /* width:250px; */
+    text-align: center;
+    margin: 45px;
+    text-decoration: underline 4px solid #A30B3D;
+}
+
+.PopularSliderContent {
+    display: flex;
+    text-align: center;
+    display: block;
+    border-radius: 25px 25px 25px 25px;
+    margin: 65px;
+    /* opacity: 0.8; */
+}
+
+.PopularSliderImageTitle {
+    color: white;
+    font-size:45px;
+    font-weight: bolder;
+    -webkit-text-stroke:1.5px #7201A5;
+        /* display: flex; */
+        text-align: center;
+        display: block;
+        position: sticky;
+        top: 50%;
+        /* margin-left: 50px; */
+        /* left: 50%;
+        transform: translate(-50%, -50%); */
+        
+}
