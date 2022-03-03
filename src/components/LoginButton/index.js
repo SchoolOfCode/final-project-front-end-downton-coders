@@ -5,9 +5,9 @@ import "./styles.css";
 function LoginButton({ handleFormPage }) {
   return (
     <div className="login-button-div">
-      <button className="login-button" onClick={handleFormPage}>
+      <div className="login-button" onClick={handleFormPage}>
         <FaSignInAlt /> Login
-      </button>
+      </div>
     </div>
   );
 }

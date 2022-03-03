@@ -4,7 +4,7 @@ import "./styles.css";
 import InputsLogin from "../InputsLogin";
 import { Link } from "react-router-dom";
 
-function LoginPopup({ onSubmitLogin, showModal, setShowModal }) {
+function LoginPopup({ showModal, setShowModal, setShowModalRegister }) {
   if (showModal) {
     return (
       <div className="window-modal">
@@ -13,12 +13,16 @@ function LoginPopup({ onSubmitLogin, showModal, setShowModal }) {
             &times;
           </span>
           <h2 className="window-title">Login Here</h2>
-          <InputsLogin
-            onSubmitLogin={onSubmitLogin}
-            setShowModal={setShowModal}
-          />
+          <InputsLogin setShowModal={setShowModal} />
           <p> Don't have account, signup here</p>
-          <Link to ='/register'>Register</Link>
+          <button
+            onClick={() => {
+              setShowModal(false);
+              setShowModalRegister(true);
+            }}
+          >
+            Register
+          </button>
         </div>
       </div>
     );
