@@ -1,9 +1,9 @@
 import styles from "./mainEvent.module.css";
 import {Link} from "react-router-dom";
 
-export default function MainEventsSection({indexLastEvent, indexFirstEvent, currentEvent, eventData}) {
+export default function MainEventsSection({indexLastEvent, indexFirstEvent, eventsToRender, eventData}) {
 
-const eventsToRender = eventData.slice(indexFirstEvent, indexLastEvent);
+
     return (
         <section id="mainEventsSection" className={styles.mainEventsSection}>
        

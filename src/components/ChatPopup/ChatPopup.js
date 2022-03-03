@@ -6,7 +6,7 @@ import styles from "./ChatPopup.module.css";
 
 
 
-function JoinChatButton({ onMessageSubmit, onTextChange, renderChat, chatUser }) {
+function ChatPopup({ onMessageSubmit, onTextChange, renderChat, chatUser }) {
 
   function openForm() {
     document.getElementById("myForm").style.display = "block";
@@ -37,4 +37,4 @@ function JoinChatButton({ onMessageSubmit, onTextChange, renderChat, chatUser })
   );
 }
 
-export default JoinChatButton;
+export default ChatPopup;

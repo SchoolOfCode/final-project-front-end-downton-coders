@@ -22,7 +22,7 @@ function MainPage({
   numbersOfEvents,
   indexLastEvent,
   indexFirstEvent,
-  currentEvent,
+  eventsToRender,
   eventData,
   onMessageSubmit, onTextChange, renderChat, chatUser
 }) {
@@ -44,11 +44,11 @@ function MainPage({
         setShowModalRegister={setRegisterPopup}
       />
       <PopularSlider />
-      <JoinChatButton/>
+ 
       <SearchBar/>
       <Pagination paginate={paginate} eventsPerPage={eventsPerPage} numbersOfEvents={numbersOfEvents} />
     <ChatPopup onMessageSubmit={onMessageSubmit} onTextChange={onTextChange} renderChat={renderChat} chatUser={chatUser}/>
-    <MainEventsSection indexLastEvent={indexLastEvent} indexFirstEvent={indexFirstEvent} currentEvent={currentEvent} eventData={eventData} /> 
+    <MainEventsSection indexLastEvent={indexLastEvent} indexFirstEvent={indexFirstEvent} eventsToRender={eventsToRender} eventData={eventData} /> 
     {/* <LandingPageSlider /> */}
     <SubmitForm />
     <CreateExperience />
