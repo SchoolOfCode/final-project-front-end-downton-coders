@@ -18,16 +18,16 @@ function App() {
 
   const socketRef = useRef();
 
-  useEffect(
-    () => {
-      socketRef.current = io.connect("https://xpeerience.herokuapp.com/")
-      socketRef.current.on("message", ({name, message}) => {
-        setChat([...chat, {name, message}])
-      })
-      return () => socketRef.current.disconnect()
-    },
-    [chat]
-  );
+  // useEffect(
+  //   () => {
+  //     socketRef.current = io.connect("https://xpeerience.herokuapp.com/")
+  //     socketRef.current.on("message", ({name, message}) => {
+  //       setChat([...chat, {name, message}])
+  //     })
+  //     return () => socketRef.current.disconnect()
+  //   },
+  //   [chat]
+  // );
 
   const onTextChange = (e) => {
     setChatUser({...chatUser, [e.target.name]: e.target.value});
@@ -38,6 +38,16 @@ function App() {
     socketRef.current.emit("message", {name, message});
     e.preventDefault();
     setChatUser({message: "", name});
+  }
+
+  const renderChat = () => {
+    return chat.map(({name, message}, index) => (
+      <div key={index}>
+        <h3>
+          {name}: <span>{message}</span>
+        </h3>
+      </div>
+    ))
   }
 
   async function getEventData() {
@@ -65,20 +75,8 @@ function App() {
     <AuthProvider>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route
-          path="main"
-          element={
-            <MainPage
-              eventsPerPage={eventsPerPage}
-              numbersOfEvents={eventData.length}
-              paginate={paginate}
-              indexLastEvent={indexOfLastEvent}
-              indexFirstEvent={indexOfFirstEvent}
-              currentEvent={currentEvent}
-              eventData={eventData}
-            />
-          }
-        />
+        <Route path="main" element={<MainPage eventsPerPage={eventsPerPage} numbersOfEvents={eventData.length} paginate={paginate} indexLastEvent={indexOfLastEvent} indexFirstEvent={indexOfFirstEvent} currentEvent={currentEvent} eventData={eventData} onMessageSubmit={onMessageSubmit} onTextChange={onTextChange} renderChat={renderChat} chatUser={chatUser} />} />
+  
         <Route path="event" element={<EventPage />} />
         <Route path="dashbroad" element={<DashbroadPage />} />
       </Routes>
@@ -88,4 +86,4 @@ function App() {
 
 export default App;
 
-// numbersOfEvents = {eventData.length}
+

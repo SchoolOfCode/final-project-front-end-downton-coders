@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import "./styles.css";
 import { loginUser, useAuthState, useAuthDispatch } from "../Context/index.js";
 
-function InputsLogin(props) {
-  //{ onSubmitLogin, setShowModal }
+function InputsLogin({ setShowModal }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -32,13 +31,14 @@ function InputsLogin(props) {
       //   console.log(error);
       // }
       console.log("Login email and password submited");
-      props.setShowModal(false);
+      setShowModal(false);
     }
   };
 
   return (
     <div className="form">
-      <label className="requiredLabel"> * Required</label>
+      <label className="requiredLabel"> * All fields Required</label>
+      <div>Email :</div>
       <textarea
         className="form-textarea form-input"
         type="text"
@@ -48,7 +48,8 @@ function InputsLogin(props) {
         maxLength="50"
       />
 
-      <label className="requiredLabel"> * Required</label>
+      <br />
+      <div>Password :</div>
       <textarea
         className="form-textarea form-input"
         type="text"
