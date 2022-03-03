@@ -20,6 +20,7 @@ import { NavLink } from "react-router-dom";
 import SubmitForm from "../../SubmitForm/SubmitForm";
 
 import SearchBar from "../../SearchBar/SearchBar.js";
+import PopularSlider from "../../PopularSlider/PopularSlider.js";
 
 function MainPage({paginate, eventsPerPage, numbersOfEvents, indexLastEvent, indexFirstEvent, currentEvent, eventData  }) {
   return (
@@ -28,6 +29,7 @@ function MainPage({paginate, eventsPerPage, numbersOfEvents, indexLastEvent, ind
     <Navbar />
     <SubmitForm />
     <JoinChatButton/>
+    <PopularSlider />
     {/* <LandingPageSlider /> */}
       <SearchBar/>
     <LandingPageSlider />
