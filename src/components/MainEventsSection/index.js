@@ -1,31 +1,31 @@
-import "./index.css";
+import styles from "./mainEvent.module.css";
 import {Link} from "react-router-dom";
 
 export default function MainEventsSection({indexLastEvent, indexFirstEvent, currentEvent, eventData}) {
 
 const eventsToRender = eventData.slice(indexFirstEvent, indexLastEvent);
     return (
-        <section id="mainEventsSection" className="mainEventsSection">
+        <section id="mainEventsSection" className={styles.mainEventsSection}>
        
             {eventsToRender.map((event, index) => {
                 return (
                     <section key={index} id={index}>
-                    <Link to="/event" className="linkstyle">
-                    <section className="tileContainer">
-                        <div className="tile">
-                        <img className="imgContainer" src={event.image} alt={event.title} />
+                    <Link to="/event" className={styles.linkstyle}>
+                    <section className={styles.tileContainer}>
+                        <div className={styles.tile}>
+                        <img className={styles.imgContainer} src={event.image} alt={event.title} />
                        
-                        <p className="title">{event.title}</p>
-                        <p className="countryTitle">
+                        <p className={styles.title}>{event.title}</p>
+                        <p className={styles.countryTitle}>
                                     {event.location}
                                 </p>
 
-                                <div className="ratingNDateContainer">
-                                    <p className="tileDate">{event.date}</p>
+                                <div className={styles.ratingNDateContainer}>
+                                    <p className={styles.tileDate}>{event.date}</p>
                                 </div>
 
-                                <div className="paragraphContainer">
-                                    <p className="paragraphDesc">
+                                <div className={styles.paragraphContainer}>
+                                    <p className={styles.paragraphDesc}>
                                        {event.description}
                                     </p>
                                 </div>

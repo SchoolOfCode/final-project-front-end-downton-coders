@@ -17,23 +17,22 @@ import { current } from "@reduxjs/toolkit";
 import Navbar from "../../Navbar/index";
 
 import { NavLink } from "react-router-dom";
-import SubmitForm from "../../SubmitForm/SubmitForm";
+import SubmitForm from "../../SubmitForm/index";
 
 import SearchBar from "../../SearchBar/SearchBar.js";
+import CreateExperience from "../../CreateExperience/index.js";
 
 function MainPage({paginate, eventsPerPage, numbersOfEvents, indexLastEvent, indexFirstEvent, currentEvent, eventData  }) {
   return (
 
   <>
     <Navbar />
-    <SubmitForm />
     <JoinChatButton/>
-    {/* <LandingPageSlider /> */}
       <SearchBar/>
-    <LandingPageSlider />
     <MainEventsSection indexLastEvent={indexLastEvent} indexFirstEvent={indexFirstEvent} currentEvent={currentEvent} eventData={eventData} /> 
     <Pagination paginate={paginate} eventsPerPage={eventsPerPage} numbersOfEvents={numbersOfEvents} />
-    
+
+    <CreateExperience />
       <Footer/>
   </>
   )
