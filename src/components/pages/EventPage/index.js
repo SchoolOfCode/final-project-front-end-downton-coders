@@ -5,6 +5,7 @@ import HeroEventUser from "./heroEventPageUser/heroeventuser"
 import {useLocation} from "react-router-dom"
 import randomData from "../../../travelData"
 import ChatEventPage from "./chatEventPage/chatEventPage";
+import Footer from "../../Footer/Footer.js";
 
 function EventPage() {
     const location = useLocation();
@@ -25,6 +26,7 @@ function EventPage() {
     <HeroEventUser DataToRender={DataToUse}/>
     <AttendingEventPageUser DataToRender={DataToUse}/>
     <ChatEventPage RandomData={randomData}/>
+    <Footer />
   </>);
 
 // import HeroEventUser from "./heroEventPageUser/heroeventuser";

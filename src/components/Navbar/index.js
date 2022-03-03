@@ -1,63 +1,73 @@
-import React from 'react'
+import React from "react";
 
-import "../Navbar/styles.css"
-import { FaSignInAlt, FaSignOutAlt, FaUser } from 'react-icons/fa'
-import {useNavigate, Link} from 'react-router-dom'
-import { useSelector, useDispatch } from 'react-redux'
-import { logout, reset } from '../features/auth/authSlice.js'
+import { Link } from "react-router-dom";
 
-//import { Link } from 'react-router-dom'
+import { FaSignInAlt, FaSignOutAlt, FaUser } from "react-icons/fa";
+import styles from "../Navbar/navbar.module.css";
+import { useAuthDispatch, logout, useAuthState } from "../Context/index.js";
+import LoginButton from "../LoginButton";
+import RegisterButton from "../RegisterButton";
 
+function Navbar({ setShowModal, setShowModalRegister }) {
+  const dispatch = useAuthDispatch(); // read dispatch method from context
+  const userDetails = useAuthState(); //read user details from context
 
+  console.log(userDetails);
+  const handleLogout = () => {
+    logout(dispatch); //call the logout action
 
-function Navbar() {
-  const navigate = useNavigate()
-  const dispatch = useDispatch()
-  const { user } = useSelector((state) => state.auth)
-
-  const onLogout = () => {
-    dispatch(logout())
-    dispatch(reset())
-    navigate('/')
-  }
+    // props.history.push("/"); //navigate to landing page on logout
+  };
   return (
-    
-    <nav className='nav-container'>
-    <div className='logo'>
-      <img  src ='/logo2.png' width ='100px' height ="70px"  alt =".."/>
-    </div>
-    
-    <div className="navlink">
-    <ul>
-          <li><a href="/about">About</a></li>
-
-         
-        {user ? (
+    <div className={styles.navContainer}>
+      <img
+        src="./logo2.png"
+        className={styles.navLogo}
+        width="200px"
+        height="70px"
+        alt="experience logo"
+      />
+      <nav className={styles.navlink}>
+        <ul>
           <li>
-            <button className='btn' onClick={onLogout}>
-              <FaSignOutAlt /> Logout
-            </button>
+            <div
+              className={styles.navAbout}
+              onClick={() => window.location.replace("/#about-us-section")}
+            >
+              About
+            </div>
           </li>
-        ) : (
-          <>
-            <li>
-              <Link to='/login'>
-                <FaSignInAlt /> Login
-              </Link>
-            </li>
-            <li>
-              <Link to='/register'>
-                <FaUser /> Register
-              </Link>
-            </li>
-          </>
-        )}
-
+          {userDetails.username ? (
+            <>
+              <li>
+                <div className={styles.navSignout} onClick={handleLogout}>
+                  <FaSignOutAlt />
+                  Signout
+                </div>
+              </li>
+              <li>
+                <div>
+                  {"Username: "}
+                  {userDetails ? userDetails.username : ""}
+                </div>
+              </li>
+            </>
+          ) : (
+            <>
+              <li>
+                <LoginButton handleFormPage={() => setShowModal(true)} />
+              </li>
+              <li>
+                <RegisterButton
+                  handleFormPage={() => setShowModalRegister(true)}
+                />
+              </li>
+            </>
+          )}
         </ul>
+      </nav>
     </div>
-    </nav>
-
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

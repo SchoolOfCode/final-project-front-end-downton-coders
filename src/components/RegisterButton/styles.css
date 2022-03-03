@@ -1,7 +1,7 @@
-.login-button {
+.register-button {
   color: var(--textColor);
 }
 
-.login-button:hover {
+.register-button:hover {
   color: var(--purple);
 }

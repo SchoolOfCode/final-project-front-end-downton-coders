@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import "./styles.css";
+import { loginUser, useAuthState, useAuthDispatch } from "../Context/index.js";
 
-function InputsLogin({ onSubmitLogin, setShowModal }) {
+function InputsLogin({ setShowModal }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const dispatch = useAuthDispatch();
+  const { loading, errorMessage } = useAuthState();
 
   function handleEmail(event) {
     const email = event.target.value;
@@ -15,16 +19,26 @@ function InputsLogin({ onSubmitLogin, setShowModal }) {
     setPassword(password);
   }
 
-  const handleForm = () => {
+  const handleForm = async () => {
     if (email && password) {
-      onSubmitLogin(email, password, setEmail, setPassword);
+      await loginUser(dispatch, { email: email, password: password });
+
+      // try {
+      //   let response = await loginUser(dispatch, { email, password });
+      //   if (!response) return;
+      //   props.history.push("/main"); //navigate to main page on success
+      // } catch (error) {
+      //   console.log(error);
+      // }
+      console.log("Login email and password submited");
       setShowModal(false);
     }
   };
 
   return (
     <div className="form">
-      <label className="requiredLabel"> * Required</label>
+      <label className="requiredLabel"> * All fields Required</label>
+      <div>Email :</div>
       <textarea
         className="form-textarea form-input"
         type="text"
@@ -34,7 +48,8 @@ function InputsLogin({ onSubmitLogin, setShowModal }) {
         maxLength="50"
       />
 
-      <label className="requiredLabel"> * Required</label>
+      <br />
+      <div>Password :</div>
       <textarea
         className="form-textarea form-input"
         type="text"
