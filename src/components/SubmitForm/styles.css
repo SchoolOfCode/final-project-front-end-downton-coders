@@ -1,8 +1,9 @@
 
 .outer-container {
-
-  justify-content: end;
+  background-color: #f2e9f7;
+  justify-content: center;
   display: flex;
+  margin-bottom: 10px;
 
 }
 
@@ -22,7 +23,7 @@
 
 
 .create-experience-button {
-    width: 39vw;
+    width: 25vw;
     height: 5vh;    
     background-color: #7201A5;
     color: white;
@@ -39,3 +40,8 @@
     display: flex;
 }
 
+.form-image-file {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}

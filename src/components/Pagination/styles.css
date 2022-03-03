@@ -1,3 +1,23 @@
-* {
-    color: black;
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    height: 62px;
+    background-color: #F9F2F2;
+}
+
+.page-link {
+    border: none;
+    background-color: white;
+    border: 1px solid #7201A5;
+}
+
+.page-link:hover {
+    border: 2px solid #7201A5;
+    background-color: #eecaff;
+}
+
+dl, ol, ul {
+    margin-bottom: 0;
 }

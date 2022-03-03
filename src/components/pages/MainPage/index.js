@@ -10,6 +10,7 @@ import MainEventsSection from "../../MainEventsSection/index";
 import "./styles.css";
 import Footer from "../../Footer/Footer.js";
 import { current } from "@reduxjs/toolkit";
+import CreateExperience from "../../CreateExperience/index.js";
 import SearchBar from "../../SearchBar/SearchBar.js";
 import PopularSlider from "../../PopularSlider/PopularSlider.js";
 import LoginPopup from "../../LoginPopup";
@@ -43,11 +44,14 @@ function MainPage({
         setShowModalRegister={setRegisterPopup}
       />
       <PopularSlider />
+      <JoinChatButton/>
+      <SearchBar/>
       <Pagination paginate={paginate} eventsPerPage={eventsPerPage} numbersOfEvents={numbersOfEvents} />
     <ChatPopup onMessageSubmit={onMessageSubmit} onTextChange={onTextChange} renderChat={renderChat} chatUser={chatUser}/>
     <MainEventsSection indexLastEvent={indexLastEvent} indexFirstEvent={indexFirstEvent} currentEvent={currentEvent} eventData={eventData} /> 
     {/* <LandingPageSlider /> */}
     <SubmitForm />
+    <CreateExperience />
     <Footer/>
     </>
   );
