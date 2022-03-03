@@ -4,12 +4,12 @@ import "./styles.css";
 
 function RegisterButton({ handleFormPage }) {
   return (
-    <div className="btn">
-      <button className="btn" onClick={handleFormPage}>
+    <div className="register-button-div">
+      <div className="register-button" onClick={handleFormPage}>
         <FaUser /> Register
-      </button>
+      </div>
     </div>
   );
 }
 
-export default RegisterButton
+export default RegisterButton;
