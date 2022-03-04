@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 import { NavLink } from "react-router-dom";
-import SubmitForm from "../../SubmitForm"
 import Navbar from "../../Navbar";
 import ChatPopup from "../../ChatPopup/ChatPopup.js";
 import LandingPageSlider from "../LandingPage/landingPageSlider/landingPageSlider";
@@ -15,6 +14,7 @@ import SearchBar from "../../SearchBar/SearchBar.js";
 import PopularSlider from "../../PopularSlider/PopularSlider.js";
 import LoginPopup from "../../LoginPopup";
 import RegisterPopup from "../../RegisterPopup";
+
 
 function MainPage({
   paginate,
@@ -44,13 +44,11 @@ function MainPage({
         setShowModalRegister={setRegisterPopup}
       />
       <PopularSlider />
-      <JoinChatButton/>
       <SearchBar/>
-      <Pagination paginate={paginate} eventsPerPage={eventsPerPage} numbersOfEvents={numbersOfEvents} />
     <ChatPopup onMessageSubmit={onMessageSubmit} onTextChange={onTextChange} renderChat={renderChat} chatUser={chatUser}/>
     <MainEventsSection indexLastEvent={indexLastEvent} indexFirstEvent={indexFirstEvent} currentEvent={currentEvent} eventData={eventData} /> 
     {/* <LandingPageSlider /> */}
-    <SubmitForm />
+      <Pagination paginate={paginate} eventsPerPage={eventsPerPage} numbersOfEvents={numbersOfEvents} />
     <CreateExperience />
     <Footer/>
     </>
