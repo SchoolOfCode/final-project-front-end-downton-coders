@@ -49,6 +49,8 @@ function MainPage({
       />
       <PopularSlider />
 
+      
+
 //       {/* <JoinChatButton/> */}
 //       <SearchBar/>
 //       <Pagination paginate={paginate} eventsPerPage={eventsPerPage} numbersOfEvents={numbersOfEvents} />
@@ -83,6 +85,7 @@ function MainPage({
       <SubmitForm />
       <CreateExperience />
       <Footer />
+
 
     </>
   );

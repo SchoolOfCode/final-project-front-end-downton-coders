@@ -1,7 +1,7 @@
-import AttendingEventCounterUser from "./attendingEventCounterUser/attendingEventCounterUser";
+import AttendingEventCounterUser from "./CounterUser/attendingEventCounterUser";
 import styles from "./AttendingEventPageUser.module.css"
-import AttendingEventJoinUser from"./attendingEventJoinUser/attendingEventJoinUser"
-import AttendingEventPriceUser from "./attendingEventPriceUser/attendingEventPriceuser";
+import AttendingEventJoinUser from"./JoinUser/attendingEventJoinUser"
+import AttendingEventPriceUser from "./PriceUser/attendingEventPriceuser";
 
 
 function AttendingEventPageUser({DataToRender}){
