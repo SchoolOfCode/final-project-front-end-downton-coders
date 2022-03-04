@@ -22,7 +22,7 @@
     margin:1rem;
     border-radius:25px;
     display:flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     overflow: hidden;
     position: relative;
@@ -37,6 +37,14 @@
     left: 50%;
     transform: translateX(-50%); 
     transition: all .3s;
+    overflow:scroll;
+     -ms-overflow-style: none; 
+    scrollbar-width: none; 
+    max-width:280px;
+    max-height:145px;
+}
+.suggestionEventHeader::-webkit-scrollbar {
+  display: none; 
 }
 .suggestionEventHeader:hover{
     color:#7201A5;

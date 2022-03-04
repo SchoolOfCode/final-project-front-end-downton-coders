@@ -75,6 +75,14 @@
     font-size:24px;
     font-weight: bold;
     margin:5px;
+    overflow:scroll;
+     -ms-overflow-style: none; 
+    scrollbar-width: none; 
+    max-width:300px;
+    height:40px;
+}
+.title::-webkit-scrollbar {
+  display: none; 
 }
 .countryTitle{
     font-size:18px;
@@ -95,6 +103,14 @@
     font-size:14px;
     font-weight: bold;
     color:black;
+    overflow:scroll;
+     -ms-overflow-style: none; 
+    scrollbar-width: none; 
+    max-width:100px;
+    height:20px;
+}
+.tileDate::-webkit-scrollbar {
+  display: none; 
 }
 .paragraphContainer{
     font-size: 13px;
@@ -106,6 +122,14 @@
     /* width:200px; */
     height: 200px;
     margin-left:0.7rem;
+     overflow:scroll;
+     -ms-overflow-style: none; 
+    scrollbar-width: none; 
+    max-width:300px;
+    height:60px;
+}
+.paragraphContainer::-webkit-scrollbar {
+  display: none; 
 }
 .paragraphDesc{
  white-space: wrap;

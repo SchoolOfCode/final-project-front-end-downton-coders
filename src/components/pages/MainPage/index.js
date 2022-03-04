@@ -44,7 +44,7 @@ function MainPage({
         setShowModalRegister={setRegisterPopup}
       />
       <PopularSlider />
-      <JoinChatButton/>
+      {/* <JoinChatButton/> */}
       <SearchBar/>
       <Pagination paginate={paginate} eventsPerPage={eventsPerPage} numbersOfEvents={numbersOfEvents} />
     <ChatPopup onMessageSubmit={onMessageSubmit} onTextChange={onTextChange} renderChat={renderChat} chatUser={chatUser}/>
