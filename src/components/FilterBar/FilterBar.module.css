@@ -1,0 +1,26 @@
+.FilterBarContainer {
+    background-color: rgb(222, 222, 222);
+   width: 85%;
+   height: 100px;
+   text-align: center;
+   justify-content: center;
+   display: flex;
+   margin: auto;
+   border-radius: 25px 25px 5px 5px;
+    
+
+}
+
+.FilterBarHeadings {
+    display:inline-block;
+    text-align: center; 
+ margin-top: 20px;
+ margin-bottom: 20px;
+ margin-inline: 48px;
+ font-size: 25px;
+ color: #7201A5;
+
+    
+    
+}
+

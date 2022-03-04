@@ -1,22 +1,27 @@
+
 :root {
-  --purple: #7201a5;
+  --purple: hsl(281, 99%, 33%);
   --white: #ffffff;
   --grey: rgb(228, 228, 228);
   --textColor: rgb(22, 22, 22);
+  --backgroundColor: #e8e8e8;
 }
 
 * {
+ 
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
 .container {
+
   display: flex;
   justify-content: space-between;
 }
 
 .navContainer {
+  background-color: var(--backgroundColor);
   display: flex;
   justify-content: space-between;
   width: 98.9vw;

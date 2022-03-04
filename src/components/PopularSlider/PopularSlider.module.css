@@ -5,13 +5,15 @@
     text-align: center;
     display: block;
     /* /* border-radius: 25px 25px 25px 25px; */
-    margin: 62.5px
+    /* margin: 62.5px; */
     /* padding: 5px; */
-    
+    /* background-color: #e8e8e8; */
+ width: 100%;
 }
 
 
 .PopularSliderHeader {
+    /* background-color: #e8e8e8; */
     color:#462626;
     font-size: 36px;
     /* /* display:inline-block; */
@@ -22,6 +24,8 @@
 }
 
 .PopularSliderContent {
+    /* background-color: #e8e8e8; */
+
     display: flex;
     text-align: center;
     display: block;
