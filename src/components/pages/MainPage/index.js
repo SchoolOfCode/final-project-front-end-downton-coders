@@ -15,6 +15,7 @@ import SearchBar from "../../SearchBar/SearchBar.js";
 import PopularSlider from "../../PopularSlider/PopularSlider.js";
 import LoginPopup from "../../LoginPopup";
 import RegisterPopup from "../../RegisterPopup";
+import FilterBar from "../../FilterBar/FilterBar";
 
 function MainPage({
   paginate,
@@ -48,6 +49,18 @@ function MainPage({
       />
       <PopularSlider />
 
+//       {/* <JoinChatButton/> */}
+//       <SearchBar/>
+//       <Pagination paginate={paginate} eventsPerPage={eventsPerPage} numbersOfEvents={numbersOfEvents} />
+//     <ChatPopup onMessageSubmit={onMessageSubmit} onTextChange={onTextChange} renderChat={renderChat} chatUser={chatUser}/>
+//     <FilterBar />
+//     <MainEventsSection indexLastEvent={indexLastEvent} indexFirstEvent={indexFirstEvent} currentEvent={currentEvent} eventData={eventData} /> 
+//     {/* <LandingPageSlider /> */}
+//     <SubmitForm />
+//     <CreateExperience />
+//     <Footer/>
+
+
       <SearchBar />
       <Pagination
         paginate={paginate}
@@ -70,6 +83,7 @@ function MainPage({
       <SubmitForm />
       <CreateExperience />
       <Footer />
+
     </>
   );
 }
