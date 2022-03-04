@@ -20,7 +20,7 @@ function PopularSlider () {
 return (
         <div>
           <h2 className={styles.PopularSliderHeader}> Popular Catergories </h2>
-           {/* <div className={styles.PopularSliderContainer}>  */}
+           <div className={styles.PopularSliderContainer}> 
           <Slider className={styles.PopularSliderContent} {...settings}>
             <div>
             
