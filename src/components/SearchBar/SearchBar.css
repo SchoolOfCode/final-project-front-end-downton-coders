@@ -3,8 +3,6 @@
   align-items: center;
   margin: 40px;
   }
-  
-  
   .SearchBarTitle {
     flex-direction: row;
     position: relative;
@@ -35,5 +33,4 @@
      margin: -3px;
   
   }
-  
-  
+

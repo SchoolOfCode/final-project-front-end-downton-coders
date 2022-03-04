@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 
 import { NavLink } from "react-router-dom";
+
+
 import SubmitForm from "../../SubmitForm";
+
 import Navbar from "../../Navbar";
 import ChatPopup from "../../ChatPopup/ChatPopup.js";
 import LandingPageSlider from "../LandingPage/landingPageSlider/landingPageSlider";
@@ -16,6 +19,7 @@ import PopularSlider from "../../PopularSlider/PopularSlider.js";
 import LoginPopup from "../../LoginPopup";
 import RegisterPopup from "../../RegisterPopup";
 import FilterBar from "../../FilterBar/FilterBar";
+
 
 function MainPage({
   paginate,
@@ -48,6 +52,8 @@ function MainPage({
         setShowModalRegister={setRegisterPopup}
       />
       <PopularSlider />
+
+
 
       
 
@@ -85,6 +91,7 @@ function MainPage({
       <SubmitForm />
       <CreateExperience />
       <Footer />
+
 
 
     </>
