@@ -25,3 +25,7 @@ https://xpeerience.netlify.app/
   - Specific chat room in each expereince
 - Give users the chance to give organisers feedback
 
+## MISC
+Link to short demo presentation
+https://docs.google.com/presentation/d/1JoxajsvJWANBbgdELGxLfSWtEYT8hPNT9VS0PCed1s4/edit?usp=sharing
+

@@ -17,7 +17,7 @@
             <div className={styles.card}>
             <h2>Create Your Xpeerience!</h2>
                 <fieldset> 
-                  <div className="mt-3 inputbox">
+                  <div class="mt-3 inputbox" className={styles.inputbox}>
                   <input type="url" className="form-control" name="" placeholder="Add image here"></input>
                     <input type="text" className="form-control" name="" placeholder="Title"></input>
                     <div className= "locaton-date-flex">
