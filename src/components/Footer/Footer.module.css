@@ -15,10 +15,8 @@
   width: 600px;
 }
 
-
 .FooterLogo {
   justify-content: right;
-  /* background-color: plum; */
   margin-left: 5%;
   padding: 15px;
 }
@@ -34,7 +32,6 @@
   font-size: 25px;
   font-family: roboto;
   color: black;
-  /* background-color: plum; */
   margin-left: 10%;
   padding: 15px;
 }
@@ -44,9 +41,7 @@
   text-align: right;
 }
 
-
 .FooterConnectText {
-  /* background-color: plum; */
   color: black;
   font-family: roboto;
   display: flex;
@@ -67,14 +62,11 @@
   display: flex;
   justify-content: center;
   flex-direction: row;
-  /* background-color: plum; */
   align-items: center;
   width: 600px;
-
 }
 
 .FooterMediaIcon {
-  /* background-color: plum; */
   height: 50px;
   width: 200px;
   display: flex;
@@ -84,10 +76,11 @@
 
 .socialLogo {
   padding: 5px;
-  /* margin: 5px; */
 }
 
-@media (max-width: 768px) {
+
+/* MEDIA QUERIES */
+@media (min-width: 768px)  and (max-width: 892px) {
 
   .FooterContainer,
   .FooterLeft,
