@@ -35,7 +35,8 @@ function MainPage({
   const [showLoginPopup, setShowLoginPopup] = useState(false);
   const [showRegisterPopup, setRegisterPopup] = useState(false);
   return (
-    <>
+    <section>
+
       <LoginPopup
         showModal={showLoginPopup}
         setShowModal={setShowLoginPopup}
@@ -50,6 +51,8 @@ function MainPage({
         setShowModalRegister={setRegisterPopup}
       />
       <PopularSlider />
+
+
       <SearchBar />
       <FilterBar />
       <Pagination
@@ -69,10 +72,16 @@ function MainPage({
         currentEvent={currentEvent}
         eventData={eventData}
       />
+
+
       <SubmitForm />
       <CreateExperience />
       <Footer />
-    </>
+
+
+
+    </section>
+
   );
 }
 
