@@ -3,6 +3,8 @@
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     background-color: #F9F2F2;
+    width: 99vw;
+
     }
 
 
@@ -33,9 +35,6 @@
     object-fit: cover;
 }
 
-.tileContainer {
-    background-color: aqua;
-}
 
 .title{
     color:#7201A5;
@@ -80,10 +79,5 @@
 
 
 
-@media (max-width: 768px) {
-    .mainEventsSection {
-        grid-template-columns: 1fr ;
-    }
-    
-}
+
 
