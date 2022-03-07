@@ -123,7 +123,7 @@ function CreateExperience() {
     setStartTime("");
     setEndTime("");
     setTitle("");
-    setPrice(null);
+    setPrice(0);
     setExternalEvent("");
   }
 
