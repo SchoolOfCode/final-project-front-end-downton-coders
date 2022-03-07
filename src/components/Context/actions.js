@@ -39,6 +39,7 @@ export async function loginUser(dispatch, loginPayload) {
     if (data) {
       dispatch({ type: "LOGIN_SUCCESS", payload: data });
       localStorage.setItem("currentUser", JSON.stringify(data));
+      window.location.replace("/main");
       return data;
     }
 
