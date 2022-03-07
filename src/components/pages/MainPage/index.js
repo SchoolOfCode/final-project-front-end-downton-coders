@@ -37,7 +37,8 @@ function MainPage({
   const [showLoginPopup, setShowLoginPopup] = useState(false);
   const [showRegisterPopup, setRegisterPopup] = useState(false);
   return (
-    <>
+    <section>
+
       <LoginPopup
         showModal={showLoginPopup}
         setShowModal={setShowLoginPopup}
@@ -52,22 +53,6 @@ function MainPage({
         setShowModalRegister={setRegisterPopup}
       />
       <PopularSlider />
-
-
-
-      
-
-//       {/* <JoinChatButton/> */}
-//       <SearchBar/>
-//       <Pagination paginate={paginate} eventsPerPage={eventsPerPage} numbersOfEvents={numbersOfEvents} />
-//     <ChatPopup onMessageSubmit={onMessageSubmit} onTextChange={onTextChange} renderChat={renderChat} chatUser={chatUser}/>
-//     <FilterBar />
-//     <MainEventsSection indexLastEvent={indexLastEvent} indexFirstEvent={indexFirstEvent} currentEvent={currentEvent} eventData={eventData} /> 
-//     {/* <LandingPageSlider /> */}
-//     <SubmitForm />
-//     <CreateExperience />
-//     <Footer/>
-
 
       <SearchBar />
       <Pagination
@@ -87,14 +72,14 @@ function MainPage({
         currentEvent={currentEvent}
         eventData={eventData}
       />
-      {/* <LandingPageSlider /> */}
+
       <SubmitForm />
       <CreateExperience />
       <Footer />
 
 
 
-    </>
+    </section>
   );
 }
 

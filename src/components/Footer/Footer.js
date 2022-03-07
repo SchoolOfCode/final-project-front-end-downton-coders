@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Footer.module.css";
 import SOClogo from "../Footer/SOClogo.jpg"
-import LinkdInLogo from "../Footer/LinkdInLogo.jpg"
+import LinkedInLogo from "../Footer/LinkdInLogo.jpg"
 import TwitterLogo from "../Footer/TwitterLogo.jpg"
 import EmailLogo from "../Footer/EmailLogo.jpg"
 import FacebookLogo from "../Footer/FacebookLogo.jpg"
@@ -15,12 +15,12 @@ function Footer() {
 
     <div className={styles.FooterLeft}>
   <div className={styles.FooterLogo}>
-    <img  src ={SOClogo} width ='200px' height ="200px" alt =""/>
+    <img src={SOClogo} alt="School of Code logo" className={styles.socLogo}/>
 </div>
          
 
       <div className={styles.FooterPoweredByText}>
-      <h4>Powered By School of Code</h4>
+      <h4><span className={styles.blockSpan}>Powered By</span> <span className={styles.blockSpan}>School of Code</span></h4>
       </div>
       </div>
      
@@ -30,10 +30,10 @@ function Footer() {
        </div>
 
       <div className={styles.FooterMediaIcon}>
-      <img  src ={TwitterLogo} alt =""/>
-      <img  src ={LinkdInLogo} alt =""/>
-      <img  src ={EmailLogo} alt =""/>
-      <img  src ={FacebookLogo} alt =""/>
+      <img src={TwitterLogo} alt="Twitter logo"/>
+      <img src={LinkedInLogo} alt="Linkedin Logo"/>
+      <img src={EmailLogo} alt="Email Logo"/>
+      <img src={FacebookLogo} alt="Facebook Logo"/>
      </div>
      </div>
        </div>

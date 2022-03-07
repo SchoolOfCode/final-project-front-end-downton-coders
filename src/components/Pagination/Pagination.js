@@ -1,5 +1,5 @@
 
-import "./styles.css";
+import styles from "./pagination.module.css";
 
 
 import React from 'react';
@@ -14,12 +14,12 @@ const Pagination = ({ paginate, eventsPerPage, numbersOfEvents }) => {
 
   return (
     <nav>
-      <ul className='pagination'>
+      <ul className={styles.pagination}>
         {pageNumbers.map(number => (
           <li key={number} className='page-item'>
-            <a onClick={() => paginate(number)} href='#' className='page-link'>
+            <button onClick={() => paginate(number)} className={styles["page-link"]}>
               {number}
-            </a>
+            </button>
           </li>
         ))}
       </ul>
