@@ -7,10 +7,11 @@
 
 .container {
     display: flex;
-   
+    flex-direction: row;
     align-items: center;
     background-color: var(--white);
-    max-width: 90%;
+    max-width: 100%;
+    
 }
 
 .mainContainer {
@@ -18,40 +19,26 @@
 }
 
 .formImage {
-    min-width: 700px;
+    min-width: 620px;
     height: 520px;
-    
 }
 
-.leftImage {
-    max-width: 750px;
-    padding: 10px;
 
+.leftImage {
+    min-width: 50vw;
+    padding: 10px;
+    text-align: center;
 }
 
 .rightForm {
     min-width: 50vw;
-    max-width: 600px;
-
 }
 
-
-.formImage {
-    max-width: 500px;
-    max-height: 500px;
-
-}
-
-.card {
-    padding-left: 50px;
- 
-}
 
 input {
-    margin: 6px;
     border: 1px solid gray;
     max-width: 500px;
-  
+    margin: 6px ; 
 }
 
 .formImageFile {
@@ -75,7 +62,95 @@ input {
     text-align:center;
     transition: all 0.2s;
     background-color:var(--purple);
+    margin-bottom: 20px;
 }    
+
+
+/* MEDIA QUERIES */
+@media only screen 
+   and (max-width : 1200px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media only screen 
+   and (max-width : 1273px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    
+    }
+    input {
+        max-width: 500px;    
+    }
+
+}
+
+@media only screen 
+   and (max-width : 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .formImage {
+        min-width: 550px;
+        height: 450px;
+    }
+}
+
+@media only screen 
+   and (max-width : 648px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .formImage {
+        min-width: 430px;
+        height: 430px;
+    }
+   
+}
+
+@media only screen 
+   and (max-width : 345px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .formImage {
+        min-width: 350px;
+        height: 350px;
+    }
+    input {
+        max-width: 260px;
+        margin: 3px ; 
+    }
+   
+}
+
+
+@media only screen 
+   and (max-width : 249px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .formImage {
+        min-width: 200px;
+        height: 200px;
+    }
+    input {
+        max-width: 200px;
+        margin: 3px ; 
+    }
+    .button {
+        padding:0.1em 1em;
+        margin-bottom: 10px;
+    }    
+}
         
 
 
