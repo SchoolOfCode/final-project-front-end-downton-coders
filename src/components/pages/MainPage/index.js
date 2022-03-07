@@ -60,12 +60,12 @@ function MainPage({
         eventsPerPage={eventsPerPage}
         numbersOfEvents={numbersOfEvents}
       />
-      <ChatPopup
+      {/* <ChatPopup
         onMessageSubmit={onMessageSubmit}
         onTextChange={onTextChange}
         renderChat={renderChat}
         chatUser={chatUser}
-      />
+      /> */}
       <MainEventsSection
         indexLastEvent={indexLastEvent}
         indexFirstEvent={indexFirstEvent}
