@@ -11,7 +11,7 @@ import "./App.css";
 function App() {
   const [eventData, setEventData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [eventsPerPage] = useState(6);
+  const [eventsPerPage] = useState(8);
   const [loading, setLoading] = useState(false);
   const [chatUser, setChatUser] = useState({name: "", message: ""});
   const [chat, setChat] = useState([]);
@@ -64,6 +64,7 @@ function App() {
   useEffect(() => {
     getEventData();
   }, []);
+  
 
   const indexOfLastEvent = currentPage * eventsPerPage;
   const indexOfFirstEvent = indexOfLastEvent - eventsPerPage;

@@ -19,7 +19,7 @@ function PopularSlider () {
 
 return (
         <div>
-          <h2 className={styles.PopularSliderHeader}> Popular Catergories </h2>
+          <h2 className={styles.PopularSliderHeader}> Popular Categories </h2>
            <div className={styles.PopularSliderContainer}> 
           <Slider className={styles.PopularSliderContent} {...settings}>
             <div>
@@ -47,7 +47,7 @@ return (
             
             </Slider>
         </div>
-        //  </div>
+        </div>
 )
       
     }
