@@ -1,9 +1,9 @@
 :root {
-    --purple: #7201a5;
-    --white: #ffffff;
-    --grey: rgb(228, 228, 228);
-    --textColor: rgb(22, 22, 22);
-  }
+  --purple: #7201a5;
+  --white: #ffffff;
+  --grey: rgb(228, 228, 228);
+  --textColor: rgb(22, 22, 22);
+}
 
 .container {
     display: flex;
@@ -11,11 +11,10 @@
     align-items: center;
     background-color: var(--white);
     max-width: 100%;
-    
 }
 
 .mainContainer {
-    max-height: 400px;
+  max-height: 400px;
 }
 
 h2 {
@@ -86,10 +85,9 @@ input {
 
 
 .formImageFile {
-    border: 1px solid rgb(212, 212, 212);
-    padding: 9px;
-    width: 100%;
-
+  border: 1px solid rgb(212, 212, 212);
+  padding: 9px;
+  width: 100%;
 }
 
 .button {
@@ -194,8 +192,4 @@ input {
         padding:0.1em 1em;
         margin-bottom: 10px;
     }    
-}
-        
-
-
-
+}      
