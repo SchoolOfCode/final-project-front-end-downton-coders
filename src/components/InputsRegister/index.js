@@ -94,7 +94,7 @@ function InputsRegister({ setShowModalRegister }) {
 
   return (
     <div className="form">
-      <label className="requiredLabel"> *All fields Required</label>
+      <label className="requiredLabel"> *All Fields Required</label>
       <div>First Name :</div>
       <textarea
         className="form-textarea form-input"
