@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import { NavLink } from "react-router-dom";
 
+
 import SubmitForm from "../../SubmitForm";
 
 import Navbar from "../../Navbar";
@@ -19,6 +20,7 @@ import LoginPopup from "../../LoginPopup";
 import RegisterPopup from "../../RegisterPopup";
 import FilterBar from "../../FilterBar/FilterBar";
 
+
 function MainPage({
   paginate,
   eventsPerPage,
@@ -35,8 +37,7 @@ function MainPage({
   const [showLoginPopup, setShowLoginPopup] = useState(false);
   const [showRegisterPopup, setRegisterPopup] = useState(false);
   return (
-    <section>
-
+    <>
       <LoginPopup
         showModal={showLoginPopup}
         setShowModal={setShowLoginPopup}
@@ -51,10 +52,7 @@ function MainPage({
         setShowModalRegister={setRegisterPopup}
       />
       <PopularSlider />
-
-
       <SearchBar />
-      <FilterBar />
       <Pagination
         paginate={paginate}
         eventsPerPage={eventsPerPage}
@@ -72,16 +70,14 @@ function MainPage({
         currentEvent={currentEvent}
         eventData={eventData}
       />
-
-
+      {/* <LandingPageSlider /> */}
       <SubmitForm />
       <CreateExperience />
       <Footer />
 
 
 
-    </section>
-
+    </>
   );
 }
 
