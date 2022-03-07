@@ -12,7 +12,7 @@
 .FooterLeft {
   display: flex;
   justify-content: center;
-  background-color: plum;
+  /* background-color: plum; */
   align-items: center;
   width: 600px;
 }
@@ -20,13 +20,12 @@
 
 .FooterLogo {
   justify-content: right;
-  background-color: plum;
+  /* background-color: plum; */
   margin-left: 5%;
   padding: 15px;
 }
 
 .socLogo {
-  /* <img  src ={SOClogo} width ='200px' height ="200px" alt ="" className={styles.socLogo}/> */
   width: 200px;
   height: 200px;
 }
@@ -37,7 +36,7 @@
   font-size: 25px;
   font-family: roboto;
   color: black;
-  background-color: plum;
+  /* background-color: plum; */
   margin-left: 10%;
   padding: 15px;
 }
@@ -49,37 +48,49 @@
 
 
 .FooterConnectText {
-  background-color: plum;
+  /* background-color: plum; */
   color: black;
   font-family: roboto;
   display: flex;
   justify-content: right;
   font-size: 30px;
   margin-right: 5%;
-  padding: 10px;
+  padding: 0;
   flex-direction: row;
   border: none;
+  align-items: flex-end;
+}
+
+.connectWithUs {
+margin: 0;
 }
 
 .FooterRight {
   display: flex;
   justify-content: center;
   flex-direction: row;
-  background-color: plum;
+  /* background-color: plum; */
   align-items: center;
   width: 600px;
 
 }
 
 .FooterMediaIcon {
-  background-color: plum;
-  height: 70px;
-  width: 300px;
+  /* background-color: plum; */
+  height: 50px;
+  width: 200px;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  padding-bottom: 30px;
-  padding-right: 20px;
+}
 
+.socialLogo {
+  padding: 5px;
+  /* margin: 5px; */
+}
 
+@media (max-width: 768px) {
+  .FooterContainer, .FooterLeft, .footerRight {
+    flex-direction: column;
+  }
 }

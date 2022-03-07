@@ -76,3 +76,9 @@
   
 }
 
+@media (max-width: 768px) {
+    .mainEventsSection {
+        grid-template-columns: 1fr ;
+    }
+    
+}
