@@ -1,10 +1,9 @@
 .mainEventsSection {
     display: grid;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     background-color: #F9F2F2;
-
-}
+    }
 
 
 .linkstyle{
@@ -32,6 +31,10 @@
     height:265px;
     width: 342px;
     object-fit: cover;
+}
+
+.tileContainer {
+    background-color: aqua;
 }
 
 .title{
@@ -72,7 +75,13 @@
 .paragraphDesc{
  white-space: wrap;
   overflow: hidden;
-  text-overflow: ellipsis;
-  
-}
+  text-overflow: ellipsis;  
+};
 
+
+@media only screen and (min-width: 768px) {
+    .mainEventSection {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
