@@ -93,6 +93,7 @@ function CreateExperience() {
       price: price,
       categories: categories,
       external_event: externalEvent,
+      star_rating: 5,
     };
 
     fetch(`${API_URL}/events`, {
