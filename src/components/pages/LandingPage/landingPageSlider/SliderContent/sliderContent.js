@@ -18,33 +18,34 @@ function SliderContent(){
 //     setSliderContent(renderData)
 // }
 const [dataIwant, setDataIwant] = useState(travelData);
-// const [dummylink, setDummyLink] = useState(0);
+const [dummylink, setDummyLink] = useState(0);
 
 
-//  async function fetchData() {
-//    const response = await fetch("https://xpeerience.herokuapp.com/events");
-//    const dataget = await response.json();
-//    //   console.log(data)
-//    //   setMapRes(data.payload.responseResources);
-
-//    setDataIwant(dataget);
+ async function fetchData() {
+   const response = await fetch("https://xpeerience.herokuapp.com/events");
+   const dataget = await response.json();
+   //   console.log(data)
+   //   setMapRes(data.payload.responseResources);
+   setDataIwant(dataget);
    
-//  }
+ }
  
    
 
-// useEffect(() => {
-//  fetchData();
-//   setDummyLink(dummylink+1)
-// }, []);
+useEffect(() => {
+ fetchData();
+  setDummyLink(dummylink+1)
+}, []);
 // console.log(dataIwant)
 // console.log(data)
+console.log(dummylink)
     const settings = {
         dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 3,
+        loazyLoad:false,
     };
 
     return(<>
