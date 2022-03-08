@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "./hero.module.css";
 import { Button } from "react-bootstrap";
 import Navbar from "../Navbar";
+import {Link} from "react-router-dom";
 //import { Link } from "react-router-dom";
 
 function Hero({ setShowModal, setShowModalRegister }) {
@@ -22,7 +23,9 @@ function Hero({ setShowModal, setShowModalRegister }) {
             <h1 className={styles.line2}>experiences</h1>
           </div>
           <div className={styles.linkToMain}>
-            <Button className={styles.submitButton}>GET STARTED</Button>
+            <Link to="/main">
+              <Button className={styles.submitButton}>GET STARTED</Button>
+            </Link>
           </div>
         </div>
       </div>
