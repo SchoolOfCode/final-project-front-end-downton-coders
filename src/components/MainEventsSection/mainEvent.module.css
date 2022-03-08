@@ -82,7 +82,7 @@
 
 
 
-@media (max-width: 1270px) {
+@media (max-width: 1664px) {
     .mainEventsSection {
      grid-template-rows: 1fr;
      grid-template-columns: 1fr 1fr 1fr;

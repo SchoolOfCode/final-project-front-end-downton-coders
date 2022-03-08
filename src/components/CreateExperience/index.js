@@ -18,8 +18,8 @@
             <h2>Create Your Xpeerience!</h2>
                 <fieldset> 
                   <div class="mt-3 inputbox" className={styles.inputbox}>
-                  <input type="url" class="form-control" name="" placeholder="Add image here"></input>
-                    <input type="text" class="form-control" name="" placeholder="Title"></input>
+                  <input type="url" class="form-control" className={styles.form} name="" placeholder="Add image here"></input>
+                    <input type="text" class="form-control" className={styles.form} name="" placeholder="Title"></input>
                     <div class= "locaton-date-flex" className={styles.locationDateFlex}>
                       <div>
                         <input type="text" class="form-control" className={styles.formLocation} name="" placeholder="Location"></input>
@@ -28,8 +28,8 @@
                         <input type="text" class="form-control" className={styles.form} name="" placeholder="Date / Time"></input>
                       </div>
                     </div>
-                    <input type="text" class="form-control" name="" placeholder="Description"></input>
-                    <input type="text" class="form-control" name="" placeholder="price"></input>
+                    <input type="text" class="form-control" className={styles.form} name="" placeholder="Description"></input>
+                    <input type="text" class="form-control" className={styles.form} name="" placeholder="price"></input>
                     <div className="mt-2"> <button class="btn btn-primary btn-block" className={styles.button}>submit</button> </div> 
                   </div> 
                 </fieldset>
