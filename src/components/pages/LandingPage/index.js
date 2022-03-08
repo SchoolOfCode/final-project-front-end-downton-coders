@@ -5,7 +5,6 @@ import Footer from "../../Footer/Footer.js";
 import LoginPopup from "../../LoginPopup";
 import RegisterPopup from "../../RegisterPopup";
 // import { API_URL } from "../../../config";
-
 import Hero from "../../Hero";
 import Navbar from "../../Navbar";
 
@@ -36,6 +35,7 @@ function LandingPage() {
       <LandingPageSlider />
       <Aboutus />
       <Footer />
+    
     </div>
   );
 }

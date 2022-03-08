@@ -6,6 +6,7 @@ import EventPage from "../pages/EventPage";
 import DashbroadPage from "../pages/DashbroadPage";
 import io from "socket.io-client";
 import { AuthProvider } from "../Context/index.js";
+
 import "./App.css";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [chatUser, setChatUser] = useState({name: "", message: ""});
   const [chat, setChat] = useState([]);
+  const [pageName, setPageName ] = useState("");
 
   const socketRef = useRef();
 
