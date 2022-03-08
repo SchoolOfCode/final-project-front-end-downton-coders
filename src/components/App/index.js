@@ -74,18 +74,14 @@ function App() {
       headers: {
         "Content-Type": "application/json"
       },
-      body: {
-        "location": locationToSearch
-      },
-      referrerPolicy: 'no-referrer'
+      body:  JSON.stringify({ location: locationToSearch })
     }
     console.log("This is the body: ", options.body)
     const response = await fetch("https://xpeerience.herokuapp.com/events/searchlocation", options);
     const data = await response.json();
     console.log("This is the data retrieved with location" , data);
     setEventData(data);
-    // console.log("This is the event data", eventData);
-    // setLoading(false);
+    setLoading(false);
   }
 
   const handleSearchOnChange = (e) => {
