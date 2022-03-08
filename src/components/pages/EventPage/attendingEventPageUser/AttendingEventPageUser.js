@@ -1,6 +1,6 @@
 import AttendingEventCounterUser from "./CounterUser/attendingEventCounterUser";
 import styles from "./AttendingEventPageUser.module.css"
-import AttendingEventJoinUser from"./JoinUser/attendingEventJoinUser"
+import AttendingEventJoinUser from "./JoinUser/attendingEventJoinUser"
 import AttendingEventPriceUser from "./PriceUser/attendingEventPriceuser";
 
 
