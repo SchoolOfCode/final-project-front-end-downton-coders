@@ -60,14 +60,6 @@ function Navbar({ setShowModal, setShowModalRegister, pageName }) {
                   handleFormPage={() => setShowModalRegister(true)}
                 />
               </li>
-              <li>
-            <div
-              className={styles.navDashboard}
-              onClick={() => window.location.replace("/#dashboard")}
-            >
-              Dashboard
-            </div>
-          </li>
             </>
           )}
         </ul>

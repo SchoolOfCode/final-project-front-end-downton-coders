@@ -73,8 +73,6 @@ function MainPage({
         eventData={eventData}
       />
 
-
-      <SubmitForm />
       <CreateExperience />
       <Footer />
 
