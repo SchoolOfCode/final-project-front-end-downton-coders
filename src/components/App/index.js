@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import LandingPage from "../pages/LandingPage";
 import MainPage from "../pages/MainPage";
 import EventPage from "../pages/EventPage";
-import DashbroadPage from "../pages/DashbroadPage";
+import DashboardPage from "../pages/DashboardPage";
 import io from "socket.io-client";
 import { AuthProvider } from "../Context/index.js";
 import "./App.css";
@@ -79,7 +79,7 @@ function App() {
         <Route path="main" element={<MainPage eventsPerPage={eventsPerPage} numbersOfEvents={eventData.length} paginate={paginate} indexLastEvent={indexOfLastEvent} indexFirstEvent={indexOfFirstEvent} currentEvent={currentEvent} eventData={eventData} onMessageSubmit={onMessageSubmit} onTextChange={onTextChange} renderChat={renderChat} chatUser={chatUser} />} />
   
         <Route path="event" element={<EventPage />} />
-        <Route path="dashbroad" element={<DashbroadPage />} />
+        <Route path="dashboard" element={<DashboardPage />} />
       </Routes>
     </AuthProvider>
   );
