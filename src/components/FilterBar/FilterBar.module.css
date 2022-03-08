@@ -1,26 +1,28 @@
 .FilterBarContainer {
-    background-color: rgb(222, 222, 222);
-   width: 85%;
-   height: 100px;
-   text-align: center;
-   justify-content: center;
-   display: flex;
-   margin: auto;
-   border-radius: 25px 25px 5px 5px;
-    
-
+    background-color: #F9F2F2;
+    text-align: center;
+    justify-content: center;
+    display: flex;
 }
 
-.FilterBarHeadings {
-    display:inline-block;
-    text-align: center; 
- margin-top: 20px;
- margin-bottom: 20px;
- margin-inline: 48px;
- font-size: 25px;
- color: #7201A5;
-
-    
-    
+.FilterBarHeadingsContainer {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* width:90%; */
+    height:78px;
+    font-size: 25px;
+    color: #7201A5; 
+    background-color: white; 
+    border-radius: 25px 25px 0px 0px;
+}
+.FilterBarHeadings{
+    /* background-color: white; */
+    color:#7201A5;
+    margin:3rem;
+    cursor:pointer;
 }
 

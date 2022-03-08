@@ -9,9 +9,10 @@ import DashbroadEventSection from "./Dashbroadsection/dashbroadeventsection"
 import Profile from "./profile/profile.js";
 import dummyData from "../../../travelData"
 import styles from "./styles.module.css"
+import {useState,useEffect} from "react"
 function DashbroadPage() {
   const userDetails = useAuthState(); //read user details from context
-
+  
   return (
     <>
       <h1>This is Dashbroad Page</h1>
