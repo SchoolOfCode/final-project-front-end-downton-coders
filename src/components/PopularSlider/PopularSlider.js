@@ -22,12 +22,12 @@ return (
 
  
       <div className={styles.wholePopularContainer}>
-          <h2 className={styles.PopularSliderHeader}> Popular Catergories </h2>
+          <h2 className={styles.PopularSliderHeader}> Popular Categories </h2>
           <div className={styles.PopularSliderContainer}> 
           <Slider className={styles.PopularSliderContent} {...settings}>
           {dataIwant.map((input)=>{
           return (
-      <div key={input.id}>
+      <div className={styles.CenterContainer}key={input.id}>
                       
          
       <Link
