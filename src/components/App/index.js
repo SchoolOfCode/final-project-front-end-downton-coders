@@ -16,6 +16,8 @@ function App() {
   const [chatUser, setChatUser] = useState({name: "", message: ""});
   const [chat, setChat] = useState([]);
 
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
+
   const socketRef = useRef();
 
   // useEffect(
@@ -75,11 +77,11 @@ function App() {
   return (
     <AuthProvider>
       <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="main" element={<MainPage eventsPerPage={eventsPerPage} numbersOfEvents={eventData.length} paginate={paginate} indexLastEvent={indexOfLastEvent} indexFirstEvent={indexOfFirstEvent} currentEvent={currentEvent} eventData={eventData} onMessageSubmit={onMessageSubmit} onTextChange={onTextChange} renderChat={renderChat} chatUser={chatUser} />} />
+        <Route path="/" element={<LandingPage isLoggedIn={isLoggedIn} />} />
+        <Route path="main" element={<MainPage eventsPerPage={eventsPerPage} numbersOfEvents={eventData.length} paginate={paginate} indexLastEvent={indexOfLastEvent} indexFirstEvent={indexOfFirstEvent} currentEvent={currentEvent} eventData={eventData} onMessageSubmit={onMessageSubmit} onTextChange={onTextChange} renderChat={renderChat} chatUser={chatUser}  isLoggedIn={isLoggedIn} />} />
   
-        <Route path="event" element={<EventPage />} />
-        <Route path="dashbroad" element={<DashbroadPage />} />
+        <Route path="event" element={<EventPage />} isLoggedIn={isLoggedIn} />
+        <Route path="dashbroad" element={<DashbroadPage />}  isLoggedIn={isLoggedIn} />
       </Routes>
     </AuthProvider>
   );

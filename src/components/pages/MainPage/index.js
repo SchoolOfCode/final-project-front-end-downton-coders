@@ -33,9 +33,11 @@ function MainPage({
   onTextChange,
   renderChat,
   chatUser,
+  isLoggedIn
 }) {
   const [showLoginPopup, setShowLoginPopup] = useState(false);
   const [showRegisterPopup, setRegisterPopup] = useState(false);
+  const [currentPageName, setCurrentPageName] = useState("Main Page");
   return (
     <>
       <LoginPopup
@@ -50,6 +52,8 @@ function MainPage({
       <Navbar
         setShowModal={setShowLoginPopup}
         setShowModalRegister={setRegisterPopup}
+        currentPageName={currentPageName}
+        isLoggedIn={isLoggedIn}
       />
       <PopularSlider />
       <SearchBar />

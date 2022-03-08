@@ -9,10 +9,13 @@ import RegisterPopup from "../../RegisterPopup";
 import Hero from "../../Hero";
 import Navbar from "../../Navbar";
 
-function LandingPage() {
+
+function LandingPage({ isLoggedIn}) {
   const [showLoginPopup, setShowLoginPopup] = useState(false);
   const [showRegisterPopup, setRegisterPopup] = useState(false);
+  const [currentPageName, setCurrentPageName] = useState("Landing Page");
 
+ 
   return (
     <div id="landingPageWrapper">
       <LoginPopup
@@ -31,6 +34,8 @@ function LandingPage() {
       <Hero
         setShowModal={setShowLoginPopup}
         setShowModalRegister={setRegisterPopup}
+        currentPageName={currentPageName}
+        isLoggedIn={isLoggedIn}
       />
 
       <LandingPageSlider />

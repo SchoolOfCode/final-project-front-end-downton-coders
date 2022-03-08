@@ -6,13 +6,15 @@ import Navbar from "../Navbar";
 import {Link} from "react-router-dom";
 //import { Link } from "react-router-dom";
 
-function Hero({ setShowModal, setShowModalRegister }) {
+function Hero({ setShowModal, setShowModalRegister, currentPageName, isLoggedIn }) {
   return (
     <>
       <div className={styles.heroWrapper}>
         <Navbar
           setShowModal={setShowModal}
           setShowModalRegister={setShowModalRegister}
+          currentPageName={currentPageName}
+          isLoggedIn={isLoggedIn}
         />
         <div class={styles.landingContainer}>
           <div className={styles.landingContainerContent}>
