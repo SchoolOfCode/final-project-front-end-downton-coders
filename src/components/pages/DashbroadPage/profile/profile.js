@@ -1,22 +1,24 @@
 import styles from "./profile.module.css"
-function Profile({DummyData}){
-    const Dummy= DummyData[0];
+import { useAuthState } from '../../../Context/index.js'
 
-    console.log(Dummy)
+const image = 'https://i.stack.imgur.com/34AD2.jpg'
+function Profile() {
+    const userDetails = useAuthState()
+
     return(<>
         <div className={styles.profileContainer}>
-                <img className={styles.profileImg} src={Dummy.image}/>
+                <img className={styles.profileImg} src={image} alt ="" />
 
                 <div className={styles.inputStyle}>
-                    <p>{Dummy.title}</p>
+                    <p>{userDetails.username}</p>
                 </div>
 
                 <div className={styles.inputStyle}>
-                    <p>{Dummy.title}</p>
+                <p>{userDetails.name} {userDetails.surname} </p>
                 </div>
 
                 <div className={styles.inputStyle}>
-                    <p>{Dummy.title}</p>
+                    <p>{userDetails.email}</p>
                 </div>
         </div>
     </>)
