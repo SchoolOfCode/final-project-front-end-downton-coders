@@ -162,8 +162,8 @@ function UserCreateEvent() {
 
     onDeleteData(input._id);
 
-    console.log("delete this one");
-    setEditingEventId("");
+    console.log("delete this event");
+
     fetchEventsData();
   };
 
