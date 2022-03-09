@@ -5,13 +5,14 @@
 // import Spinner from "../../spinner/Spinner.js";
 
 import { useAuthState } from "../../Context/index.js";
-import DashbroadEventSection from "./Dashbroadsection/dashbroadeventsection"
+import DashboardEventSection from "./Dashboardsection/dashboardeventsection"
 import Profile from "./profile/profile.js";
 import dummyData from "../../../travelData"
 import styles from "./styles.module.css"
+import {useState,useEffect} from "react"
 function DashbroadPage() {
   const userDetails = useAuthState(); //read user details from context
-
+  
   return (
     <>
       <h1>This is Dashbroad Page</h1>
@@ -20,7 +21,7 @@ function DashbroadPage() {
       <div className={styles.Container}>
         <div className={styles.mainContainer}>
           <Profile DummyData={dummyData}/>
-          <DashbroadEventSection DummyData={dummyData}/>
+          <DashboardEventSection DummyData={dummyData}/>
         </div>
       </div>
     </>

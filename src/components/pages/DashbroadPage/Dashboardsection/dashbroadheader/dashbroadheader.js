@@ -1,7 +1,7 @@
 import styles from "./dashbroadheader.module.css"
 
 
-function DashBroadHeader(){
+function DashBoardHeader(){
     return(
         <>
             <div className={styles.headerContainer}>
@@ -11,4 +11,4 @@ function DashBroadHeader(){
     )
 }
 
-export default DashBroadHeader;
+export default DashBoardHeader;

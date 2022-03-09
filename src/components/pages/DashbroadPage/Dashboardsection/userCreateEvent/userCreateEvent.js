@@ -3,9 +3,15 @@ import CreateHeader from "./userCreateHeader/createheader"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 import { faXmark,faPencil } from '@fortawesome/free-solid-svg-icons'
-import {useState} from "react"
+import {useEffect, useState} from "react"
+import {API_URL} from '../../../../../config/index.js'
+import {useAuthState} from '../../../../Context/index.js'
+  
+function UserCreateEvent() {
+    const [eventData, setEventData] = useState([])
+    const userDetails = useAuthState()
 
-function UserCreateEvent({DummyData}){
+
     // form placeHolder value
     const [location, setLocation]=useState("");
     const [date, setDate]=useState("");
@@ -13,6 +19,20 @@ function UserCreateEvent({DummyData}){
     const [image, setImage]=useState("");
     const [category, setCategory]=useState("");
     const [price, setPrice] = useState("");
+  
+
+
+
+    const fetchEventsData = async () => {
+        let res = await fetch(`${API_URL}/events/user/host/${userDetails.id}`)
+        const data = await res.json()
+        console.log(data)
+        setEventData(data)
+
+    }
+    useEffect(() => {
+        fetchEventsData()
+    }, [])
 
 
     //when click edit button lets populate the button
@@ -45,7 +65,7 @@ function UserCreateEvent({DummyData}){
                 <CreateHeader Title={"Event You Host"}/>
                 <div className={styles.tileMain}>
                     {/* This is for tile its here because we need to be able to transfer data from button click edit to populate the form */}
-                    {DummyData.map((input)=>{ return(
+                    {eventData.map((input)=>{ return(
                     <div className={styles.tileContainer} key={input.id}>
                         <div className={styles.tileContainerMain}>
                             <p className={styles.tileTitleNDate}>{input.title}</p>

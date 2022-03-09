@@ -25,6 +25,7 @@ function Footer() {
       </div>
      
      <div className={styles.FooterRight}>
+
        <div className={styles.FooterConnectText}>
        <h4 className={styles.connectWithUs}>Connect with us</h4>
        </div>
@@ -35,10 +36,10 @@ function Footer() {
       <img className={styles.socialLogo} src={EmailLogo} alt="Email Logo"/>
       <img className={styles.socialLogo} src={FacebookLogo} alt="Facebook Logo"/>
      </div>
+
      </div>
+     
        </div>
-  
-    
     )
 }
   

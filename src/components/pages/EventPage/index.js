@@ -6,6 +6,8 @@ import {useLocation} from "react-router-dom"
 import randomData from "../../../travelData"
 import ChatEventPage from "./chatEventPage/chatEventPage";
 import Footer from "../../Footer/Footer.js";
+import {useState,useEffect} from "react";
+
 
 function EventPage() {
     const location = useLocation();
@@ -20,12 +22,24 @@ function EventPage() {
         }
     }
     const DataToUse=rendering()
+
+    const [dataToRender, setDataToRender] = useState(randomData);
+
+    async function Database() {
+      const response = await fetch("https://xpeerience.herokuapp.com/events");
+      const data = await response.json();
+      setDataToRender(data);
+    }
+
+    useEffect(() => {
+      Database();
+    }, []);
   
   return (<>
   <h1>This is Event Page</h1>
     <HeroEventUser DataToRender={DataToUse}/>
     <AttendingEventPageUser DataToRender={DataToUse}/>
-    <ChatEventPage RandomData={randomData}/>
+    <ChatEventPage RandomData={dataToRender}/>
     <Footer />
   </>);
 

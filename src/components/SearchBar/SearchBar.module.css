@@ -1,38 +1,45 @@
 .SearchContainer {
 display: flex;
+justify-content: center;
 align-items: center;
-margin: 40px;
+/* margin-bottom: 40px; */
+background-color: #F9F2F2;
+padding-bottom: 1rem;
+padding-top:1rem;
 }
 
 
 .SearchBarTitle {
-  flex-direction: row;
-  position: relative;
-  display: flex;
-  text-align: center;
-  text-indent: 200px;
   margin-right: 10px;
-  white-space: nowrap;
+  white-space: nowrap; 
+}
+
+.SearchBarTitle h4{
   font-weight: 500;
   color: #462626;
- 
-  
 }
 
+.SearchBarBoxContainer{
+  background-color: transparent;
+}
 .SearchBarBox {
-    width: 700px; 
-    height: 43px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-  /* justify-content: center; */
-  align-items: center;
-    /* margin-right: 800px; 
-    margin-left: 5px;  */
     border-radius: 25px 25px 25px 25px;
     border: 3px solid #7201A5;
-    overflow: hidden;
-   margin: -3px;
-
+    background-color: white;
+    width:466px;
+    height:40px;
+    padding:10px;
 }
 
+.submitButton {
+  border: none;
+  border-radius: 5px;
+  padding: 9px;
+  margin-left: 10px;
+  color: var(--purple);
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
+  box-shadow: 0px 0px 2px 1px var(--boxShadow);
+  width: 100px;
+}

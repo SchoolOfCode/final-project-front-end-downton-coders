@@ -37,7 +37,7 @@ function InputsLogin({ setShowModal }) {
 
   return (
     <div className="form">
-      <label className="requiredLabel"> * All fields Required</label>
+      <label className="requiredLabel"> * All Fields Required</label>
       <div>Email :</div>
       <textarea
         className="form-textarea form-input"
