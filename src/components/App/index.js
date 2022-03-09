@@ -61,7 +61,7 @@ function App() {
     const response = await fetch("https://xpeerience.herokuapp.com/events");
     const data = await response.json();
     setEventData(data);
-    console.log("This is the event data", eventData);
+    // console.log("This is the event data", eventData);
     setLoading(false);
   }
 
@@ -76,7 +76,7 @@ function App() {
   async function handleCategoryClick(e) {
     let categoryToFilterBy;
     if (e.target.alt) {
-      console.log(e.target.alt);
+      // console.log(e.target.alt);
        categoryToFilterBy = e.target.alt;
     } else {
        categoryToFilterBy = e.target.childNodes[0].data;
@@ -89,17 +89,17 @@ function App() {
       },
       body:  JSON.stringify({ category: categoryToFilterBy })
     }
-    console.log("This is the body: ", options.body)
+    // console.log("This is the body: ", options.body)
     const response = await fetch("https://xpeerience.herokuapp.com/events/searchcategory", options);
     const data = await response.json();
-    console.log("This is the data retrieved with category" , data);
+    // console.log("This is the data retrieved with category" , data);
     setEventData(data);
     setLoading(false);
   }
 
   // FILTER EVENTS BY LOCATION
   async function handleSearchClick() {
-    console.log("This is the location", locationToSearch);
+    // console.log("This is the location", locationToSearch);
     setLoading(true);
     const options = {
       method: "POST",
@@ -109,10 +109,10 @@ function App() {
       },
       body:  JSON.stringify({ location: locationToSearch })
     }
-    console.log("This is the body: ", options.body)
+    // console.log("This is the body: ", options.body)
     const response = await fetch("https://xpeerience.herokuapp.com/events/searchlocation", options);
     const data = await response.json();
-    console.log("This is the data retrieved with location" , data);
+    // console.log("This is the data retrieved with location" , data);
     setEventData(data);
     setLoading(false);
   }

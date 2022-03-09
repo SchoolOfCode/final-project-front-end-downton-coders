@@ -38,7 +38,7 @@ useEffect(() => {
 }, []);
 // console.log(dataIwant)
 // console.log(data)
-console.log(dummylink)
+// console.log(dummylink)
     const settings = {
         dots: false,
         infinite: true,
@@ -58,7 +58,7 @@ console.log(dummylink)
 
                   <div key={input.id}>
                       
-                    {console.log(input.title)}
+                    {/* {console.log(input.title)} */}
                     <Link
                       to="/event"
                       className={styles.linkstyle}

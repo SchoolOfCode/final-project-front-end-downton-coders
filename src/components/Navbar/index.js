@@ -10,7 +10,7 @@ function Navbar({ setShowModal, setShowModalRegister, pageName }) {
   const dispatch = useAuthDispatch(); // read dispatch method from context
   const userDetails = useAuthState(); //read user details from context
 
-  console.log(userDetails);
+  // console.log(userDetails);
   const handleLogout = () => {
     logout(dispatch); //call the logout action
 
