@@ -35,7 +35,8 @@ function MainPage({
   chatUser,
   locationToSearch,
   handleSearchOnChange,
-  handleSearchClick
+  handleSearchClick,
+  handleCategoryClick
 }) {
   const [showLoginPopup, setShowLoginPopup] = useState(false);
   const [showRegisterPopup, setRegisterPopup] = useState(false);
@@ -54,7 +55,7 @@ function MainPage({
         setShowModal={setShowLoginPopup}
         setShowModalRegister={setRegisterPopup}
       />
-      <PopularSlider />
+      <PopularSlider handleCategoryClick={handleCategoryClick} />
       <SearchBar locationToSearch={locationToSearch} handleSearchOnChange={handleSearchOnChange} handleSearchClick={handleSearchClick} />
       <Pagination
         paginate={paginate}
