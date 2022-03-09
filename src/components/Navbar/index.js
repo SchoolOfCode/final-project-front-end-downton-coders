@@ -13,7 +13,7 @@ function Navbar({ setShowModal, setShowModalRegister, pageName }) {
   console.log(userDetails);
   const handleLogout = () => {
     logout(dispatch); //call the logout action
-
+    window.location.replace("/"); //Go to landing page after signout
     // props.history.push("/"); //navigate to landing page on logout
   };
   return (

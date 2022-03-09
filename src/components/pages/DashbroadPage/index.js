@@ -4,6 +4,7 @@
 // import { useSelector, useDispatch } from "react-redux";
 // import Spinner from "../../spinner/Spinner.js";
 
+import Navbar from "../../Navbar";
 import { useAuthState } from "../../Context/index.js";
 import DashboardEventSection from "./Dashboardsection/dashboardeventsection";
 import Profile from "./profile/profile.js";
@@ -15,7 +16,7 @@ function DashbroadPage() {
 
   return (
     <>
-      <h1>This is Dashbroad Page</h1>
+      <Navbar />
 
       {/* {userDetails.username} */}
       <div className={styles.Container}>
