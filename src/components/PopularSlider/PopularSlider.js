@@ -7,7 +7,7 @@ import {useState, useEffect} from"react";
 import Catergories from "../../categoriesData.js"
 import {Link} from "react-router-dom";
 
-function PopularSlider () {
+function PopularSlider ({handleCategoryClick}) {
   
   const [dataIwant, setDataIwant] = useState(Catergories);
   console.log(dataIwant)
@@ -27,22 +27,17 @@ return (
           <Slider className={styles.PopularSliderContent} {...settings}>
           {dataIwant.map((input)=>{
           return (
-      <div className={styles.CenterContainer}key={input.id}>
-                      
-         
-      <Link
-          to="/event"
-          className={styles.linkstyle}
-          state={{ input: { input } }}
-      ></Link>
+      <div className={styles.CenterContainer}
+      key={input.id}
+      onClick={(e) => handleCategoryClick(e)}
+      >
+       
       <div className={styles.PopularSliderContent1}>
             <h3 className={styles.PopularSliderImageTitle}>{input.category_name}</h3>
             <img
-              src={input.image} alt=""
-          
-                />
+              src={input.image} alt={input.category_name}/>
         </div>
-            
+
             </div>
                 );
           })}
