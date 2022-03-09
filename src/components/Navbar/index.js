@@ -49,7 +49,10 @@ function Navbar({ setShowModal, setShowModalRegister, pageName }) {
                 </div>
               </li>
               <li>
-                <div onClick={handleGoToDashboard}>
+                <div
+                  className={styles.navUsername}
+                  onClick={handleGoToDashboard}
+                >
                   {"Username: "}
                   {userDetails ? userDetails.username : ""}
                 </div>
