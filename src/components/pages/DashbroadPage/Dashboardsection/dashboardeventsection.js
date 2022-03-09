@@ -1,9 +1,10 @@
+import { useState } from "react"
 import styles from "./dashbroadeventsection.module.css"
 import DashBroadHeader from "./dashbroadheader/dashbroadheader"
-import Dashboardgoingsection from "./goingSection/dashbroadgoingsection"
+import Dashboardgoingsection from "./goingSection/dashboardgoingsection"
 import UserCreateEvent from "./userCreateEvent/userCreateEvent"
 
-function DashbroadEventSection({DummyData}){
+function DashboardEventSection({ DummyData }) {
     return(<>
         <div className={styles.dashbroadEventSectionContainer}>
             <div className={styles.dashbroadEventSection}>
@@ -19,4 +20,4 @@ function DashbroadEventSection({DummyData}){
     </>)
 }
 
-export default DashbroadEventSection
+export default DashboardEventSection
