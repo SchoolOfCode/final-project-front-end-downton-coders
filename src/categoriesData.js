@@ -12,7 +12,7 @@ const popularCategories = [
     },
     {
       id: 3,
-      category_name: "Museum's",
+      category_name: "Museum",
       image:
         "https://www.artnews.com/wp-content/uploads/2019/11/british-museum.jpg",
     },
@@ -30,7 +30,7 @@ const popularCategories = [
     },
     {
       id: 6,
-      category_name: "Day Trip",
+      category_name: "Tour",
       image:
         "https://cdn.images.express.co.uk/img/dynamic/25/590x/Gift-a-Valentine-s-Day-trip-to-Paris-complete-with-lunch-at-the-Eiffel-Tower-1562682.jpg",
     },
