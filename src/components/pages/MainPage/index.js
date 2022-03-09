@@ -33,6 +33,9 @@ function MainPage({
   onTextChange,
   renderChat,
   chatUser,
+  locationToSearch,
+  handleSearchOnChange,
+  handleSearchClick
 }) {
   const [showLoginPopup, setShowLoginPopup] = useState(false);
   const [showRegisterPopup, setRegisterPopup] = useState(false);
@@ -52,7 +55,7 @@ function MainPage({
         setShowModalRegister={setRegisterPopup}
       />
       <PopularSlider />
-      <SearchBar />
+      <SearchBar locationToSearch={locationToSearch} handleSearchOnChange={handleSearchOnChange} handleSearchClick={handleSearchClick} />
       <Pagination
         paginate={paginate}
         eventsPerPage={eventsPerPage}
