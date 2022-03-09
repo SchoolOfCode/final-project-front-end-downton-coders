@@ -17,7 +17,7 @@ import { useAuthState } from "../Context/index.js";
 
 //             <div className={styles.card}>
 //             <h2>Create Your Xpeerience!</h2>
-//                 <fieldset> 
+//                 <fieldset>
 //                   <div class="mt-3 inputbox" className={styles.inputbox}>
 //                   <input type="url" class="form-control" className={styles.form} name="" placeholder="Add image here"></input>
 //                     <input type="text" class="form-control" className={styles.form} name="" placeholder="Title"></input>
@@ -31,8 +31,8 @@ import { useAuthState } from "../Context/index.js";
 //                     </div>
 //                     <input type="text" class="form-control" className={styles.form} name="" placeholder="Description"></input>
 //                     <input type="text" class="form-control" className={styles.form} name="" placeholder="price"></input>
-//                     <div className="mt-2"> <button class="btn btn-primary btn-block" className={styles.button}>submit</button> </div> 
-//                   </div> 
+//                     <div className="mt-2"> <button class="btn btn-primary btn-block" className={styles.button}>submit</button> </div>
+//                   </div>
 
 function CreateExperience() {
   const userDetails = useAuthState();
@@ -206,10 +206,11 @@ function CreateExperience() {
               <>
                 <h2>Create Your Xpeerience, {userDetails.username}!</h2>
                 <fieldset>
-                  <div className="mt-3 inputbox">
+                  <div class="mt-3 inputbox" className={styles.inputbox}>
                     <input
                       type="url"
-                      className="form-control"
+                      class="form-control"
+                      className={styles.form}
                       name=""
                       placeholder="Add image here"
                       onChange={handleImage}
@@ -217,33 +218,44 @@ function CreateExperience() {
                     ></input>
                     <input
                       type="text"
-                      className="form-control"
+                      class="form-control"
+                      className={styles.form}
                       name=""
                       placeholder="Title"
                       onChange={handleTitle}
                       value={title}
                     ></input>
-                    <div className="locaton-date-flex">
-                      <input
-                        type="text"
-                        className="form-control"
-                        name=""
-                        placeholder="Location"
-                        onChange={handleLocation}
-                        value={location}
-                      ></input>
-                      <input
-                        type="text"
-                        className="form-control"
-                        name=""
-                        placeholder="Date"
-                        onChange={handleDate}
-                        value={date}
-                      ></input>
+                    <div
+                      class="locaton-date-flex"
+                      className={styles.locationDateFlex}
+                    >
+                      <div>
+                        <input
+                          type="text"
+                          class="form-control"
+                          className={styles.formLocation}
+                          name=""
+                          placeholder="Location"
+                          onChange={handleLocation}
+                          value={location}
+                        ></input>
+                      </div>
+                      <div>
+                        <input
+                          type="text"
+                          class="form-control"
+                          className={styles.form}
+                          name=""
+                          placeholder="Date"
+                          onChange={handleDate}
+                          value={date}
+                        ></input>
+                      </div>
                     </div>
                     <input
                       type="text"
-                      className="form-control"
+                      class="form-control"
+                      className={styles.form}
                       name=""
                       placeholder="Start Time"
                       onChange={handleStartTime}
@@ -251,7 +263,8 @@ function CreateExperience() {
                     ></input>
                     <input
                       type="text"
-                      className="form-control"
+                      class="form-control"
+                      className={styles.form}
                       name=""
                       placeholder="End Time"
                       onChange={handleEndTime}
@@ -259,7 +272,8 @@ function CreateExperience() {
                     ></input>
                     <input
                       type="text"
-                      className="form-control"
+                      class="form-control"
+                      className={styles.form}
                       name=""
                       placeholder="Description"
                       onChange={handleDescription}
@@ -267,7 +281,8 @@ function CreateExperience() {
                     ></input>
                     <input
                       type="text"
-                      className="form-control"
+                      class="form-control"
+                      className={styles.form}
                       name=""
                       placeholder="Price"
                       onChange={handlePrice}
@@ -275,7 +290,8 @@ function CreateExperience() {
                     ></input>
                     <input
                       type="text"
-                      className="form-control"
+                      class="form-control"
+                      className={styles.form}
                       name=""
                       placeholder="Categories"
                       onChange={handleCategories}
@@ -283,7 +299,8 @@ function CreateExperience() {
                     ></input>
                     <input
                       type="text"
-                      className="form-control"
+                      class="form-control"
+                      className={styles.form}
                       name=""
                       placeholder="External event"
                       onChange={handleExternalEvent}
