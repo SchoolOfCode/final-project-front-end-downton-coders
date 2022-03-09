@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 
-import SubmitForm from "../../SubmitForm";
+//import SubmitForm from "../../SubmitForm";
 
 import Navbar from "../../Navbar";
 import ChatPopup from "../../ChatPopup/ChatPopup.js";
@@ -74,7 +74,8 @@ function MainPage({
         eventData={eventData}
       />
       {/* <LandingPageSlider /> */}
-      <SubmitForm />
+     {/*<SubmitForm />*/}
+
       <CreateExperience />
       <Footer />
 

@@ -1,14 +1,12 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
-
 import { FaSignInAlt, FaSignOutAlt, FaUser } from "react-icons/fa";
 import styles from "../Navbar/navbar.module.css";
 import { useAuthDispatch, logout, useAuthState } from "../Context/index.js";
 import LoginButton from "../LoginButton";
 import RegisterButton from "../RegisterButton";
 
-function Navbar({ setShowModal, setShowModalRegister }) {
+function Navbar({ setShowModal, setShowModalRegister, pageName }) {
   const dispatch = useAuthDispatch(); // read dispatch method from context
   const userDetails = useAuthState(); //read user details from context
 
