@@ -16,6 +16,11 @@ function Navbar({ setShowModal, setShowModalRegister, pageName }) {
     window.location.replace("/"); //Go to landing page after signout
     // props.history.push("/"); //navigate to landing page on logout
   };
+
+  const handleGoToDashboard = () => {
+    window.location.replace("/dashbroad"); // Go to dashboard page
+  };
+
   return (
     <div className={styles.navContainer}>
       <img
@@ -44,7 +49,7 @@ function Navbar({ setShowModal, setShowModalRegister, pageName }) {
                 </div>
               </li>
               <li>
-                <div>
+                <div onClick={handleGoToDashboard}>
                   {"Username: "}
                   {userDetails ? userDetails.username : ""}
                 </div>
