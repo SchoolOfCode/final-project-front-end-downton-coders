@@ -10,7 +10,7 @@ import {Link} from "react-router-dom";
 function PopularSlider ({handleCategoryClick}) {
   
   const [dataIwant, setDataIwant] = useState(Catergories);
-  console.log(dataIwant)
+//   console.log(dataIwant)
   const settings = {
         dots: true,
         infinite: true,

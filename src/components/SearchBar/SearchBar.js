@@ -6,7 +6,7 @@ import { Button } from "react-bootstrap";
 
 function SearchBar ({locationToSearch, handleSearchOnChange, handleSearchClick}) {
    
-    console.log("This is the Input value: ", locationToSearch);
+    // console.log("This is the Input value: ", locationToSearch);
     return (
     <div className={styles.SearchContainer}>
 
