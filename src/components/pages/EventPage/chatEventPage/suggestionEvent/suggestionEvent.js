@@ -1,11 +1,25 @@
 import styles from "./suggestionEvent.module.css";
 import {Link} from "react-router-dom";
-import {useState} from"react";
 
 
 function SuggestionEvent({DataToRender}){
     let arrSuggestion=[];
+
     const random =DataToRender
+
+    // const [dataIwant, setDataIwant] = useState(travelData);
+
+    // async function fetchData() {
+    //   const response = await fetch("https://xpeerience.herokuapp.com/events");
+    //   const dataget = await response.json();
+    //   //   console.log(data)
+    //   //   setMapRes(data.payload.responseResources);
+    //   setDataIwant(dataget);
+    // }
+
+    // useEffect(() => {
+    //   fetchData();
+    // }, []);
     
     let arrLength=0;
 
@@ -29,17 +43,32 @@ function SuggestionEvent({DataToRender}){
 
     return(<>
         <div className={styles.suggestionEvent}>
-            {arrSuggestion.map((input)=>{
-                return(
-                    <div key={input.id}>
-                        <Link to="/event" className={styles.linkstyle} state={{input:{input}}}>
-                            <div className={styles.suggestionIndividualContainer} >
-                                    <img className={styles.backgroundImage} src={input.image}/>
-                                    <h1 className={styles.suggestionEventHeader}>{input.title}</h1>
-                            </div>
-                        </Link>
-                    </div>
-                )
+            {arrSuggestion.map((input,index)=>{
+                return (
+                  <div
+                    key={index}
+                    onClick={() => {
+                      window.location.reload(false);
+                    }}
+                  >
+                    <Link
+                      to="/event"
+                      className={styles.linkstyle}
+                      state={{ input: { input } }}
+                    >
+                      <div className={styles.suggestionIndividualContainer}>
+                        <img
+                          className={styles.backgroundImage}
+                          src={input.image}
+                          alt=""
+                        />
+                        <h1 className={styles.suggestionEventHeader}>
+                          {input.title}
+                        </h1>
+                      </div>
+                    </Link>
+                  </div>
+                );
             })}
         </div>
     </>)

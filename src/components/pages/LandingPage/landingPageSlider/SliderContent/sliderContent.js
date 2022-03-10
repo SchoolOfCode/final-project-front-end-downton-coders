@@ -18,7 +18,7 @@ function SliderContent(){
 //     setSliderContent(renderData)
 // }
 const [dataIwant, setDataIwant] = useState(travelData);
-const [dummylink, setDummyLink] = useState(0);
+
 
 
  async function fetchData() {
@@ -27,18 +27,16 @@ const [dummylink, setDummyLink] = useState(0);
    //   console.log(data)
    //   setMapRes(data.payload.responseResources);
    setDataIwant(dataget);
-   
  }
  
-   
-
 useEffect(() => {
  fetchData();
-  setDummyLink(dummylink+1)
 }, []);
 // console.log(dataIwant)
 // console.log(data)
-// console.log(dummylink)
+
+
+
     const settings = {
         dots: false,
         infinite: true,
@@ -62,7 +60,8 @@ useEffect(() => {
                     <Link
                       to="/event"
                       className={styles.linkstyle}
-                      state={{ input: { input } }}
+                      //changing the input to id 
+                      state={{ input:  {input}}}
                     >
                       <div className={styles.tileContainer}>
                         <div className={styles.tile}>

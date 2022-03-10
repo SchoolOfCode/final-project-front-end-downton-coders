@@ -1,5 +1,6 @@
 import styles from "./mainEvent.module.css";
 import {Link} from "react-router-dom";
+import { InputGroup } from "react-bootstrap";
 
 export default function MainEventsSection({indexLastEvent, indexFirstEvent, currentEvent, eventData}) {
 
@@ -7,33 +8,42 @@ const eventsToRender = eventData.slice(indexFirstEvent, indexLastEvent);
     return (
         <section id="mainEventsSection" className={styles.mainEventsSection}>
        
-            {eventsToRender.map((event, index) => {
+            {eventsToRender.map((input, index) => {
                 return (
-                    <section key={index} id={index}>
-                    <Link to="/event" className={styles.linkstyle}>
-                    <section className={styles.tileContainer}>
+                  <section key={index} id={index}>
+                    <Link
+                      to="/event"
+                      className={styles.linkstyle}
+                      state={{ input: { input } }}
+                    >
+                        {console.log(input)}
+                      <section className={styles.tileContainer}>
                         <div className={styles.tile}>
-                        <img className={styles.imgContainer} src={event.image} alt={event.title} />
-                       
-                        <p className={styles.title}>{event.title}</p>
-                        <p className={styles.countryTitle}>
-                                    {event.location}
-                                </p>
+                          <img
+                            className={styles.imgContainer}
+                            src={input.image}
+                            alt={input.title}
+                          />
 
-                                <div className={styles.ratingNDateContainer}>
-                                    <p className={styles.tileDate}>{event.date}</p>
-                                </div>
+                          <p className={styles.title}>{input.title}</p>
+                          <p className={styles.countryTitle}>
+                            {input.location}
+                          </p>
 
-                                <div className={styles.paragraphContainer}>
-                                    <p className={styles.paragraphDesc}>
-                                       {event.description}
-                                    </p>
-                                </div>
-                                </div>
-                    </section>
+                          <div className={styles.ratingNDateContainer}>
+                            <p className={styles.tileDate}>{input.date}</p>
+                          </div>
+
+                          <div className={styles.paragraphContainer}>
+                            <p className={styles.paragraphDesc}>
+                              {input.description}
+                            </p>
+                          </div>
+                        </div>
+                      </section>
                     </Link>
-                    </section>
-                )
+                  </section>
+                );
             })}
         </section>
     )
