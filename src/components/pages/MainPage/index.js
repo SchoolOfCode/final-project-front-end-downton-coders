@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 
-import SubmitForm from "../../SubmitForm";
+//import SubmitForm from "../../SubmitForm";
 
 import Navbar from "../../Navbar";
 import ChatPopup from "../../ChatPopup/ChatPopup.js";
@@ -35,7 +35,8 @@ function MainPage({
   chatUser,
   locationToSearch,
   handleSearchOnChange,
-  handleSearchClick
+  handleSearchClick,
+  handleCategoryClick
 }) {
   const [showLoginPopup, setShowLoginPopup] = useState(false);
   const [showRegisterPopup, setRegisterPopup] = useState(false);
@@ -54,7 +55,7 @@ function MainPage({
         setShowModal={setShowLoginPopup}
         setShowModalRegister={setRegisterPopup}
       />
-      <PopularSlider />
+      <PopularSlider handleCategoryClick={handleCategoryClick} />
       <SearchBar locationToSearch={locationToSearch} handleSearchOnChange={handleSearchOnChange} handleSearchClick={handleSearchClick} />
       <Pagination
         paginate={paginate}
@@ -74,7 +75,8 @@ function MainPage({
         eventData={eventData}
       />
       {/* <LandingPageSlider /> */}
-      <SubmitForm />
+     {/*<SubmitForm />*/}
+
       <CreateExperience />
       <Footer />
 

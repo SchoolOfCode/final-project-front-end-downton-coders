@@ -1,23 +1,26 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
-
 import { FaSignInAlt, FaSignOutAlt, FaUser } from "react-icons/fa";
 import styles from "../Navbar/navbar.module.css";
 import { useAuthDispatch, logout, useAuthState } from "../Context/index.js";
 import LoginButton from "../LoginButton";
 import RegisterButton from "../RegisterButton";
 
-function Navbar({ setShowModal, setShowModalRegister }) {
+function Navbar({ setShowModal, setShowModalRegister, pageName }) {
   const dispatch = useAuthDispatch(); // read dispatch method from context
   const userDetails = useAuthState(); //read user details from context
 
-  console.log(userDetails);
+  // console.log(userDetails);
   const handleLogout = () => {
     logout(dispatch); //call the logout action
-
+    window.location.replace("/"); //Go to landing page after signout
     // props.history.push("/"); //navigate to landing page on logout
   };
+
+  const handleGoToDashboard = () => {
+    window.location.replace("/dashbroad"); // Go to dashboard page
+  };
+
   return (
     <div className={styles.navContainer}>
       <img
@@ -46,7 +49,10 @@ function Navbar({ setShowModal, setShowModalRegister }) {
                 </div>
               </li>
               <li>
-                <div>
+                <div
+                  className={styles.navUsername}
+                  onClick={handleGoToDashboard}
+                >
                   {"Username: "}
                   {userDetails ? userDetails.username : ""}
                 </div>
