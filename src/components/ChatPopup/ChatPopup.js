@@ -16,23 +16,47 @@ function JoinChatButton({ onMessageSubmit, onTextChange, renderChat, chatUser })
     document.getElementById("myForm").style.display = "none";
   }
 
+  function openChat() {
+    document.getElementById("myChat").style.display = "block";
+  }
+
+  function closeChat() {
+    document.getElementById("myChat").style.display = "none";
+  }
+ 
 
   return (
+    
     <section id="chat-container" className={styles["chat-container"]}>
-      <button className={styles["open-button"]} onClick={openForm}>Chat</button>
+
+    <div className={styles.chatSection} id="myChat">
+    <h2 className={styles.chatTitle}>Chat</h2>
+    <div className={styles.chatWrapper} >
+      {renderChat(styles)}
+      </div>
+      <button type="button" className={styles.cancelButton} onClick={closeChat}>Close</button>
+    </div>
+    <button className={styles["openChatSection-button"]} onClick={openChat}>Chat</button>
+
+
+      <button className={styles["open-button"]} onClick={openForm}>Send a message</button>
       <div className={styles["chat-popup"]} id="myForm">
+
         <form onSubmit={onMessageSubmit} className={styles["form-container"]}>
-          <h1>Chat</h1>
+
           <div className="name-field">
+          <label htmlFor="name"><b>Name</b></label>
 					<input type="text" name="name" onChange={(e) => onTextChange(e)} value={chatUser.name} placeholder="Enter your name" className={styles.nameInput} label="Name" />
 				</div>
-          <label for="msg"><b>Message</b></label>
+          <label htmlFor="msg"><b>Message</b></label>
           <textarea placeholder="Type message..." name="message" onChange={(e) => onTextChange(e)} value={chatUser.message} label="Message" required></textarea>
 
           <button className={styles.btn}>Send</button>
           <button type="button" className={styles.cancelButton} onClick={closeForm}>Close</button>
         </form>
+
       </div>
+
     </section>
   );
 }
