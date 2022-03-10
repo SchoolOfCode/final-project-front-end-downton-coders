@@ -191,9 +191,10 @@ function CreateExperience() {
 
   return (
     <div className={styles.container}>
+    
       <div className={styles.leftImage}>
         <img
-          src="https:images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=749&q=80"
+          src="https://images.pexels.com/photos/3184183/pexels-photo-3184183.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
           alt="people"
           className={styles.formImage}
         ></img>
@@ -244,7 +245,7 @@ function CreateExperience() {
                         <input
                           type="text"
                           class="form-control"
-                          className={styles.form}
+                          className={styles.formDate}
                           name=""
                           placeholder="Date"
                           onChange={handleDate}
