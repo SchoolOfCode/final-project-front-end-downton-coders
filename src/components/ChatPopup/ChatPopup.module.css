@@ -100,3 +100,20 @@
 .cancelButton:hover {
   opacity: 1;
 }
+
+.chatSection {
+  background-color: #FFFFFF;
+  display: inline-block;
+  position: fixed;
+  bottom: 0;
+  right: 400px;
+  border: 3px solid #F9F2F2;
+  z-index: 9;
+  padding: 20px;
+  width: 400px;
+}
+
+.chatH1 {
+  border-bottom: 1px solid black;
+  width: 100%;
+}

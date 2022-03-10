@@ -7,6 +7,7 @@ import DashbroadPage from "../pages/DashbroadPage";
 import io from "socket.io-client";
 import { AuthProvider } from "../Context/index.js";
 
+
 import "./App.css";
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
   const [eventsPerPage] = useState(8);
   const [loading, setLoading] = useState(false);
   const [chatUser, setChatUser] = useState({name: "", message: ""});
-  const [chat, setChat] = useState([]);
+  const [chatSection, setChatSection] = useState([]);
+  // const chat = useRef(0)
 
   const [pageName, setPageName ] = useState("");
 
@@ -24,30 +26,58 @@ function App() {
 
   const socketRef = useRef();
 
-  // useEffect(
-  //   () => {
-  //     socketRef.current = io.connect("https://xpeerience.herokuapp.com/")
-  //     socketRef.current.on("message", ({name, message}) => {
-  //       setChat([...chat, {name, message}])
-  //     })
-  //     return () => socketRef.current.disconnect()
-  //   },
-  //   [chat]
-  // );
+  // const socket = io('https://xpeerience.herokuapp.com/', {transports: ['websocket']});
 
+
+  // CHAT FUNCTIONS
+  useEffect(
+    () => {
+      try {
+      console.log("Connecting chat")
+      socketRef.current = io('xpeerience.herokuapp.com/' );
+     
+      // http://localhost:5000/
+      // https://xpeerience.herokuapp.com/
+      // {transports: ['websocket']}
+      // https://test-chat-brr.herokuapp.com
+
+      socketRef.current.on("message", ({name, message}) => {
+        setChatSection([...chatSection, {name, message}]);
+
+        console.log("Current chat section", chatSection);
+      })
+      return () => socketRef.current.disconnect()
+      // return () => {
+      //   console.log("Disconnecting now.");
+      //   socketRef.current.disconnect()
+      // }
+    } catch (err) {
+      console.log(err);
+    }
+    }
+  , [chatSection]);
+
+  // CHAT FUNCTIONS
   const onTextChange = (e) => {
     setChatUser({...chatUser, [e.target.name]: e.target.value});
+    console.log(chatUser);
   };
 
+  
+  // CHAT FUNCTIONS
   const onMessageSubmit = (e) => {
-    const {name, message} = chat;
-    socketRef.current.emit("message", {name, message});
     e.preventDefault();
+    const { name, message } = chatUser;
+    socketRef.current.emit("message", {name, message});
+    
     setChatUser({message: "", name});
   }
 
+  
+  // CHAT FUNCTIONS
   const renderChat = () => {
-    return chat.map(({name, message}, index) => (
+    console.log("Current chatSection", chatSection);
+    return chatSection.map(({name, message}, index) => (
       <div key={index}>
         <h3>
           {name}: <span>{message}</span>
