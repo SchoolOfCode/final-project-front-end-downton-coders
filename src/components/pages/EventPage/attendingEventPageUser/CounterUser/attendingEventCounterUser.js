@@ -1,7 +1,6 @@
-import styles from "./attendingEventCounterUser.module.css"
+import styles from "./attendingEventCounterUser.module.css";
 
-
-function AttendingEventCounterUser({ noAttending}) {
+function AttendingEventCounterUser({ noAttending }) {
   const numAttending = noAttending;
 
   return (
@@ -10,7 +9,7 @@ function AttendingEventCounterUser({ noAttending}) {
         className={styles.attendingEventCounter}
         data-testid="attendingEventCounterUserTesting"
       >
-        <p className={styles.attendingTitle}>Atttending</p>
+        <p className={styles.attendingTitle}>Attending</p>
         <p className={styles.attendingNumber}>{numAttending}</p>
       </div>
     </>

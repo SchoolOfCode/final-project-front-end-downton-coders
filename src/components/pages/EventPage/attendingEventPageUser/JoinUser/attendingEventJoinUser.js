@@ -1,14 +1,14 @@
-import styles from "./attendingEventJoinUser.module.css"
-import {useState} from "react"
+import styles from "./attendingEventJoinUser.module.css";
+import { useState } from "react";
 import { useAuthState } from "../../../../Context/index";
 
 function AttendingEventJoinUser({
+  // setShowModal,
   dataAttend,
   setDummyNum,
   setDummyNumCounter,
   setDummyNumCounterNo,
 }) {
-  
   const [attendStatus, setAttendStatus] = useState("Attend Event");
   const [going, setGoing] = useState(0);
   const eventID = dataAttend._id;
@@ -27,11 +27,10 @@ function AttendingEventJoinUser({
           body: JSON.stringify({
             user_id: userIDAuth.id,
           }),
-        }); 
-        
+        });
+
         setAttendStatus("Going");
         setGoing(going + 1);
-      
       } catch (err) {
         console.log(err);
       }
@@ -76,14 +75,27 @@ function AttendingEventJoinUser({
   // }
 
   return (
-    <button
-      onClick={AttendSubmit}
-      className={styles.attendingEventJoin}
-      data-testid="AttendingEventJointUserTesting"
-    >
-      {attendStatus}
-    </button>
+    <>
+      {userIDAuth.username ? (
+        <button
+          onClick={AttendSubmit}
+          className={styles.attendingEventJoin}
+          data-testid="AttendingEventJointUserTesting"
+        >
+          {attendStatus}
+        </button>
+      ) : (
+        <button
+          // onClick={() => setShowModal(true)}
+          className={styles.attendingEventJoin}
+          data-testid="AttendingEventJointUserTesting"
+          disabled
+        >
+          Login To Join
+        </button>
+      )}
+    </>
   );
 }
 
-export default AttendingEventJoinUser
+export default AttendingEventJoinUser;
