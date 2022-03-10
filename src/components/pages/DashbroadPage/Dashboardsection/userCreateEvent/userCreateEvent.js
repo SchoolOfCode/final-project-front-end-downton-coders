@@ -163,7 +163,7 @@ function UserCreateEvent() {
     onDeleteData(input._id);
 
     console.log("delete this event");
-
+    //setEditingEventId("");
     fetchEventsData();
   };
 
