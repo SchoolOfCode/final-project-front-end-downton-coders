@@ -13,7 +13,7 @@
   position: fixed;
   bottom: 23px;
   right: 28px;
-  width: 280px;
+  width: 250px;
 }
 
 .nameInput {
@@ -81,7 +81,7 @@
 }
 
 
-.form-container .btn:hover, .open-button:hover {
+.form-container .btn:hover, .open-button:hover, .openChatSection-button:hover {
   opacity: 1;
 }
 
@@ -103,17 +103,54 @@
 
 .chatSection {
   background-color: #FFFFFF;
-  display: inline-block;
+  display: none;
   position: fixed;
   bottom: 0;
-  right: 400px;
+  right: 325px;
   border: 3px solid #F9F2F2;
   z-index: 9;
-  padding: 20px;
+  padding: 20px 20px 10px 20px;
   width: 400px;
+  height: 521px;
 }
 
-.chatH1 {
+.chatTitle {
   border-bottom: 1px solid black;
   width: 100%;
+  /* text-align: center; */
+}
+
+.openChatSection-button {
+  background-color: #fff;
+  font-size: 1.2rem;
+  color: black;
+  padding: 16px 20px;
+  border: 2px solid black;
+  border-radius: 20px;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 330px;
+  width: 250px;
+}
+
+.chatUserName, .chatMessage {
+  color: black;
+  font-weight: 700px;
+}
+
+.chatMessageWrapper {
+  background-color: #F9F2F2;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.chatWrapper {
+  background-color: #F9F2F2;
+  height: 350px;
+  margin-bottom: 20px;
+  max-width: 75ch;
+  overflow-y: scroll;
+  overflow-wrap: break-word;
 }

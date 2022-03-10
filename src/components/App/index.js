@@ -75,13 +75,13 @@ function App() {
 
   
   // CHAT FUNCTIONS
-  const renderChat = () => {
+  const renderChat = (styles) => {
     console.log("Current chatSection", chatSection);
     return chatSection.map(({name, message}, index) => (
-      <div key={index}>
-        <h3>
-          {name}: <span>{message}</span>
-        </h3>
+      <div key={index} className={styles.chatMessageWrapper}>
+        
+          <span className={styles.chatUserName}>{name}</span>: <span className={styles.chatMessage}>{message}</span>
+        
       </div>
     ))
   }

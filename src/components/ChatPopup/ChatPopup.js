@@ -16,17 +16,30 @@ function JoinChatButton({ onMessageSubmit, onTextChange, renderChat, chatUser })
     document.getElementById("myForm").style.display = "none";
   }
 
+  function openChat() {
+    document.getElementById("myChat").style.display = "block";
+  }
+
+  function closeChat() {
+    document.getElementById("myChat").style.display = "none";
+  }
  
 
   return (
     
     <section id="chat-container" className={styles["chat-container"]}>
-    <div className={styles.chatSection}>
-    <h1 className={styles.chatH1}>Chat</h1>
-      {renderChat()}
+
+    <div className={styles.chatSection} id="myChat">
+    <h2 className={styles.chatTitle}>Chat</h2>
+    <div className={styles.chatWrapper} >
+      {renderChat(styles)}
+      </div>
+      <button type="button" className={styles.cancelButton} onClick={closeChat}>Close</button>
     </div>
-      <button className={styles["open-button"]} onClick={openForm}>Join the chat</button>
-      
+    <button className={styles["openChatSection-button"]} onClick={openChat}>Chat</button>
+
+
+      <button className={styles["open-button"]} onClick={openForm}>Send a message</button>
       <div className={styles["chat-popup"]} id="myForm">
 
         <form onSubmit={onMessageSubmit} className={styles["form-container"]}>
