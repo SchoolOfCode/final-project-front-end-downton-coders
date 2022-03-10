@@ -1,4 +1,3 @@
-
 :root {
   --purple: hsl(281, 99%, 33%);
   --white: #ffffff;
@@ -8,14 +7,12 @@
 }
 
 * {
- 
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
 .container {
-
   display: flex;
   justify-content: space-between;
 }
@@ -43,7 +40,8 @@ a:link {
 .navAbout,
 .navLogin,
 .navSignout,
-.navRegister {
+.navRegister,
+.navUsername {
   color: var(--textColor);
 }
 
@@ -51,6 +49,7 @@ a:link {
 .navLogin:hover,
 .navSignout:hover,
 .navRegister:hover,
+.navUsername:hover,
 a:link:hover {
   color: var(--purple);
 }
