@@ -33,7 +33,7 @@ function App() {
   useEffect(
     () => {
       try {
-      console.log("Connecting chat")
+
       socketRef.current = io('xpeerience.herokuapp.com/' );
      
       // http://localhost:5000/
@@ -44,13 +44,9 @@ function App() {
       socketRef.current.on("message", ({name, message}) => {
         setChatSection([...chatSection, {name, message}]);
 
-        console.log("Current chat section", chatSection);
+ 
       })
       return () => socketRef.current.disconnect()
-      // return () => {
-      //   console.log("Disconnecting now.");
-      //   socketRef.current.disconnect()
-      // }
     } catch (err) {
       console.log(err);
     }
@@ -60,7 +56,6 @@ function App() {
   // CHAT FUNCTIONS
   const onTextChange = (e) => {
     setChatUser({...chatUser, [e.target.name]: e.target.value});
-    console.log(chatUser);
   };
 
   
@@ -69,19 +64,16 @@ function App() {
     e.preventDefault();
     const { name, message } = chatUser;
     socketRef.current.emit("message", {name, message});
-    
     setChatUser({message: "", name});
   }
 
   
   // CHAT FUNCTIONS
   const renderChat = (styles) => {
-    console.log("Current chatSection", chatSection);
+    // console.log("Current chatSection", chatSection);
     return chatSection.map(({name, message}, index) => (
       <div key={index} className={styles.chatMessageWrapper}>
-        
           <span className={styles.chatUserName}>{name}</span>: <span className={styles.chatMessage}>{message}</span>
-        
       </div>
     ))
   }
