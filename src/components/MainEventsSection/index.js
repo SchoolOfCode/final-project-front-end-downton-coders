@@ -16,7 +16,7 @@ const eventsToRender = eventData.slice(indexFirstEvent, indexLastEvent);
                       className={styles.linkstyle}
                       state={{ input: { input } }}
                     >
-                        {console.log(input)}
+                
                       <section className={styles.tileContainer}>
                         <div className={styles.tile}>
                           <img

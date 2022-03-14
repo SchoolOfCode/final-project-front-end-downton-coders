@@ -83,7 +83,7 @@ function App() {
     const response = await fetch("https://xpeerience.herokuapp.com/events");
     const data = await response.json();
     setEventData(data);
-    // console.log("This is the event data", eventData);
+  
     setLoading(false);
   }
 
@@ -103,7 +103,7 @@ function App() {
     } else {
        categoryToFilterBy = e.target.childNodes[0].data;
     }
-    setLoading(true);
+
     const options = {
       method: "POST",
       headers: {
@@ -116,7 +116,7 @@ function App() {
     const data = await response.json();
     // console.log("This is the data retrieved with category" , data);
     setEventData(data);
-    setLoading(false);
+   
   }
 
   // FILTER EVENTS BY LOCATION
