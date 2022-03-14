@@ -102,7 +102,7 @@
 }
 
 .chatSection {
-  background-color: #FFFFFF;
+  background-color: #FFF;
   display: none;
   position: fixed;
   bottom: 0;
@@ -111,7 +111,7 @@
   z-index: 9;
   padding: 20px 20px 10px 20px;
   width: 400px;
-  height: 521px;
+  height: 501px;
 }
 
 .chatTitle {
@@ -148,9 +148,15 @@
 
 .chatWrapper {
   background-color: #F9F2F2;
-  height: 350px;
+  height: 310px;
   margin-bottom: 20px;
   max-width: 75ch;
   overflow-y: scroll;
   overflow-wrap: break-word;
 }
+
+.disabledArea {
+  font-weight: regular;
+  color: #757575;
+}
+
