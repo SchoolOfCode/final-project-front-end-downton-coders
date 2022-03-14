@@ -5,6 +5,7 @@ import styles from "../Navbar/navbar.module.css";
 import { useAuthDispatch, logout, useAuthState } from "../Context/index.js";
 import LoginButton from "../LoginButton";
 import RegisterButton from "../RegisterButton";
+import { Link } from "react-router-dom";
 
 function Navbar({ setShowModal, setShowModalRegister, pageName }) {
   const dispatch = useAuthDispatch(); // read dispatch method from context
@@ -23,6 +24,7 @@ function Navbar({ setShowModal, setShowModalRegister, pageName }) {
 
   return (
     <div className={styles.navContainer}>
+    <Link to="/">
       <img
         src="./logo2.png"
         className={styles.navLogo}
@@ -30,6 +32,7 @@ function Navbar({ setShowModal, setShowModalRegister, pageName }) {
         height="70px"
         alt="experience logo"
       />
+      </Link>
       <nav className={styles.navlink}>
         <ul>
           <li>
