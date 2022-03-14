@@ -78,6 +78,8 @@ textarea:focus, input:focus{
 .locationDateFlex {
     display: flex;
     flex-direction: row;
+    margin: 0;
+    padding: 0;
 }
 
 .form, .formDate {
@@ -106,7 +108,7 @@ textarea:focus, input:focus{
   appearance: none;
   border-radius: 10px;
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-  margin-right: 35px;
+  margin-right: 34px;
 }
 
 
