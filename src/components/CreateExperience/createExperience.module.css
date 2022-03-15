@@ -95,6 +95,10 @@ textarea:focus, input:focus{
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
+.formDate {
+    width: 98%;
+}
+
 
 .formLocation {
   display: block;
@@ -108,7 +112,7 @@ textarea:focus, input:focus{
   appearance: none;
   border-radius: 10px;
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-  margin-right: 34px;
+  margin-right: 50px;
 }
 
 
