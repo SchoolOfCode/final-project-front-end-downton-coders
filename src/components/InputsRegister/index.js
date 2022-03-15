@@ -96,7 +96,7 @@ function InputsRegister({ setShowModalRegister }) {
     <div className="form">
       <label className="requiredLabel"> *All Fields Required</label>
       <div>First Name :</div>
-      <textarea
+      <input
         className="form-textarea form-input"
         type="text"
         onChange={handleName}
@@ -106,7 +106,7 @@ function InputsRegister({ setShowModalRegister }) {
       />
       <br />
       <div>Last Name :</div>
-      <textarea
+      <input
         className="form-textarea form-input"
         type="text"
         onChange={handleSurname}
@@ -116,7 +116,7 @@ function InputsRegister({ setShowModalRegister }) {
       />
       <br />
       <div>Username :</div>
-      <textarea
+      <input
         className="form-textarea form-input"
         type="text"
         onChange={handleUsername}
@@ -127,7 +127,7 @@ function InputsRegister({ setShowModalRegister }) {
 
       <br />
       <div>Email :</div>
-      <textarea
+      <input
         className="form-textarea form-input"
         type="text"
         onChange={handleEmail}
@@ -138,9 +138,9 @@ function InputsRegister({ setShowModalRegister }) {
 
       <br />
       <div>Password :</div>
-      <textarea
+      <input
         className="form-textarea form-input"
-        type="text"
+        type="password"
         onChange={handlePassword}
         placeholder="Enter your password"
         value={password}
@@ -149,7 +149,7 @@ function InputsRegister({ setShowModalRegister }) {
 
       <br />
       <div>Age :</div>
-      <textarea
+      <input
         className="form-textarea form-input"
         type="number"
         onChange={handleAge}
@@ -160,7 +160,7 @@ function InputsRegister({ setShowModalRegister }) {
 
       <br />
       <div>Hobbies :</div>
-      <textarea
+      <input
         className="form-textarea form-input"
         type="text"
         onChange={handleHobbies}
