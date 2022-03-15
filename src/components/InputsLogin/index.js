@@ -39,7 +39,7 @@ function InputsLogin({ setShowModal }) {
     <div className="form">
       <label className="requiredLabel"> * All Fields Required</label>
       <div>Email :</div>
-      <textarea
+      <input
         className="form-textarea form-input"
         type="text"
         onChange={handleEmail}
@@ -50,9 +50,9 @@ function InputsLogin({ setShowModal }) {
 
       <br />
       <div>Password :</div>
-      <textarea
+      <input
         className="form-textarea form-input"
-        type="text"
+        type="password"
         onChange={handlePassword}
         placeholder="Enter your password"
         value={password}
