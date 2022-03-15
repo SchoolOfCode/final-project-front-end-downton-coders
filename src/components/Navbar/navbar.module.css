@@ -28,6 +28,7 @@
 
 li a {
   color: var(--grey);
+
 }
 
 a:link {
@@ -35,6 +36,7 @@ a:link {
   margin-right: 20px;
   font-size: 1.3em;
   color: var(--textColor);
+ 
 }
 
 .navAbout,
@@ -43,6 +45,7 @@ a:link {
 .navRegister,
 .navUsername {
   color: var(--textColor);
+  cursor: pointer;
 }
 
 .navAbout:hover,
@@ -52,9 +55,15 @@ a:link {
 .navUsername:hover,
 a:link:hover {
   color: var(--purple);
+  cursor: pointer;
 }
 
 .navlink li {
   display: inline-block;
   padding: 20px 40px 20px 0px;
+  cursor: pointer;
+}
+
+.navLink {
+  cursor: pointer;
 }
