@@ -10,8 +10,13 @@ import { useState, useEffect, useCallback } from "react";
 import Navbar from "../../Navbar";
 import LoginPopup from "../../LoginPopup";
 import RegisterPopup from "../../RegisterPopup";
+// import styles from "./EventPage.module.css"
+import ChatPopup from "../../ChatPopup/ChatPopup.js"
 
-function EventPage() {
+function EventPage({  onMessageSubmit,
+  onTextChange,
+  renderChat,
+  chatUser}) {
   const location = useLocation();
   const [showLoginPopup, setShowLoginPopup] = useState(false);
   const [showRegisterPopup, setRegisterPopup] = useState(false);
@@ -114,6 +119,12 @@ function EventPage() {
         setShowModalRegister={setRegisterPopup}
       />
       <HeroEventUser DataToRender={DataToUse} />
+      <ChatPopup
+        onMessageSubmit={onMessageSubmit}
+        onTextChange={onTextChange}
+        renderChat={renderChat}
+        chatUser={chatUser}
+      />
       <AttendingEventPageUser
         // setShowModal={setShowLoginPopup}
         DataToRender={DataToUse}
@@ -123,8 +134,11 @@ function EventPage() {
         setDummyNumCounterNo={setDummyNumCounterNo}
         dummyNumCounterNo={dummyNumCounterNo}
       />
+       
       <ChatEventPage RandomData={dataToRender} />
+   
       <Footer />
+   
     </>
   );
 

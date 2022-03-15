@@ -156,7 +156,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="main" element={<MainPage eventsPerPage={eventsPerPage} numbersOfEvents={eventData.length} paginate={paginate} indexLastEvent={indexOfLastEvent} indexFirstEvent={indexOfFirstEvent} currentEvent={currentEvent} eventData={eventData} onMessageSubmit={onMessageSubmit} onTextChange={onTextChange} renderChat={renderChat} chatUser={chatUser} locationToSearch={locationToSearch} handleSearchOnChange={handleSearchOnChange} handleSearchClick={handleSearchClick} handleCategoryClick={handleCategoryClick} />} />
   
-        <Route path="event" element={<EventPage />} />
+        <Route path="event" element={<EventPage  onMessageSubmit={onMessageSubmit} onTextChange={onTextChange} renderChat={renderChat} chatUser={chatUser}/>} />
         <Route path="dashbroad" element={<DashbroadPage />} />
       </Routes>
     </AuthProvider>

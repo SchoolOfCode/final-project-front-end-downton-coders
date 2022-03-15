@@ -8,7 +8,7 @@ function ChatEventPage({RandomData}){
         <>
             <div className={styles.chatEventPage} data-testid="chatboxeventtesting">
                 <div className={styles.chatEventPageMain}>
-                    <ChatBoxEvent/>
+                    {/* <ChatBoxEvent/> */}
                     <SuggestionEvent DataToRender={RandomData}/>
                 </div>
             </div>
