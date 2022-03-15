@@ -11,7 +11,9 @@ import Profile from "./profile/profile.js";
 //import dummyData from "../../../travelData";
 import styles from "./styles.module.css";
 import { useState, useEffect } from "react";
-function DashbroadPage() {
+import ChatPopup from "../../ChatPopup/ChatPopup"
+
+function DashbroadPage({onMessageSubmit, onTextChange, renderChat, chatUser}) {
   const userDetails = useAuthState(); //read user details from context
 
   return (
@@ -24,6 +26,12 @@ function DashbroadPage() {
           <Profile />
           <DashboardEventSection />
         </div>
+        <ChatPopup
+        onMessageSubmit={onMessageSubmit}
+        onTextChange={onTextChange}
+        renderChat={renderChat}
+        chatUser={chatUser}
+      />
       </div>
     </>
   );
