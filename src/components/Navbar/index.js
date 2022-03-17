@@ -19,19 +19,19 @@ function Navbar({ setShowModal, setShowModalRegister, pageName }) {
   };
 
   const handleGoToDashboard = () => {
-    window.location.replace("/dashbroad"); // Go to dashboard page
+    window.location.replace("/dashboard"); // Go to dashboard page
   };
 
   return (
     <div className={styles.navContainer}>
-    <Link to="/">
-      <img
-        src="./logo2.png"
-        className={styles.navLogo}
-        width="200px"
-        height="70px"
-        alt="experience logo"
-      />
+      <Link to="/">
+        <img
+          src="./logo2.png"
+          className={styles.navLogo}
+          width="200px"
+          height="70px"
+          alt="experience logo"
+        />
       </Link>
       <nav className={styles.navlink}>
         <ul>

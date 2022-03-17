@@ -7,7 +7,6 @@ import DashbroadPage from "../pages/DashbroadPage";
 import io from "socket.io-client";
 import { AuthProvider } from "../Context/index.js";
 
-
 import "./App.css";
 
 function App() {
@@ -15,75 +14,67 @@ function App() {
   const [currentPage, setCurrentPage] = useState(1);
   const [eventsPerPage] = useState(8);
   const [loading, setLoading] = useState(false);
-  const [chatUser, setChatUser] = useState({name: "", message: ""});
+  const [chatUser, setChatUser] = useState({ name: "", message: "" });
   const [chatSection, setChatSection] = useState([]);
   // const chat = useRef(0)
 
-  const [pageName, setPageName ] = useState("");
+  const [pageName, setPageName] = useState("");
 
   const [locationToSearch, setLocationToSearch] = useState("");
-
 
   const socketRef = useRef();
 
   // const socket = io('https://xpeerience.herokuapp.com/', {transports: ['websocket']});
 
-
   // CHAT FUNCTIONS
-  useEffect(
-    () => {
-      try {
+  useEffect(() => {
+    try {
+      socketRef.current = io("xpeerience.herokuapp.com/");
 
-      socketRef.current = io('xpeerience.herokuapp.com/' );
-     
       // http://localhost:5000/
       // https://xpeerience.herokuapp.com/
       // {transports: ['websocket']}
       // https://test-chat-brr.herokuapp.com
 
-      socketRef.current.on("message", ({name, message}) => {
-        setChatSection([...chatSection, {name, message}]);
-
- 
-      })
-      return () => socketRef.current.disconnect()
+      socketRef.current.on("message", ({ name, message }) => {
+        setChatSection([...chatSection, { name, message }]);
+      });
+      return () => socketRef.current.disconnect();
     } catch (err) {
       console.log(err);
     }
-    }
-  , [chatSection]);
+  }, [chatSection]);
 
   // CHAT FUNCTIONS
   const onTextChange = (e) => {
-    setChatUser({...chatUser, [e.target.name]: e.target.value});
+    setChatUser({ ...chatUser, [e.target.name]: e.target.value });
   };
 
-  
   // CHAT FUNCTIONS
   const onMessageSubmit = (e) => {
     e.preventDefault();
     const { name, message } = chatUser;
-    socketRef.current.emit("message", {name, message});
-    setChatUser({message: "", name});
-  }
+    socketRef.current.emit("message", { name, message });
+    setChatUser({ message: "", name });
+  };
 
-  
   // CHAT FUNCTIONS
   const renderChat = (styles) => {
     // console.log("Current chatSection", chatSection);
-    return chatSection.map(({name, message}, index) => (
+    return chatSection.map(({ name, message }, index) => (
       <div key={index} className={styles.chatMessageWrapper}>
-          <span className={styles.chatUserName}>{name}</span>: <span className={styles.chatMessage}>{message}</span>
+        <span className={styles.chatUserName}>{name}</span>:{" "}
+        <span className={styles.chatMessage}>{message}</span>
       </div>
-    ))
-  }
+    ));
+  };
 
   async function getEventData() {
     setLoading(true);
     const response = await fetch("https://xpeerience.herokuapp.com/events");
     const data = await response.json();
     setEventData(data);
-  
+
     setLoading(false);
   }
 
@@ -93,30 +84,31 @@ function App() {
     getEventData();
   }, []);
 
-
-  // FILTER EVENTS BY CATEGORY 
+  // FILTER EVENTS BY CATEGORY
   async function handleCategoryClick(e) {
     let categoryToFilterBy;
     if (e.target.alt) {
       // console.log(e.target.alt);
-       categoryToFilterBy = e.target.alt;
+      categoryToFilterBy = e.target.alt;
     } else {
-       categoryToFilterBy = e.target.childNodes[0].data;
+      categoryToFilterBy = e.target.childNodes[0].data;
     }
 
     const options = {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
-      body:  JSON.stringify({ category: categoryToFilterBy })
-    }
+      body: JSON.stringify({ category: categoryToFilterBy }),
+    };
     // console.log("This is the body: ", options.body)
-    const response = await fetch("https://xpeerience.herokuapp.com/events/searchcategory", options);
+    const response = await fetch(
+      "https://xpeerience.herokuapp.com/events/searchcategory",
+      options
+    );
     const data = await response.json();
     // console.log("This is the data retrieved with category" , data);
     setEventData(data);
-   
   }
 
   // FILTER EVENTS BY LOCATION
@@ -127,12 +119,15 @@ function App() {
       method: "POST",
 
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
-      body:  JSON.stringify({ location: locationToSearch })
-    }
+      body: JSON.stringify({ location: locationToSearch }),
+    };
     // console.log("This is the body: ", options.body)
-    const response = await fetch("https://xpeerience.herokuapp.com/events/searchlocation", options);
+    const response = await fetch(
+      "https://xpeerience.herokuapp.com/events/searchlocation",
+      options
+    );
     const data = await response.json();
     // console.log("This is the data retrieved with location" , data);
     setEventData(data);
@@ -141,8 +136,7 @@ function App() {
 
   const handleSearchOnChange = (e) => {
     setLocationToSearch(e.target.value);
-  }
-  
+  };
 
   const indexOfLastEvent = currentPage * eventsPerPage;
   const indexOfFirstEvent = indexOfLastEvent - eventsPerPage;
@@ -154,15 +148,54 @@ function App() {
     <AuthProvider>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="main" element={<MainPage eventsPerPage={eventsPerPage} numbersOfEvents={eventData.length} paginate={paginate} indexLastEvent={indexOfLastEvent} indexFirstEvent={indexOfFirstEvent} currentEvent={currentEvent} eventData={eventData} onMessageSubmit={onMessageSubmit} onTextChange={onTextChange} renderChat={renderChat} chatUser={chatUser} locationToSearch={locationToSearch} handleSearchOnChange={handleSearchOnChange} handleSearchClick={handleSearchClick} handleCategoryClick={handleCategoryClick} />} />
-  
-        <Route path="event" element={<EventPage  onMessageSubmit={onMessageSubmit} onTextChange={onTextChange} renderChat={renderChat} chatUser={chatUser}/>} />
-        <Route path="dashbroad" element={<DashbroadPage onMessageSubmit={onMessageSubmit} onTextChange={onTextChange} renderChat={renderChat} chatUser={chatUser} />} />
+        <Route
+          path="main"
+          element={
+            <MainPage
+              eventsPerPage={eventsPerPage}
+              numbersOfEvents={eventData.length}
+              paginate={paginate}
+              indexLastEvent={indexOfLastEvent}
+              indexFirstEvent={indexOfFirstEvent}
+              currentEvent={currentEvent}
+              eventData={eventData}
+              onMessageSubmit={onMessageSubmit}
+              onTextChange={onTextChange}
+              renderChat={renderChat}
+              chatUser={chatUser}
+              locationToSearch={locationToSearch}
+              handleSearchOnChange={handleSearchOnChange}
+              handleSearchClick={handleSearchClick}
+              handleCategoryClick={handleCategoryClick}
+            />
+          }
+        />
+
+        <Route
+          path="event"
+          element={
+            <EventPage
+              onMessageSubmit={onMessageSubmit}
+              onTextChange={onTextChange}
+              renderChat={renderChat}
+              chatUser={chatUser}
+            />
+          }
+        />
+        <Route
+          path="dashboard"
+          element={
+            <DashbroadPage
+              onMessageSubmit={onMessageSubmit}
+              onTextChange={onTextChange}
+              renderChat={renderChat}
+              chatUser={chatUser}
+            />
+          }
+        />
       </Routes>
     </AuthProvider>
   );
 }
 
 export default App;
-
-
